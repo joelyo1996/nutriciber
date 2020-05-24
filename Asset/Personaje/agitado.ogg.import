@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/agitado.ogg-511f4f3a171a0ffdc148e06cded58b7b.oggstr"
+
+[deps]
+
+source_file="res://Asset/Personaje/agitado.ogg"
+dest_files=[ "res://.import/agitado.ogg-511f4f3a171a0ffdc148e06cded58b7b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

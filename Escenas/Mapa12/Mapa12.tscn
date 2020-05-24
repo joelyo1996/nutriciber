@@ -1,0 +1,146 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Escenas/Mapa12/Mapa12.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Mapa12/Fondo2.png" type="Texture" id=2]
+[ext_resource path="res://Escenas/Personaje/Personaje.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=5]
+[ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=6]
+[ext_resource path="res://Escenas/Frutilla/Frutilla.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 112.948, 197.184 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 77.98, 226.565 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 48.6943, 13.244 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 10, 470.051 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 10, 531.974 )
+
+[node name="Mapa12" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Fondo" type="Sprite" parent="."]
+position = Vector2( 524.543, 307.215 )
+scale = Vector2( 0.548192, 0.488277 )
+texture = ExtResource( 2 )
+
+[node name="Plataforma" type="StaticBody2D" parent="."]
+position = Vector2( -44.505, 390.499 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma"]
+position = Vector2( 139.749, 108.923 )
+shape = SubResource( 1 )
+
+[node name="Plataforma2" type="StaticBody2D" parent="."]
+position = Vector2( 417.197, 405.304 )
+
+[node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma2"]
+position = Vector2( -80.1688, 116.913 )
+shape = SubResource( 2 )
+
+[node name="Plataforma3" type="StaticBody2D" parent="."]
+position = Vector2( 353.837, -0.578629 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma3"]
+position = Vector2( 225.475, 278.921 )
+shape = SubResource( 3 )
+
+[node name="Plataforma4" type="StaticBody2D" parent="."]
+position = Vector2( -40.0451, 324.109 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma4"]
+position = Vector2( 795.249, -145.866 )
+shape = SubResource( 3 )
+
+[node name="Plataforma5" type="StaticBody2D" parent="."]
+position = Vector2( 628.029, -66.7151 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma5"]
+position = Vector2( 330.743, 338.997 )
+shape = SubResource( 3 )
+
+[node name="Plataforma6" type="StaticBody2D" parent="."]
+position = Vector2( 404.224, 172.121 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma6"]
+position = Vector2( 347.399, 253.868 )
+shape = SubResource( 3 )
+
+[node name="Plataforma7" type="StaticBody2D" parent="."]
+position = Vector2( 634.71, 304.066 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma7"]
+position = Vector2( 388.113, -236.547 )
+shape = SubResource( 3 )
+
+[node name="Personaje" parent="." instance=ExtResource( 3 )]
+position = Vector2( 41.295, 266.091 )
+
+[node name="Mapa11" type="Area2D" parent="."]
+position = Vector2( -7.4025, 323.859 )
+
+[node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa11"]
+position = Vector2( -28.3932, -10.0211 )
+shape = SubResource( 4 )
+
+[node name="Mapa13" type="Area2D" parent="."]
+position = Vector2( 1158.17, 341.127 )
+
+[node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa13"]
+position = Vector2( -53.1725, -351.399 )
+shape = SubResource( 4 )
+
+[node name="pozo" type="Area2D" parent="."]
+position = Vector2( 558.79, 687.959 )
+rotation = 1.50111
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pozo"]
+position = Vector2( 140.686, -108.105 )
+shape = SubResource( 5 )
+
+[node name="UI" parent="." instance=ExtResource( 4 )]
+
+[node name="TextureButton" type="TextureButton" parent="UI"]
+margin_left = 96.2323
+margin_top = 475.609
+margin_right = 400.232
+margin_bottom = 812.609
+rect_rotation = -92.4648
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+
+[node name="Izquierda" type="TextureButton" parent="UI"]
+margin_left = 155.452
+margin_top = 584.796
+margin_right = 459.452
+margin_bottom = 921.796
+rect_rotation = -179.269
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+
+[node name="Derecha" type="TextureButton" parent="UI"]
+margin_left = 185.062
+margin_top = 420.091
+margin_right = 489.062
+margin_bottom = 757.091
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+
+[node name="Frutilla" parent="." instance=ExtResource( 7 )]
+position = Vector2( 960.357, 185.562 )
+[connection signal="body_entered" from="Mapa11" to="." method="_on_Mapa11_body_entered"]
+[connection signal="body_entered" from="Mapa13" to="." method="_on_Mapa13_body_entered"]
+[connection signal="body_entered" from="pozo" to="." method="_on_pozo_body_entered"]
+[connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]
+[connection signal="button_down" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_down"]
+[connection signal="button_up" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_up"]

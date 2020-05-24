@@ -1,0 +1,144 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Escenas/Mapa13/Mapa13.gd" type="Script" id=1]
+[ext_resource path="res://Asset/Mapa13/fondo3.png" type="Texture" id=2]
+[ext_resource path="res://Escenas/Personaje/Personaje.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escenas/Frutilla/Frutilla.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Escenas/Tronco/Tronco.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Asset/Mapa13/boton_salir_normal.png" type="Texture" id=7]
+[ext_resource path="res://Asset/Mapa13/boton_salir_presionado.png" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 376.429, 70.4795 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 63.8967, 9.26279 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 510.145, 10 )
+
+[node name="Mapa13" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="fondo" type="Sprite" parent="."]
+position = Vector2( 512.762, 304.395 )
+scale = Vector2( 0.532295, 0.481243 )
+texture = ExtResource( 2 )
+
+[node name="Plataforma" type="StaticBody2D" parent="."]
+position = Vector2( 515.521, 526.336 )
+
+[node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma"]
+position = Vector2( 145.052, -33.9913 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Personaje" parent="." instance=ExtResource( 3 )]
+position = Vector2( 41.2384, -23.2059 )
+
+[node name="Plataforma2" type="StaticBody2D" parent="."]
+position = Vector2( 947.61, 239.1 )
+
+[node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma2"]
+position = Vector2( 0, 11.6881 )
+shape = SubResource( 2 )
+
+[node name="Plataforma3" type="StaticBody2D" parent="."]
+position = Vector2( 733.328, 141.699 )
+
+[node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma3"]
+position = Vector2( 0, 11.6881 )
+shape = SubResource( 2 )
+
+[node name="Plataforma4" type="StaticBody2D" parent="."]
+position = Vector2( 483.981, 262.476 )
+
+[node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma4"]
+position = Vector2( 4.29596, 51.7834 )
+shape = SubResource( 2 )
+
+[node name="Plataforma5" type="StaticBody2D" parent="."]
+position = Vector2( 201.517, 161.179 )
+
+[node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma5"]
+position = Vector2( 0, 11.6881 )
+shape = SubResource( 2 )
+
+[node name="Plataforma6" type="StaticBody2D" parent="."]
+position = Vector2( 33.9874, 83.2582 )
+
+[node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma6"]
+position = Vector2( 0, 11.6881 )
+shape = SubResource( 2 )
+
+[node name="Mapa12" type="Area2D" parent="."]
+position = Vector2( -77.838, 77.731 )
+rotation = 1.5682
+
+[node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa12"]
+shape = SubResource( 3 )
+
+[node name="Mapa14" type="Area2D" parent="."]
+position = Vector2( 1048.41, 223.93 )
+rotation = 1.5682
+
+[node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa14"]
+shape = SubResource( 3 )
+
+[node name="Pozo" type="Area2D" parent="."]
+position = Vector2( 586.438, 673.826 )
+rotation = -0.00922668
+
+[node name="CollisionMapa11" type="CollisionShape2D" parent="Pozo"]
+position = Vector2( -190.435, -20.2642 )
+shape = SubResource( 3 )
+
+[node name="Frutilla" parent="." instance=ExtResource( 4 )]
+position = Vector2( 190.906, 79.8689 )
+
+[node name="Frutilla2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 707.132, 62.3367 )
+
+[node name="Tronco" parent="." instance=ExtResource( 5 )]
+position = Vector2( 732.851, 347.61 )
+
+[node name="UI" parent="." instance=ExtResource( 6 )]
+
+[node name="TextureButton" type="TextureButton" parent="UI"]
+margin_left = 48.7006
+margin_top = 449.993
+margin_right = 352.701
+margin_bottom = 786.993
+rect_rotation = 268.407
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+
+[node name="Izquierda" type="TextureButton" parent="UI"]
+margin_left = 140.258
+margin_top = 566.874
+margin_right = 444.258
+margin_bottom = 903.874
+rect_rotation = 177.492
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+
+[node name="Derecha" type="TextureButton" parent="UI"]
+margin_left = 138.31
+margin_top = 414.929
+margin_right = 442.31
+margin_bottom = 751.929
+rect_rotation = -5.36234
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+[connection signal="body_entered" from="Mapa12" to="." method="_on_Mapa12_body_entered"]
+[connection signal="area_entered" from="Mapa14" to="." method="_on_Mapa14_area_entered"]
+[connection signal="body_entered" from="Pozo" to="." method="_on_Pozo_body_entered"]
+[connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]
+[connection signal="button_down" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_down"]
+[connection signal="button_up" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_up"]

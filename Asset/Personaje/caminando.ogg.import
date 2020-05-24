@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/caminando.ogg-b5261d38d5788ebe796f99c21fe102ce.oggstr"
+
+[deps]
+
+source_file="res://Asset/Personaje/caminando.ogg"
+dest_files=[ "res://.import/caminando.ogg-b5261d38d5788ebe796f99c21fe102ce.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/butom_press_sound.ogg-8631610f4bb8e15dbeae009dc4ddd834.oggstr"
+
+[deps]
+
+source_file="res://assets/menu/butom_press_sound.ogg"
+dest_files=[ "res://.import/butom_press_sound.ogg-8631610f4bb8e15dbeae009dc4ddd834.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/corriendo.ogg-7b4aa728180fb041f1561990e50e1148.oggstr"
+
+[deps]
+
+source_file="res://Asset/Personaje/corriendo.ogg"
+dest_files=[ "res://.import/corriendo.ogg-7b4aa728180fb041f1561990e50e1148.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
