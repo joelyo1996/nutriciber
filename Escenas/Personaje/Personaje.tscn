@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Escenas/Mapa11/KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa11/personaje_corriendo.png" type="Texture" id=2]
@@ -6,10 +6,26 @@
 [ext_resource path="res://Asset/Personaje/corriendo.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Asset/Personaje/salto.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Asset/Personaje/head_salto1.png" type="Texture" id=6]
-[ext_resource path="res://Asset/Personaje/head_corriendo.png" type="Texture" id=7]
+[ext_resource path="res://Asset/Personaje/head_salto2.png" type="Texture" id=7]
+[ext_resource path="res://Asset/Personaje/head_corriendo.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 114.753, 213.302 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "Salto_corto"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CortoSalto:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "caminar"
@@ -30,24 +46,12 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=3]
 resource_name = "caminar_largo"
 tracks/0/type = "value"
-tracks/0/path = NodePath("SpritePersonaje:frame")
+tracks/0/path = NodePath("LargoCaminar:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.1, 0.4, 0.6, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 1, 2, 5, 1 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("LargoCaminar:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0, 0.4, 0.6, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
@@ -85,24 +89,12 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=6]
 resource_name = "saltar_largo"
 tracks/0/type = "value"
-tracks/0/path = NodePath("SpriteSalto:frame")
+tracks/0/path = NodePath("LargoSalto:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.5, 0.8 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 1,
-"values": [ 0, 1, 2, 3 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("LargoSalto:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5, 0.8 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
@@ -129,6 +121,7 @@ hframes = 4
 frame = 1
 
 [node name="AnimationPersonaje" type="AnimationPlayer" parent="."]
+anims/Salto_corto = SubResource( 8 )
 anims/caminar = SubResource( 2 )
 anims/caminar_largo = SubResource( 3 )
 anims/salto = SubResource( 4 )
@@ -164,9 +157,16 @@ vframes = 2
 hframes = 4
 frame = 3
 
-[node name="LargoCaminar" type="Sprite" parent="."]
+[node name="CortoSalto" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 7 )
+vframes = 2
+hframes = 4
+frame = 4
+
+[node name="LargoCaminar" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 8 )
 vframes = 2
 hframes = 4
 [connection signal="area_entered" from="AreaPersonaje" to="." method="_on_Area2D_area_entered"]
