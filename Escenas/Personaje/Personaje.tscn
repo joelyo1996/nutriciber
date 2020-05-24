@@ -12,7 +12,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 114.753, 213.302 )
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=2]
 resource_name = "Salto_corto"
 tracks/0/type = "value"
 tracks/0/path = NodePath("CortoSalto:frame")
@@ -27,8 +27,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "caminar"
+[sub_resource type="Animation" id=3]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpritePersonaje:frame")
@@ -43,8 +42,7 @@ tracks/0/keys = {
 "values": [ 4, 5, 7 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "caminar_largo"
+[sub_resource type="Animation" id=4]
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoCaminar:frame")
 tracks/0/interp = 1
@@ -58,7 +56,7 @@ tracks/0/keys = {
 "values": [ 0, 6, 2, 0 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoSalto:frame")
 tracks/0/interp = 1
@@ -72,7 +70,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpriteSalto:frame")
 tracks/0/interp = 1
@@ -86,8 +84,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "saltar_largo"
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoSalto:frame")
 tracks/0/interp = 1
@@ -101,7 +98,7 @@ tracks/0/keys = {
 "values": [ 0, 2, 3 ]
 }
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 123.182, 208.621 )
 
 [node name="Personaje" type="KinematicBody2D"]
@@ -121,10 +118,10 @@ hframes = 4
 frame = 1
 
 [node name="AnimationPersonaje" type="AnimationPlayer" parent="."]
-anims/Salto_corto = SubResource( 8 )
-anims/caminar = SubResource( 2 )
-anims/caminar_largo = SubResource( 3 )
-anims/salto = SubResource( 4 )
+anims/Salto_corto = SubResource( 2 )
+anims/caminar = SubResource( 3 )
+anims/caminar_largo = SubResource( 4 )
+anims/salto = SubResource( 5 )
 
 [node name="SpriteSalto" type="Sprite" parent="."]
 visible = false
@@ -133,14 +130,14 @@ vframes = 2
 hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/saltar = SubResource( 5 )
-anims/saltar_largo = SubResource( 6 )
+anims/saltar = SubResource( 6 )
+anims/saltar_largo = SubResource( 7 )
 
 [node name="AreaPersonaje" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPersonaje"]
 position = Vector2( 22.752, 2.84387 )
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
 [node name="AudioPersonaje" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
@@ -162,7 +159,6 @@ visible = false
 texture = ExtResource( 7 )
 vframes = 2
 hframes = 4
-frame = 4
 
 [node name="LargoCaminar" type="Sprite" parent="."]
 visible = false

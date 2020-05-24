@@ -8,6 +8,7 @@ var veri = true
 func _physics_process(delta):
 	if veri == true:
 		if Global.peloCorto:
+			$CortoSalto.visible = true
 			veri = false
 		if Global.largoSalto == true:
 			$LargoCaminar.visible = true
@@ -19,26 +20,40 @@ func _physics_process(delta):
 		$LargoCaminar.visible = false
 		$SpritePersonaje.visible = false
 		$LargoCaminar.visible = false
+		if Global.peloCorto:
+			$LargoSalto.visible = false
+			$SpriteSalto.visible = false
+			$CortoSalto.visible = true
+			$AnimationPersonaje.play("Salto_corto")
+			saltando = true
+			move.y = -salto
+			Global.Energia = Global.Energia - 10
+			yield(get_tree().create_timer(1),"timeout")
+			move.y = +salto
+			yield(get_tree().create_timer(1),"timeout")
+			salto = 100
+			saltando = false
+			$SpriteSalto.visible = false
+			$AudioSaltar.stop()
+			$LargoSalto.visible = false
+			$LargoCaminar.visible = false
+		
 		if Global.largoSalto == true:
 			$LargoSalto.visible = true
 			$SpriteSalto.visible = false
 			$AnimationPersonaje.play("saltar_largo")
-		else:
+			saltando = true
+			move.y = -salto
+			Global.Energia = Global.Energia - 10
+			yield(get_tree().create_timer(1),"timeout")
+			move.y = +salto
+			yield(get_tree().create_timer(1),"timeout")
+			salto = 100
+			saltando = false
+			$SpriteSalto.visible = false
+			$AudioSaltar.stop()
 			$LargoSalto.visible = false
-			$SpriteSalto.visible = true
-			$AnimationPersonaje.play("salto")
-		saltando = true
-		move.y = -salto
-		Global.Energia = Global.Energia - 10
-		yield(get_tree().create_timer(1),"timeout")
-		move.y = +salto
-		yield(get_tree().create_timer(1),"timeout")
-		salto = 100
-		saltando = false
-		$SpriteSalto.visible = false
-		$AudioSaltar.stop()
-		$LargoSalto.visible = false
-		$LargoCaminar.visible=true
+			$LargoCaminar.visible=true
 	
 	if Input.is_action_pressed("ui_right")&& Global.Energia != 0:
 		if Global.largoSalto == true && !saltando== true:
