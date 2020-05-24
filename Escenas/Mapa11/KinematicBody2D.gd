@@ -41,7 +41,7 @@ func _physics_process(delta):
 		if Global.largoSalto == true:
 			$LargoSalto.visible = true
 			$SpriteSalto.visible = false
-			$AnimationPersonaje.play("saltar_largo")
+			$AnimationPersonaje.play("salto")
 			saltando = true
 			move.y = -salto
 			Global.Energia = Global.Energia - 10
@@ -91,7 +91,7 @@ func _physics_process(delta):
 		$SpritePersonaje.visible = false
 		$SpriteSalto.visible = false
 		
-	move_and_slide(move,Vector2(0,-1))
+	move_and_slide(move,Vector2(0,0))
 	if Input.is_action_just_pressed("ui_left"):
 		$AudioPersonaje.play()
 	if Input.is_action_just_pressed("ui_right"):
@@ -141,7 +141,7 @@ func _on_TextureButton_pressed():
 
 func _on_Izquierda_button_down():
 	if Global.Energia != 0:
-		if Global.largoSalto == true:
+		if Global.largoSalto == true && !saltando== true:
 			$LargoCaminar.visible = true
 			$SpritePersonaje.visible = false
 			$AnimationPersonaje.play("caminar_largo")
@@ -159,7 +159,7 @@ func _on_Izquierda_button_down():
 
 func _on_Derecha_button_up():
 	if  Global.Energia != 0:
-		if Global.largoSalto == true:
+		if Global.largoSalto == true && !saltando== true:
 			$LargoCaminar.visible = true
 			$SpritePersonaje.visible = false
 			$AnimationPersonaje.play("caminar_largo")
