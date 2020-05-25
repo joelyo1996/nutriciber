@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Escenas/Tronco/Tronco.gd" type="Script" id=1]
-[ext_resource path="res://Asset/Mapa11/tronco.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Trocos/tronco_movible.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 15.4609
@@ -19,7 +19,8 @@ position = Vector2( -0.630264, 13.2353 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 0.1, 0.1 )
+position = Vector2( 12.8299, -44.3213 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
