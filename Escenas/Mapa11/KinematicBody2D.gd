@@ -8,6 +8,7 @@ var veri = true
 func _physics_process(delta):
 	if veri == true:
 		if Global.peloCorto:
+			$CortoSalto.visible = true
 			veri = false
 		if Global.largoSalto == true:
 			$LargoCaminar.visible = true
@@ -19,26 +20,40 @@ func _physics_process(delta):
 		$LargoCaminar.visible = false
 		$SpritePersonaje.visible = false
 		$LargoCaminar.visible = false
+		if Global.peloCorto:
+			$LargoSalto.visible = false
+			$SpriteSalto.visible = false
+			$CortoSalto.visible = true
+			$AnimationPersonaje.play("Salto_corto")
+			saltando = true
+			move.y = -salto
+			Global.Energia = Global.Energia - 10
+			yield(get_tree().create_timer(1),"timeout")
+			move.y = +salto
+			yield(get_tree().create_timer(1),"timeout")
+			salto = 100
+			saltando = false
+			$SpriteSalto.visible = false
+			$AudioSaltar.stop()
+			$LargoSalto.visible = false
+			$LargoCaminar.visible = false
+		
 		if Global.largoSalto == true:
 			$LargoSalto.visible = true
 			$SpriteSalto.visible = false
-			$AnimationPersonaje.play("saltar_largo")
-		else:
-			$LargoSalto.visible = false
-			$SpriteSalto.visible = true
 			$AnimationPersonaje.play("salto")
-		saltando = true
-		move.y = -salto
-		Global.Energia = Global.Energia - 10
-		yield(get_tree().create_timer(1),"timeout")
-		move.y = +salto
-		yield(get_tree().create_timer(1),"timeout")
-		salto = 100
-		saltando = false
-		$SpriteSalto.visible = false
-		$AudioSaltar.stop()
-		$LargoSalto.visible = false
-		$LargoCaminar.visible=true
+			saltando = true
+			move.y = -salto
+			Global.Energia = Global.Energia - 10
+			yield(get_tree().create_timer(1),"timeout")
+			move.y = +salto
+			yield(get_tree().create_timer(1),"timeout")
+			salto = 100
+			saltando = false
+			$SpriteSalto.visible = false
+			$AudioSaltar.stop()
+			$LargoSalto.visible = false
+			$LargoCaminar.visible=true
 	
 	if Input.is_action_pressed("ui_right")&& Global.Energia != 0:
 		if Global.largoSalto == true && !saltando== true:
@@ -76,7 +91,7 @@ func _physics_process(delta):
 		$SpritePersonaje.visible = false
 		$SpriteSalto.visible = false
 		
-	move_and_slide(move,Vector2(0,-1))
+	move_and_slide(move,Vector2(0,0))
 	if Input.is_action_just_pressed("ui_left"):
 		$AudioPersonaje.play()
 	if Input.is_action_just_pressed("ui_right"):
@@ -126,7 +141,7 @@ func _on_TextureButton_pressed():
 
 func _on_Izquierda_button_down():
 	if Global.Energia != 0:
-		if Global.largoSalto == true:
+		if Global.largoSalto == true && !saltando== true:
 			$LargoCaminar.visible = true
 			$SpritePersonaje.visible = false
 			$AnimationPersonaje.play("caminar_largo")
@@ -144,7 +159,7 @@ func _on_Izquierda_button_down():
 
 func _on_Derecha_button_up():
 	if  Global.Energia != 0:
-		if Global.largoSalto == true:
+		if Global.largoSalto == true && !saltando== true:
 			$LargoCaminar.visible = true
 			$SpritePersonaje.visible = false
 			$AnimationPersonaje.play("caminar_largo")
