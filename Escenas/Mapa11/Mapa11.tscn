@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Escenas/Mapa11/Mapa11.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa11/fondo1.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=6]
 [ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=7]
 [ext_resource path="res://Escenas/Tronco/Tronco.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 259.337, 136.763 )
@@ -23,15 +24,6 @@ extents = Vector2( 10, 295.429 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 233.487, 12.449 )
-
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 63.2688, 21.7029 )
-
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 84.5723, 10 )
-
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 73.5054, 10.3392 )
 
 [node name="Mapa11" type="Node2D"]
 script = ExtResource( 1 )
@@ -74,36 +66,15 @@ position = Vector2( 51.8174, 1.85065 )
 shape = SubResource( 4 )
 
 [node name="Mapa13" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 315.637, 691.097 )
 
 [node name="CollisionMapa13" type="CollisionShape2D" parent="Mapa13"]
 position = Vector2( 25.9086, 25.9086 )
 shape = SubResource( 5 )
 
-[node name="Plataforma4" type="StaticBody2D" parent="."]
-position = Vector2( 951.219, 118.44 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma4"]
-position = Vector2( -8.62488, -14.66 )
-shape = SubResource( 6 )
-
-[node name="Plataforma5" type="StaticBody2D" parent="."]
-position = Vector2( 693.983, 109.187 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma5"]
-position = Vector2( 37.4462, -16.3961 )
-rotation = -0.0917057
-shape = SubResource( 7 )
-
-[node name="Plataforma6" type="StaticBody2D" parent="."]
-position = Vector2( 397.175, 175.586 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma6"]
-position = Vector2( -134.677, -14.9641 )
-shape = SubResource( 8 )
-
 [node name="Frutilla" parent="." instance=ExtResource( 4 )]
-position = Vector2( 255.308, 65.1312 )
+position = Vector2( 357.947, 81.4601 )
 
 [node name="UI" parent="." instance=ExtResource( 5 )]
 
@@ -138,6 +109,18 @@ texture_pressed = ExtResource( 7 )
 
 [node name="Tronco" parent="." instance=ExtResource( 8 )]
 position = Vector2( 538.457, 350.026 )
+
+[node name="Rama" parent="." instance=ExtResource( 9 )]
+position = Vector2( 967.718, 120.198 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Rama2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 792.766, 124.863 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Rama3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 384.543, 200.676 )
+scale = Vector2( 0.5, 0.5 )
 [connection signal="body_entered" from="Mapa12" to="." method="_on_Mapa12_body_entered"]
 [connection signal="body_entered" from="Mapa13" to="." method="_on_Mapa13_body_entered"]
 [connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]

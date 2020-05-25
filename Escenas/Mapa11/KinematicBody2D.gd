@@ -76,7 +76,7 @@ func _physics_process(delta):
 		$SpritePersonaje.visible = false
 		$SpriteSalto.visible = false
 		
-	move_and_slide(move,Vector2(0,-1))
+	move_and_slide(move,Vector2(0,0))
 	if Input.is_action_just_pressed("ui_left"):
 		$AudioPersonaje.play()
 	if Input.is_action_just_pressed("ui_right"):
