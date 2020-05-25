@@ -6,10 +6,11 @@
 [sub_resource type="CircleShape2D" id=1]
 radius = 15.4609
 
-[sub_resource type="CircleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=4]
+height = 59.7303
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 8.09178
+radius = 12.5791
 
 [node name="Tronco" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -27,20 +28,21 @@ texture = ExtResource( 2 )
 position = Vector2( 16.6785, 18.5317 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -16.5116, -34.6219 )
-shape = SubResource( 2 )
+position = Vector2( -17.2854, -50.0975 )
+rotation = -1.56955
+shape = SubResource( 4 )
 
 [node name="AreaTronco" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaTronco"]
-position = Vector2( -18.7488, -1.22943 )
+position = Vector2( -33.4506, 3.41325 )
 shape = SubResource( 3 )
 
 [node name="AreaTronco2" type="Area2D" parent="."]
 position = Vector2( 36.8829, 2.1515 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaTronco2"]
-position = Vector2( -18.7488, -1.22943 )
+position = Vector2( 6.78596, 1.09191 )
 shape = SubResource( 3 )
 [connection signal="area_entered" from="AreaTronco" to="." method="_on_AreaTronco_area_entered"]
 [connection signal="body_entered" from="AreaTronco" to="." method="_on_AreaTronco_body_entered"]

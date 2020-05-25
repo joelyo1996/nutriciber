@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Escenas/Mapa13/Mapa13.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa13/fondo3.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Asset/Mapa13/boton_salir_normal.png" type="Texture" id=7]
 [ext_resource path="res://Asset/Mapa13/boton_salir_presionado.png" type="Texture" id=8]
+[ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 376.429, 70.4795 )
@@ -39,39 +40,11 @@ __meta__ = {
 [node name="Personaje" parent="." instance=ExtResource( 3 )]
 position = Vector2( 41.2384, -23.2059 )
 
-[node name="Plataforma2" type="StaticBody2D" parent="."]
-position = Vector2( 947.61, 239.1 )
-
-[node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma2"]
-position = Vector2( 0, 11.6881 )
-shape = SubResource( 2 )
-
-[node name="Plataforma3" type="StaticBody2D" parent="."]
-position = Vector2( 733.328, 141.699 )
-
-[node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma3"]
-position = Vector2( 0, 11.6881 )
-shape = SubResource( 2 )
-
 [node name="Plataforma4" type="StaticBody2D" parent="."]
 position = Vector2( 483.981, 262.476 )
 
 [node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma4"]
 position = Vector2( 4.29596, 51.7834 )
-shape = SubResource( 2 )
-
-[node name="Plataforma5" type="StaticBody2D" parent="."]
-position = Vector2( 201.517, 161.179 )
-
-[node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma5"]
-position = Vector2( 0, 11.6881 )
-shape = SubResource( 2 )
-
-[node name="Plataforma6" type="StaticBody2D" parent="."]
-position = Vector2( 33.9874, 83.2582 )
-
-[node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma6"]
-position = Vector2( 0, 11.6881 )
 shape = SubResource( 2 )
 
 [node name="Mapa12" type="Area2D" parent="."]
@@ -136,6 +109,22 @@ rect_rotation = -5.36234
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
+
+[node name="Rama" parent="." instance=ExtResource( 9 )]
+position = Vector2( 81.6224, 106.109 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Rama2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 219.02, 191.813 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Rama3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 759.089, 170.047 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Rama4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 972.667, 269.354 )
+scale = Vector2( 0.5, 0.5 )
 [connection signal="body_entered" from="Mapa12" to="." method="_on_Mapa12_body_entered"]
 [connection signal="area_entered" from="Mapa14" to="." method="_on_Mapa14_area_entered"]
 [connection signal="body_entered" from="Pozo" to="." method="_on_Pozo_body_entered"]
