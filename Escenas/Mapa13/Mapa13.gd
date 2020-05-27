@@ -22,6 +22,9 @@ func _on_Mapa14_area_entered(area):
 	if area.name == "AreaPersonaje":
 		Global.posicion_personaje = Vector2(100,350)
 		get_tree().change_scene("res://Escenas/Mapa14/Mapa14.tscn")
+		Global.tronco = Vector2 (2000,375)
 	if area.name == "AreaTronco":
+		Global.posicion_personaje = Vector2(100,350)
 		Global.tronco = Vector2 (150,375)
+		get_tree().change_scene("res://Escenas/Mapa14/Mapa14.tscn")
 	pass # Replace with function body.

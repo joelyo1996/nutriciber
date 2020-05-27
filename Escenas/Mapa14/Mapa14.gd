@@ -9,9 +9,12 @@ func _ready():
 func _on_Mapa13_area_entered(area):
 	if area.name == "AreaPersonaje":
 		Global.posicion_personaje = Vector2(1000,350)
+		Global.tronco = Vector2 (2000,375)
 		get_tree().change_scene("res://Escenas/Mapa13/Mapa13.tscn")
 	if area.name == "AreaTronco":
 		Global.tronco = Vector2 (900,375)
+		Global.posicion_personaje = Vector2(1000,350)
+		get_tree().change_scene("res://Escenas/Mapa13/Mapa13.tscn")
 
 
 func _on_Arriba_area_entered(area):
