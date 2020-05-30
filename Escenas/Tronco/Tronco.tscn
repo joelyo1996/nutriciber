@@ -9,10 +9,10 @@ radius = 15.4609
 [sub_resource type="CapsuleShape2D" id=2]
 height = 59.7303
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=3]
 radius = 44.4771
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=4]
 radius = 13.2914
 
 [node name="Tronco" type="KinematicBody2D"]
@@ -39,14 +39,14 @@ shape = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaTronco"]
 position = Vector2( -3.08005, 21.0471 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="AreaTronco2" type="Area2D" parent="."]
 position = Vector2( 36.8829, 2.1515 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaTronco2"]
 position = Vector2( 6.78596, 1.09191 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 [connection signal="area_entered" from="AreaTronco" to="." method="_on_AreaTronco_area_entered"]
 [connection signal="body_entered" from="AreaTronco" to="." method="_on_AreaTronco_body_entered"]
 [connection signal="area_entered" from="AreaTronco2" to="." method="_on_AreaTronco2_area_entered"]

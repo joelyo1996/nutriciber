@@ -18,3 +18,9 @@ func _on_Mapa13_body_entered(body):
 	Global.posicion_personaje = Vector2(0,0)
 	get_tree().change_scene("res://Escenas/Mapa13/Mapa13.tscn")
 	pass 
+
+
+func _on_Mapa13Abajo_area_entered(area):
+	if area.name == "AreaPersonaje":
+		Global.posicion_personaje = Vector2(50,400)
+		get_tree().change_scene("res://Escenas/Mapa13/Mapa13.tscn")

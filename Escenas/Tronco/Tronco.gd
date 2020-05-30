@@ -10,6 +10,7 @@ func _physics_process(delta):
 func _on_AreaTronco_area_entered(area):
 	if area.name == "AreaPersonaje":
 		position.x = position.x + mover
+		Global.Energia = Global.Energia - 25
 
 
 func _on_AreaTronco_body_entered(body):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Escenas/Mapa12/Mapa12.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa12/Fondo2.png" type="Texture" id=2]
@@ -15,11 +15,8 @@ extents = Vector2( 112.948, 197.184 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 77.98, 226.565 )
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 48.6943, 13.244 )
-
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 10, 470.051 )
+extents = Vector2( 11.6014, 202.695 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 10, 531.974 )
@@ -46,13 +43,6 @@ position = Vector2( 417.197, 405.304 )
 position = Vector2( -80.1688, 116.913 )
 shape = SubResource( 2 )
 
-[node name="Plataforma6" type="StaticBody2D" parent="."]
-position = Vector2( 404.224, 172.121 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma6"]
-position = Vector2( 347.399, 253.868 )
-shape = SubResource( 3 )
-
 [node name="Personaje" parent="." instance=ExtResource( 3 )]
 position = Vector2( 41.295, 266.091 )
 
@@ -67,7 +57,14 @@ shape = SubResource( 4 )
 position = Vector2( 1111.92, 554.706 )
 
 [node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa13"]
-position = Vector2( -53.1725, -351.399 )
+position = Vector2( -51.0139, -390.251 )
+shape = SubResource( 4 )
+
+[node name="Mapa13Abajo" type="Area2D" parent="."]
+position = Vector2( 1116.24, 977.766 )
+
+[node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa13Abajo"]
+position = Vector2( -51.0139, -390.251 )
 shape = SubResource( 4 )
 
 [node name="pozo" type="Area2D" parent="."]
@@ -117,7 +114,7 @@ position = Vector2( 621.665, 310.249 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Rama2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 783.788, 194.781 )
+position = Vector2( 786.803, 218.898 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Rama3" parent="." instance=ExtResource( 8 )]
@@ -131,8 +128,13 @@ scale = Vector2( 0.5, 0.5 )
 [node name="Rama5" parent="." instance=ExtResource( 8 )]
 position = Vector2( 1010.06, 88.6426 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="Rama6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1008.71, 500.414 )
+scale = Vector2( 0.5, 0.5 )
 [connection signal="body_entered" from="Mapa11" to="." method="_on_Mapa11_body_entered"]
 [connection signal="body_entered" from="Mapa13" to="." method="_on_Mapa13_body_entered"]
+[connection signal="area_entered" from="Mapa13Abajo" to="." method="_on_Mapa13Abajo_area_entered"]
 [connection signal="body_entered" from="pozo" to="." method="_on_pozo_body_entered"]
 [connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]
 [connection signal="button_down" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_down"]
