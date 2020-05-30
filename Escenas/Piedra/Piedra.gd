@@ -1,18 +1,17 @@
-extends Node2D
+extends KinematicBody2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+var gravedad = 2
+var mover = 10
+var move = Vector2(0,-1)
+func _physics_process(delta):
+	position.y = gravedad + position.y
+	if is_on_floor():
+		move.y = 0
+	move_and_slide(move)
 
 
 func _on_AreaPiedra_area_entered(area):
 	if area.name == "AreaPersonaje":
-		queue_free()
+		position.x = position.x + mover
+		Global.Energia = Global.Energia - 50
+		

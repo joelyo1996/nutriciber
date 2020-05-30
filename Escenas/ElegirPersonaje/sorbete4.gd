@@ -43,7 +43,7 @@ func _on_Area2D2_area_entered(area):
 		fin = false
 		is_inside = false
 		position = posicion
-		Global.is_inside2 = false
+		Global.is_inside1 = false
 		
 	pass # Replace with function body.
 

@@ -1,19 +1,21 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Escenas/Mapa11/KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://Asset/Mapa11/personaje_corriendo.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Personaje/corriendo.png" type="Texture" id=2]
 [ext_resource path="res://Asset/Mapa11/salto.png" type="Texture" id=3]
 [ext_resource path="res://Asset/Personaje/corriendo.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Asset/Personaje/salto.ogg" type="AudioStream" id=5]
 [ext_resource path="res://Asset/Personaje/head_salto1.png" type="Texture" id=6]
 [ext_resource path="res://Asset/Personaje/head_salto2.png" type="Texture" id=7]
 [ext_resource path="res://Asset/Personaje/head_corriendo.png" type="Texture" id=8]
+[ext_resource path="res://Asset/Personaje/head_corriendo2.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 114.753, 213.302 )
+extents = Vector2( 114.753, 178.775 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "Salto_corto"
+length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("CortoSalto:frame")
 tracks/0/interp = 1
@@ -21,14 +23,14 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"times": PoolRealArray( 0, 0.4, 0.8, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3 ]
 }
 
 [sub_resource type="Animation" id=3]
-length = 0.5
+length = 0.8
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpritePersonaje:frame")
 tracks/0/interp = 1
@@ -36,10 +38,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.2, 0.4 ),
-"transitions": PoolRealArray( 1, 1, 1 ),
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 4, 5, 7 ]
+"values": [ 2, 3, 6, 7 ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -57,6 +59,22 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=5]
+resource_name = "corto_caminar"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CortoCaminar:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoSalto:frame")
 tracks/0/interp = 1
@@ -64,13 +82,13 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0.00784508, 0.3, 0.6, 0.9 ),
+"times": PoolRealArray( 0.00784508, 0.4, 0.8, 1.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpriteSalto:frame")
 tracks/0/interp = 1
@@ -84,7 +102,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoSalto:frame")
 tracks/0/interp = 1
@@ -98,8 +116,8 @@ tracks/0/keys = {
 "values": [ 0, 2, 3 ]
 }
 
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 123.182, 208.621 )
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 123.182, 175.157 )
 
 [node name="Personaje" type="KinematicBody2D"]
 position = Vector2( 177.6, 409.255 )
@@ -107,6 +125,7 @@ scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 1 )
 
 [node name="CollisionPersonaje" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 24.1226, 6.46179 )
 shape = SubResource( 1 )
 
@@ -115,13 +134,14 @@ visible = false
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 4
-frame = 1
+frame = 7
 
 [node name="AnimationPersonaje" type="AnimationPlayer" parent="."]
 anims/Salto_corto = SubResource( 2 )
 anims/caminar = SubResource( 3 )
 anims/caminar_largo = SubResource( 4 )
-anims/salto = SubResource( 5 )
+anims/corto_caminar = SubResource( 5 )
+anims/salto = SubResource( 6 )
 
 [node name="SpriteSalto" type="Sprite" parent="."]
 visible = false
@@ -130,14 +150,15 @@ vframes = 2
 hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/saltar = SubResource( 6 )
-anims/saltar_largo = SubResource( 7 )
+anims/saltar = SubResource( 7 )
+anims/saltar_largo = SubResource( 8 )
 
 [node name="AreaPersonaje" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPersonaje"]
+visible = false
 position = Vector2( 22.752, 2.84387 )
-shape = SubResource( 8 )
+shape = SubResource( 9 )
 
 [node name="AudioPersonaje" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
@@ -152,17 +173,26 @@ visible = false
 texture = ExtResource( 6 )
 vframes = 2
 hframes = 4
-frame = 3
+frame = 1
 
 [node name="CortoSalto" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 7 )
 vframes = 2
 hframes = 4
+frame = 3
 
 [node name="LargoCaminar" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 8 )
 vframes = 2
 hframes = 4
+
+[node name="CortoCaminar" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 9 )
+vframes = 2
+hframes = 4
+frame = 4
 [connection signal="area_entered" from="AreaPersonaje" to="." method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="AreaPersonaje" to="." method="_on_Area2D_body_entered"]
