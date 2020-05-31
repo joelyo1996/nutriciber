@@ -107,11 +107,11 @@ position = Vector2( -2.27209, -170.406 )
 shape = SubResource( 6 )
 
 [node name="Piedra" parent="." instance=ExtResource( 7 )]
-position = Vector2( 551.617, 324.806 )
+position = Vector2( 550.617, 283.806 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Piedra2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 645.956, 288.353 )
+position = Vector2( 642.956, 255.353 )
 scale = Vector2( 0.5, 1 )
 
 [node name="UI" parent="." instance=ExtResource( 8 )]

@@ -316,9 +316,6 @@ position = Vector2( 220.676, 313.764 )
 scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 15 )
 script = ExtResource( 16 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Area2D" type="Area2D" parent="Leche"]
 

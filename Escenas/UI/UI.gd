@@ -17,5 +17,6 @@ func _on_BotonReintentar_pressed():
 	$BotonReintentar.disabled = true
 	$Reintentar.visible = false
 	$BotonReintentar.visible = false
+	Global.fin = false
 	get_tree().change_scene("res://Escenas/ElegirPersonaje/ElegirPersonaje.tscn")
 	pass 

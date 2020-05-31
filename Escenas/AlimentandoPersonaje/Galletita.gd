@@ -32,6 +32,7 @@ func _on_Area2D2_area_entered(area):
 			Global.pos2 = false
 			Global.pos1 = false
 			Global.pos4 = true
+			Global.fin = true
 		if Global.pos2 == true:
 			position = Global.posicion2
 			Global.pos3 = true
@@ -44,9 +45,8 @@ func _on_Area2D2_area_entered(area):
 			Global.pos1 = false
 	pass 
 
-
 func _on_Area2D_input_event(viewport, event, shape_idx):
-	if Global.is_inside2  == true:
+	if Global.fin == false:
 		if fin == true:
 			if event.is_action_pressed("left_click"):
 				is_inside = true

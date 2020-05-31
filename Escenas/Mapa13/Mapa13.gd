@@ -4,7 +4,7 @@ var posicionPersonaje = Vector2(100,100)
 
 func _ready():
 	$Personaje.position = Global.posicion_personaje 
-	$Tronco.position = Global.tronco
+	$Tronco.position = Vector2(500,250)
 
 
 func _on_Pozo_body_entered(body):
@@ -34,4 +34,11 @@ func _on_Mapa12Abajo_area_entered(area):
 	if area.name == "AreaPersonaje":
 		Global.posicion_personaje = Vector2(1000,350)
 		get_tree().change_scene("res://Escenas/Mapa12/Mapa12.tscn")
-	pass # Replace with function body.
+	pass 
+
+
+func _on_Mapa12Medio_area_entered(area):
+	if area.name == "AreaPersonaje":
+		Global.posicion_personaje = Vector2(1000,250)
+		get_tree().change_scene("res://Escenas/Mapa12/Mapa12.tscn")
+	pass 
