@@ -39,12 +39,24 @@ func _on_Area_pocicion_area_entered(area):
 
 
 func _on_Area2D2_area_entered(area):
-	if area.name == "2":
-		visible = false
+	if area.name == "1":
 		fin = false
 		is_inside = false
-		Global.is_inside1 = false
-		position = posicion
+		Global.pos1 = true
+		if Global.pos3 == true:
+			position = Global.posicion3
+			Global.pos2 = false
+			Global.pos1 = false
+		if Global.pos2 == true:
+			position = Global.posicion2
+			Global.pos3 = true
+			Global.pos2 = false
+			Global.pos1 = false
+		if Global.pos1 == true:
+			position = Global.posicion1
+			Global.pos2 = true
+			Global.pos3 = false
+			Global.pos1 = false
 		
 	pass # Replace with function body.
 
