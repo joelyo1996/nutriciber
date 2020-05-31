@@ -74,7 +74,7 @@ position = Vector2( 25.9086, 25.9086 )
 shape = SubResource( 5 )
 
 [node name="Frutilla" parent="." instance=ExtResource( 4 )]
-position = Vector2( 357.947, 81.4601 )
+position = Vector2( 346.897, 126.886 )
 
 [node name="UI" parent="." instance=ExtResource( 5 )]
 
@@ -110,16 +110,8 @@ texture_pressed = ExtResource( 7 )
 [node name="Tronco" parent="." instance=ExtResource( 8 )]
 position = Vector2( 538.457, 350.026 )
 
-[node name="Rama" parent="." instance=ExtResource( 9 )]
-position = Vector2( 967.718, 120.198 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Rama2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 792.766, 124.863 )
-scale = Vector2( 0.5, 0.5 )
-
 [node name="Rama3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 384.543, 200.676 )
+position = Vector2( 372.266, 230.142 )
 scale = Vector2( 0.5, 0.5 )
 [connection signal="body_entered" from="Mapa12" to="." method="_on_Mapa12_body_entered"]
 [connection signal="body_entered" from="Mapa13" to="." method="_on_Mapa13_body_entered"]

@@ -15,10 +15,10 @@ extents = Vector2( 112.948, 197.184 )
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 77.98, 226.565 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 11.6014, 202.695 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 531.974 )
 
 [node name="Mapa12" type="Node2D"]
@@ -51,21 +51,21 @@ position = Vector2( -7.4025, 323.859 )
 
 [node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa11"]
 position = Vector2( -28.3932, -10.0211 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="Mapa13" type="Area2D" parent="."]
 position = Vector2( 1111.92, 554.706 )
 
 [node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa13"]
 position = Vector2( -51.0139, -390.251 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="Mapa13Abajo" type="Area2D" parent="."]
 position = Vector2( 1116.24, 977.766 )
 
 [node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa13Abajo"]
 position = Vector2( -51.0139, -390.251 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="pozo" type="Area2D" parent="."]
 position = Vector2( 529.631, 713.619 )
@@ -73,7 +73,7 @@ rotation = 1.50111
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pozo"]
 position = Vector2( 140.686, -108.105 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="UI" parent="." instance=ExtResource( 4 )]
 

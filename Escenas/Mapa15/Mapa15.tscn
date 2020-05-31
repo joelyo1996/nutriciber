@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Escenas/Mapa15/Mapa15.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa15/fondo5.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=5]
 [ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=6]
+[ext_resource path="res://Asset/Mapa15/xylon.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 489.285, 40.2864 )
@@ -88,6 +89,11 @@ rect_rotation = 0.470204
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
+
+[node name="Xylon" type="Sprite" parent="."]
+position = Vector2( 917.419, 336.249 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
 [connection signal="area_entered" from="Arriba" to="." method="_on_Arriba_area_entered"]
 [connection signal="area_entered" from="Abajo" to="." method="_on_Abajo_area_entered"]
 [connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]

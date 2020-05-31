@@ -2,7 +2,7 @@ extends Node2D
 
 func _ready():
 	$Personaje.position = Global.posicion_personaje 
-	$Tronco.position = Global.tronco
+	$Tronco.position = Vector2 (600,500)
 
 
 

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Escenas/ElegirPersonaje/ElegirPersonaje.gd" type="Script" id=1]
 [ext_resource path="res://Asset/fondo_nubes1.png" type="Texture" id=2]
-[ext_resource path="res://Asset/SegundoMenu/cuerpo.png" type="Texture" id=3]
+[ext_resource path="res://Asset/SegundoMenu/idle_menu_custom.png" type="Texture" id=3]
 [ext_resource path="res://Asset/PersonalisarPersonaje/head_idle1.png" type="Texture" id=4]
 [ext_resource path="res://Escenas/ElegirPersonaje/sorbete1.gd" type="Script" id=5]
 [ext_resource path="res://Asset/cara2.png" type="Texture" id=6]
@@ -76,8 +76,7 @@ texture = ExtResource( 2 )
 
 [node name="bruno" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.215686 )
-position = Vector2( 519.807, 294.987 )
-scale = Vector2( 0.7, 0.7 )
+position = Vector2( 965.746, 456.995 )
 texture = ExtResource( 3 )
 
 [node name="1" type="Area2D" parent="."]

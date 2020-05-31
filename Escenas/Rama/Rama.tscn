@@ -3,7 +3,7 @@
 [ext_resource path="res://Asset/Ramas/rama_larga.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 96.8498, 6.18188 )
+extents = Vector2( 85.118, 4.37637 )
 
 [node name="Rama" type="Node2D"]
 

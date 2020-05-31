@@ -27,7 +27,6 @@ func _on_Creditos_pressed():
 	reproducir_sonido_botones()
 	salir()
 	yield(get_tree().create_timer(2),"timeout")
-	get_tree().change_scene("res://escenas/creditos/Creditos.tscn")
 	pass
 
 func _on_Salir_pressed():
