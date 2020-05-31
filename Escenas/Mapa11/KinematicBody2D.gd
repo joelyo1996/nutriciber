@@ -27,17 +27,10 @@ func _physics_process(delta):
 			$CortoSalto.visible = true
 			$AnimationPersonaje.play("Salto_corto")
 			saltando = true
-			if Global.Energia > 4800:
-				move.y = -salto * 1.8
-			if Global.Energia < 4800 && Global.Energia > 2400:
-				move.y = -salto * 1.8
-			if Global.Energia < 2400 && Global.Energia > 1200:
-				move.y = -salto * 1.8
-			if Global.Energia < 1200 && Global.Energia > 0:
-				move.y = -salto * 1.8
+			_salto()
 			Global.Energia = Global.Energia - 10
 			yield(get_tree().create_timer(0.5),"timeout")
-			move.y = salto
+			move.y = 400
 			salto = 200
 			yield(get_tree().create_timer(1),"timeout")
 			saltando = false
@@ -51,16 +44,9 @@ func _physics_process(delta):
 			$SpriteSalto.visible = false
 			$AnimationPersonaje.play("salto")
 			saltando = true
-			if Global.Energia > 4800:
-				move.y = -salto * 1.8
-			if Global.Energia < 4800 && Global.Energia > 2400:
-				move.y = -salto * 1.8
-			if Global.Energia < 2400 && Global.Energia > 1200:
-				move.y = -salto * 1.8
-			if Global.Energia < 1200 && Global.Energia > 0:
-				move.y = -salto * 1.8
+			_salto()
 			yield(get_tree().create_timer(0.5),"timeout")
-			move.y = +salto
+			move.y = 400
 			salto = 200
 			yield(get_tree().create_timer(1),"timeout")
 			saltando = false
@@ -106,7 +92,10 @@ func _physics_process(delta):
 	if Input.is_action_just_released("ui_right") or Input.is_action_just_released("ui_left"):
 		move.x = 0
 		$AudioPersonaje.stop()
-		
+	
+	if !is_on_floor():
+		if saltando == false:
+			move.y = 400
 	if is_on_floor():
 		move.y = 0
 		$SpritePersonaje.visible = false
@@ -138,17 +127,10 @@ func _on_TextureButton_pressed():
 			$CortoSalto.visible = true
 			$AnimationPersonaje.play("Salto_corto")
 			saltando = true
-			if Global.Energia > 4800:
-				move.y = -salto * 1.8
-			if Global.Energia < 4800 && Global.Energia > 2400:
-				move.y = -salto * 1.8
-			if Global.Energia < 2400 && Global.Energia > 1200:
-				move.y = -salto * 1.8
-			if Global.Energia < 1200 && Global.Energia > 0:
-				move.y = -salto * 1.8
+			_salto()
 			Global.Energia = Global.Energia - 10
 			yield(get_tree().create_timer(0.5),"timeout")
-			move.y = salto
+			move.y = 400
 			salto = 200
 			yield(get_tree().create_timer(1),"timeout")
 			saltando = false
@@ -163,16 +145,9 @@ func _on_TextureButton_pressed():
 			$SpriteSalto.visible = false
 			$AnimationPersonaje.play("salto")
 			saltando = true
-			if Global.Energia > 4800:
-				move.y = -salto * 1.8
-			if Global.Energia < 4800 && Global.Energia > 2400:
-				move.y = -salto * 1.8
-			if Global.Energia < 2400 && Global.Energia > 1200:
-				move.y = -salto * 1.8
-			if Global.Energia < 1200 && Global.Energia > 0:
-				move.y = -salto * 1.8
+			_salto()
 			yield(get_tree().create_timer(0.5),"timeout")
-			move.y = +salto
+			move.y = 400
 			salto = 200
 			yield(get_tree().create_timer(1),"timeout")
 			saltando = false
@@ -190,16 +165,9 @@ func _on_TextureButton_pressed():
 			$CortoSalto.visible = true
 			$AnimationPersonaje.play("Salto_corto")
 			saltando = true
-			if Global.Energia > 4800:
-				move.y = -salto * 1.8
-			if Global.Energia < 4800 && Global.Energia > 2400:
-				move.y = -salto * 1.8
-			if Global.Energia < 2400 && Global.Energia > 1200:
-				move.y = -salto * 1.8
-			if Global.Energia < 1200 && Global.Energia > 0:
-				move.y = -salto * 1.8
+			_salto()
 			yield(get_tree().create_timer(0.5),"timeout")
-			move.y = salto
+			move.y = 400
 			salto = 200
 			yield(get_tree().create_timer(1),"timeout")
 			saltando = false
@@ -214,16 +182,9 @@ func _on_TextureButton_pressed():
 			$LargoCaminar.visible = false
 			$AnimationPersonaje.play("salto")
 			saltando = true
-			if Global.Energia > 4800:
-				move.y = -salto * 1.8
-			if Global.Energia < 4800 && Global.Energia > 2400:
-				move.y = -salto * 1.8
-			if Global.Energia < 2400 && Global.Energia > 1200:
-				move.y = -salto * 1.8
-			if Global.Energia < 1200 && Global.Energia > 0:
-				move.y = -salto * 1.8
+			_salto()
 			yield(get_tree().create_timer(0.5),"timeout")
-			move.y = +salto
+			move.y = +400
 			salto = 200
 			yield(get_tree().create_timer(1),"timeout")
 			saltando = false
@@ -289,3 +250,12 @@ func _on_Derecha_button_up():
 		$AudioPersonaje.stop()
 	pass 
 	
+func _salto():
+	if Global.Energia > 4800:
+		move.y = -salto * 1.8
+	if Global.Energia < 4800 && Global.Energia > 2400:
+		move.y = -salto * 1.4
+	if Global.Energia < 2400 && Global.Energia > 1200:
+		move.y = -salto * 1.2
+	if Global.Energia < 1200 && Global.Energia > 0:
+		move.y = -salto * 1

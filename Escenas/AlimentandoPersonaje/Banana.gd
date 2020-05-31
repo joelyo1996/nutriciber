@@ -24,6 +24,7 @@ func _on_Area2D_mouse_exited():
 
 func _on_Area_pocicion_area_entered(area):
 	if area.name == "1":
+		Global.Energia = Global.Energia + 3200
 		fin = false
 		is_inside = false
 		Global.pos1 = true

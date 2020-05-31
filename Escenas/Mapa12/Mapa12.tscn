@@ -10,7 +10,7 @@
 [ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 112.948, 197.184 )
+extents = Vector2( 87.0023, 197.184 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 77.98, 226.565 )
@@ -33,14 +33,14 @@ texture = ExtResource( 2 )
 position = Vector2( -44.505, 390.499 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma"]
-position = Vector2( 139.749, 108.923 )
+position = Vector2( 125.782, 126.918 )
 shape = SubResource( 1 )
 
 [node name="Plataforma2" type="StaticBody2D" parent="."]
 position = Vector2( 417.197, 405.304 )
 
 [node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma2"]
-position = Vector2( -80.1688, 116.913 )
+position = Vector2( -31.1953, 140.039 )
 shape = SubResource( 2 )
 
 [node name="Personaje" parent="." instance=ExtResource( 3 )]
@@ -88,10 +88,10 @@ texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
-margin_left = 155.452
-margin_top = 584.796
-margin_right = 459.452
-margin_bottom = 921.796
+margin_left = 163.803
+margin_top = 588.136
+margin_right = 467.803
+margin_bottom = 925.136
 rect_rotation = -179.269
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 5 )

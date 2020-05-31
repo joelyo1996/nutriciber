@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Escenas/Mapa11/Mapa11.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa11/fondo1.png" type="Texture" id=2]
@@ -11,18 +11,20 @@
 [ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 259.337, 136.763 )
+extents = Vector2( 221.568, 136.763 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 266.037, 91.9964 )
+extents = Vector2( 229.4, 91.9964 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 131.577, 185.535 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 10, 295.429 )
 
 [sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 10, 295.429 )
+
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 233.487, 12.449 )
 
 [node name="Mapa11" type="Node2D"]
@@ -47,15 +49,21 @@ shape = SubResource( 1 )
 position = Vector2( 515.448, 527.397 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plataforma2"]
-position = Vector2( 119.688, -52.9841 )
+position = Vector2( 125.827, -39.479 )
 shape = SubResource( 2 )
 
 [node name="plataforma3" type="StaticBody2D" parent="."]
 position = Vector2( 838.083, 522.853 )
 
 [node name="CollisionPlataforma" type="CollisionShape2D" parent="plataforma3"]
-position = Vector2( 72.9871, -85.6805 )
+position = Vector2( 75.4426, -75.8586 )
 shape = SubResource( 3 )
+
+[node name="plataforma4" type="StaticBody2D" parent="."]
+position = Vector2( 422.811, 385.384 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plataforma4"]
+shape = SubResource( 4 )
 
 [node name="Mapa12" type="Area2D" parent="."]
 editor/display_folded = true
@@ -63,7 +71,7 @@ position = Vector2( 1004.8, 288.351 )
 
 [node name="CollisionMapa12" type="CollisionShape2D" parent="Mapa12"]
 position = Vector2( 51.8174, 1.85065 )
-shape = SubResource( 4 )
+shape = SubResource( 5 )
 
 [node name="Mapa13" type="Area2D" parent="."]
 editor/display_folded = true
@@ -71,7 +79,7 @@ position = Vector2( 315.637, 691.097 )
 
 [node name="CollisionMapa13" type="CollisionShape2D" parent="Mapa13"]
 position = Vector2( 25.9086, 25.9086 )
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Frutilla" parent="." instance=ExtResource( 4 )]
 position = Vector2( 346.897, 126.886 )

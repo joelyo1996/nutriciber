@@ -8,6 +8,9 @@ func _physics_process(delta):
 		$Avanzar.disabled = false
 		Global.is_inside1 = true
 		Global.pos4 = false
+		Global.pos1 = false
+		Global.pos2 = false
+		Global.pos3 = false
 func _on_Avanzar_pressed():
 	Global.is_inside1 = true
 	Global.is_inside2 = true

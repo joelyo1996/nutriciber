@@ -40,6 +40,7 @@ func _on_Area_pocicion_area_entered(area):
 
 func _on_Area2D2_area_entered(area):
 	if area.name == "1":
+		Global.Energia = Global.Energia + 2800
 		fin = false
 		is_inside = false
 		Global.pos1 = true
