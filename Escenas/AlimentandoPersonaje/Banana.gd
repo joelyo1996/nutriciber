@@ -5,7 +5,7 @@ var is_inside = false
 var con  = 0
 var mauseIn = false
 var a = true
-var posicion = Vector2(518,60)
+
 
 func _process(delta):
 	if a == true :
@@ -22,29 +22,32 @@ func _on_Area2D_mouse_entered():
 func _on_Area2D_mouse_exited():
 	mauseIn = false
 
-
-func _on_Area2D_area_entered(area):
-
-	pass # Replace with function body.
-
-
 func _on_Area_pocicion_area_entered(area):
 	if area.name == "1":
-		visible = false
+		Global.Energia = Global.Energia + 3200
 		fin = false
 		is_inside = false
-		position = posicion
-		Global.is_inside1 = false
-	pass # Replace with function body.
-
-
-func _on_Area2D2_area_entered(area):
-	
-	pass # Replace with function body.
-
+		Global.pos1 = true
+		if Global.pos3 == true:
+			position = Global.posicion3
+			Global.pos2 = false
+			Global.pos1 = false
+			Global.pos4 = true
+			Global.fin = true
+		if Global.pos2 == true:
+			position = Global.posicion2
+			Global.pos3 = true
+			Global.pos2 = false
+			Global.pos1 = false
+		if Global.pos1 == true:
+			position = Global.posicion1
+			Global.pos2 = true
+			Global.pos3 = false
+			Global.pos1 = false
+	pass 
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
-	if Global.is_inside1  == true:
+	if Global.fin == false:
 		if fin == true:
 			if event.is_action_pressed("left_click"):
 				is_inside = true

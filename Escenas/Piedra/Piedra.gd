@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var gravedad = 2
+var gravedad = 10
 var mover = 10
 var move = Vector2(0,-1)
 func _physics_process(delta):

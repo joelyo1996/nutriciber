@@ -10,13 +10,13 @@
 [ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 112.948, 197.184 )
+extents = Vector2( 87.0023, 197.184 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 77.98, 226.565 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 11.6014, 202.695 )
+extents = Vector2( 11.6014, 198.952 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 10, 531.974 )
@@ -33,14 +33,14 @@ texture = ExtResource( 2 )
 position = Vector2( -44.505, 390.499 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma"]
-position = Vector2( 139.749, 108.923 )
+position = Vector2( 125.782, 126.918 )
 shape = SubResource( 1 )
 
 [node name="Plataforma2" type="StaticBody2D" parent="."]
 position = Vector2( 417.197, 405.304 )
 
 [node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma2"]
-position = Vector2( -80.1688, 116.913 )
+position = Vector2( -31.1953, 140.039 )
 shape = SubResource( 2 )
 
 [node name="Personaje" parent="." instance=ExtResource( 3 )]
@@ -50,21 +50,28 @@ position = Vector2( 41.295, 266.091 )
 position = Vector2( -7.4025, 323.859 )
 
 [node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa11"]
-position = Vector2( -28.3932, -10.0211 )
+position = Vector2( -15.0317, -146.976 )
 shape = SubResource( 3 )
 
 [node name="Mapa13" type="Area2D" parent="."]
 position = Vector2( 1111.92, 554.706 )
 
 [node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa13"]
-position = Vector2( -51.0139, -390.251 )
+position = Vector2( -51.0139, -675.852 )
 shape = SubResource( 3 )
 
 [node name="Mapa13Abajo" type="Area2D" parent="."]
 position = Vector2( 1116.24, 977.766 )
 
 [node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa13Abajo"]
-position = Vector2( -51.0139, -390.251 )
+position = Vector2( -64.3754, -467.079 )
+shape = SubResource( 3 )
+
+[node name="Mapa13Medio" type="Area2D" parent="."]
+position = Vector2( 1107.89, 678.803 )
+
+[node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa13Medio"]
+position = Vector2( -64.3754, -467.079 )
 shape = SubResource( 3 )
 
 [node name="pozo" type="Area2D" parent="."]
@@ -84,16 +91,18 @@ margin_right = 400.232
 margin_bottom = 812.609
 rect_rotation = -92.4648
 rect_scale = Vector2( 0.5, 0.5 )
+toggle_mode = true
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
-margin_left = 155.452
-margin_top = 584.796
-margin_right = 459.452
-margin_bottom = 921.796
+margin_left = 163.803
+margin_top = 588.136
+margin_right = 467.803
+margin_bottom = 925.136
 rect_rotation = -179.269
 rect_scale = Vector2( 0.5, 0.5 )
+toggle_mode = true
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 
@@ -103,11 +112,12 @@ margin_top = 420.091
 margin_right = 489.062
 margin_bottom = 757.091
 rect_scale = Vector2( 0.5, 0.5 )
+toggle_mode = true
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 
 [node name="Frutilla" parent="." instance=ExtResource( 7 )]
-position = Vector2( 960.357, 185.562 )
+position = Vector2( 972.048, -1.49843 )
 
 [node name="Rama" parent="." instance=ExtResource( 8 )]
 position = Vector2( 621.665, 310.249 )
@@ -122,7 +132,7 @@ position = Vector2( 784.954, 443.213 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Rama4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 992.564, 299.752 )
+position = Vector2( 1021.2, 299.752 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Rama5" parent="." instance=ExtResource( 8 )]
@@ -135,6 +145,7 @@ scale = Vector2( 0.5, 0.5 )
 [connection signal="body_entered" from="Mapa11" to="." method="_on_Mapa11_body_entered"]
 [connection signal="body_entered" from="Mapa13" to="." method="_on_Mapa13_body_entered"]
 [connection signal="area_entered" from="Mapa13Abajo" to="." method="_on_Mapa13Abajo_area_entered"]
+[connection signal="area_entered" from="Mapa13Medio" to="." method="_on_Mapa13Medio_area_entered"]
 [connection signal="body_entered" from="pozo" to="." method="_on_pozo_body_entered"]
 [connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]
 [connection signal="button_down" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_down"]

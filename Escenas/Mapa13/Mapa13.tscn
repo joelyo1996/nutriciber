@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Escenas/Mapa13/Mapa13.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa13/fondo3.png" type="Texture" id=2]
@@ -17,7 +17,13 @@ extents = Vector2( 376.429, 70.4795 )
 extents = Vector2( 63.8967, 9.26279 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 185.608, 10 )
+extents = Vector2( 59.4362, 64.4632 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 129.356, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 227.742, 10 )
 
 [node name="Mapa13" type="Node2D"]
 script = ExtResource( 1 )
@@ -41,7 +47,7 @@ __meta__ = {
 position = Vector2( 41.2384, -23.2059 )
 
 [node name="Plataforma4" type="StaticBody2D" parent="."]
-position = Vector2( 483.981, 262.476 )
+position = Vector2( 347.527, 362.436 )
 
 [node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma4"]
 position = Vector2( 4.29596, 51.7834 )
@@ -51,22 +57,34 @@ shape = SubResource( 2 )
 position = Vector2( -77.838, 77.731 )
 rotation = 1.5682
 
-[node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa12"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa12"]
+position = Vector2( -44.3937, -12.8087 )
 shape = SubResource( 3 )
 
 [node name="Mapa12Abajo" type="Area2D" parent="."]
 position = Vector2( -20.7178, 433.146 )
 rotation = 1.5682
 
-[node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa12Abajo"]
-shape = SubResource( 3 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa12Abajo"]
+position = Vector2( 27.0269, -20.5567 )
+rotation = -0.175003
+shape = SubResource( 4 )
+
+[node name="Mapa12Medio" type="Area2D" parent="."]
+position = Vector2( -27.0645, 203.079 )
+rotation = 1.5682
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa12Medio"]
+position = Vector2( 27.0269, -20.5567 )
+rotation = -0.175003
+shape = SubResource( 4 )
 
 [node name="Mapa14" type="Area2D" parent="."]
 position = Vector2( 1048.41, 223.93 )
 rotation = 1.5682
 
 [node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa14"]
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="Pozo" type="Area2D" parent="."]
 position = Vector2( 586.438, 673.826 )
@@ -74,7 +92,7 @@ rotation = -0.00922668
 
 [node name="CollisionMapa11" type="CollisionShape2D" parent="Pozo"]
 position = Vector2( -394.639, -72.9241 )
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="Frutilla" parent="." instance=ExtResource( 4 )]
 position = Vector2( 190.906, 79.8689 )
@@ -94,6 +112,7 @@ margin_right = 1125.52
 margin_bottom = 848.31
 rect_rotation = 268.407
 rect_scale = Vector2( 0.3, 0.3 )
+toggle_mode = true
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 
@@ -104,6 +123,7 @@ margin_right = 1168.1
 margin_bottom = 924.379
 rect_rotation = 177.492
 rect_scale = Vector2( 0.3, 0.3 )
+toggle_mode = true
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 
@@ -114,6 +134,7 @@ margin_right = 1182.56
 margin_bottom = 825.749
 rect_rotation = -5.36234
 rect_scale = Vector2( 0.3, 0.3 )
+toggle_mode = true
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
 
@@ -136,8 +157,13 @@ scale = Vector2( 0.5, 0.5 )
 [node name="Rama5" parent="." instance=ExtResource( 9 )]
 position = Vector2( 106.344, 447.061 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="Rama6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 98.4107, 324.887 )
+scale = Vector2( 0.5, 0.5 )
 [connection signal="body_entered" from="Mapa12" to="." method="_on_Mapa12_body_entered"]
 [connection signal="area_entered" from="Mapa12Abajo" to="." method="_on_Mapa12Abajo_area_entered"]
+[connection signal="area_entered" from="Mapa12Medio" to="." method="_on_Mapa12Medio_area_entered"]
 [connection signal="area_entered" from="Mapa14" to="." method="_on_Mapa14_area_entered"]
 [connection signal="body_entered" from="Pozo" to="." method="_on_Pozo_body_entered"]
 [connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]

@@ -1,10 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Escenas/UI/UI.gd" type="Script" id=1]
 [ext_resource path="res://Asset/UI/Fuente.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Asset/UI/texto1.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Asset/menu/boton_play_normal.png" type="Texture" id=4]
+[ext_resource path="res://Asset/menu/boton_play_presionado.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 3 )
 
 [node name="UI" type="Node2D"]
 script = ExtResource( 1 )
@@ -16,3 +23,23 @@ margin_top = 13.5661
 margin_right = 58.0881
 margin_bottom = 29.5661
 custom_fonts/font = SubResource( 1 )
+
+[node name="Reintentar" type="Label" parent="."]
+visible = false
+margin_left = 288.942
+margin_top = 187.061
+margin_right = 760.942
+margin_bottom = 234.061
+custom_fonts/font = SubResource( 2 )
+text = "inténtalo otra vez."
+
+[node name="BotonReintentar" type="TextureButton" parent="."]
+visible = false
+margin_left = 385.813
+margin_top = 340.718
+margin_right = 861.813
+margin_bottom = 754.718
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+[connection signal="pressed" from="BotonReintentar" to="." method="_on_BotonReintentar_pressed"]

@@ -107,11 +107,11 @@ position = Vector2( -2.27209, -170.406 )
 shape = SubResource( 6 )
 
 [node name="Piedra" parent="." instance=ExtResource( 7 )]
-position = Vector2( 551.617, 324.806 )
+position = Vector2( 550.617, 283.806 )
 scale = Vector2( 0.5, 0.5 )
 
 [node name="Piedra2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 645.956, 288.353 )
+position = Vector2( 642.956, 255.353 )
 scale = Vector2( 0.5, 1 )
 
 [node name="UI" parent="." instance=ExtResource( 8 )]
@@ -123,6 +123,7 @@ margin_right = 370.904
 margin_bottom = 840.272
 rect_rotation = -90.2057
 rect_scale = Vector2( 0.3, 0.3 )
+toggle_mode = true
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
 
@@ -133,6 +134,7 @@ margin_right = 406.404
 margin_bottom = 930.104
 rect_rotation = 179.289
 rect_scale = Vector2( 0.3, 0.3 )
+toggle_mode = true
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
 
@@ -143,6 +145,7 @@ margin_right = 467.64
 margin_bottom = 832.954
 rect_rotation = 358.708
 rect_scale = Vector2( 0.3, 0.3 )
+toggle_mode = true
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
 [connection signal="area_entered" from="Mapa13" to="." method="_on_Mapa13_area_entered"]
