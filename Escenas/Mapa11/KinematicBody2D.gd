@@ -212,12 +212,11 @@ func _on_Izquierda_button_down():
 			$SpritePersonaje.visible = false
 			$AnimationPersonaje.play("caminar_largo")
 		$AudioPersonaje.play()
-		move.x = -spee
+		move.x = -100
 		$LargoCaminar.flip_h = true
 		$LargoSalto.flip_h = true
 		Global.Energia = Global.Energia - 1
 		yield(get_tree().create_timer(0.5),"timeout")
-		move.x = 0
 		$AudioPersonaje.stop()
 	pass # Replace with function body.
 
@@ -241,12 +240,12 @@ func _on_Derecha_button_up():
 			$SpritePersonaje.visible = false
 			$AnimationPersonaje.play("caminar_largo")
 		$AudioPersonaje.play()
-		move.x = spee
+		move.x = 100
 		$LargoCaminar.flip_h = false
 		$LargoSalto.flip_h = false
 		Global.Energia = Global.Energia - 1
 		yield(get_tree().create_timer(0.5),"timeout")
-		move.x = 0
+		
 		$AudioPersonaje.stop()
 	pass 
 	
@@ -259,3 +258,8 @@ func _salto():
 		move.y = -salto * 1.2
 	if Global.Energia < 1200 && Global.Energia > 0:
 		move.y = -salto * 1
+
+
+func _on_Izquierda_toggled(button_pressed):
+	move.x = 0
+	pass # Replace with function body.

@@ -93,6 +93,7 @@ margin_right = 1103.77
 margin_bottom = 818.68
 rect_rotation = 270.491
 rect_scale = Vector2( 0.5, 0.5 )
+toggle_mode = true
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
 
@@ -103,6 +104,7 @@ margin_right = 1137.85
 margin_bottom = 927.74
 rect_rotation = -179.787
 rect_scale = Vector2( 0.5, 0.5 )
+toggle_mode = true
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
 
@@ -112,6 +114,7 @@ margin_top = 429.423
 margin_right = 1169.66
 margin_bottom = 766.422
 rect_scale = Vector2( 0.5, 0.5 )
+toggle_mode = true
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
 

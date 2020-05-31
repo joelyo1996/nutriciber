@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Escenas/SegundoMenu/SegundoMenu.gd" type="Script" id=1]
 [ext_resource path="res://Asset/SegundoMenu/fondo_nubes.png" type="Texture" id=2]
-[ext_resource path="res://Asset/SegundoMenu/cuerpo.png" type="Texture" id=3]
-[ext_resource path="res://Asset/SegundoMenu/cargar.png" type="Texture" id=4]
+[ext_resource path="res://Asset/PersonalisarPersonaje/ide.png" type="Texture" id=3]
+[ext_resource path="res://Asset/AlimentandoPersonaje/idle.png" type="Texture" id=4]
 [ext_resource path="res://Asset/SegundoMenu/Fuente1.ttf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=1]
@@ -23,16 +23,17 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 2 )
 
 [node name="NuevaPartida" type="TextureButton" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 8.20215
+margin_top = -51.2636
+margin_right = 1288.2
+margin_bottom = 987.736
 texture_normal = ExtResource( 3 )
 
 [node name="CargarPartida" type="TextureButton" parent="."]
-margin_left = 574.154
-margin_top = 8.20221
-margin_right = 1024.15
-margin_bottom = 478.202
+margin_left = 563.901
+margin_top = -38.9603
+margin_right = 1843.9
+margin_bottom = 1000.04
 texture_normal = ExtResource( 4 )
 
 [node name="LabelNuevaPartida" type="Label" parent="."]

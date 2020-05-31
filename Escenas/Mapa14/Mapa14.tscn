@@ -123,6 +123,7 @@ margin_right = 370.904
 margin_bottom = 840.272
 rect_rotation = -90.2057
 rect_scale = Vector2( 0.3, 0.3 )
+toggle_mode = true
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
 
@@ -133,6 +134,7 @@ margin_right = 406.404
 margin_bottom = 930.104
 rect_rotation = 179.289
 rect_scale = Vector2( 0.3, 0.3 )
+toggle_mode = true
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
 
@@ -143,6 +145,7 @@ margin_right = 467.64
 margin_bottom = 832.954
 rect_rotation = 358.708
 rect_scale = Vector2( 0.3, 0.3 )
+toggle_mode = true
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
 [connection signal="area_entered" from="Mapa13" to="." method="_on_Mapa13_area_entered"]
