@@ -3,14 +3,6 @@ extends Node2D
 func _ready():
 	$Avanzar.disabled 
 func _physics_process(delta):
-	if Global.peloCorto:
-		$bruno.visible = false
-		$PeloLargo.visible = false
-		$PeloCorto.visible = true
-	if Global.largoSalto:
-		$bruno.visible = false
-		$PeloCorto.visible = false
-		$PeloLargo.visible = true
 	if Global.is_inside1 == false &&  Global.is_inside2 == false &&  Global.is_inside3 == false:
 		$AnimationPlayer.play("boton")
 		$Avanzar.disabled = false

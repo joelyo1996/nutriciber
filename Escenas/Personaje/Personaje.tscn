@@ -187,6 +187,7 @@ visible = false
 texture = ExtResource( 8 )
 vframes = 2
 hframes = 4
+frame = 4
 
 [node name="CortoCaminar" type="Sprite" parent="."]
 visible = false

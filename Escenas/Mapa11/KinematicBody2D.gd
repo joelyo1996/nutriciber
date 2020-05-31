@@ -28,13 +28,13 @@ func _physics_process(delta):
 			$AnimationPersonaje.play("Salto_corto")
 			saltando = true
 			if Global.Energia > 4800:
-				move.y = -salto * 1.5
+				move.y = -salto * 1.8
 			if Global.Energia < 4800 && Global.Energia > 2400:
-				move.y = -salto * 1
+				move.y = -salto * 1.8
 			if Global.Energia < 2400 && Global.Energia > 1200:
-				move.y = -salto * 0.8
+				move.y = -salto * 1.8
 			if Global.Energia < 1200 && Global.Energia > 0:
-				move.y = -salto * 0.5
+				move.y = -salto * 1.8
 			Global.Energia = Global.Energia - 10
 			yield(get_tree().create_timer(0.5),"timeout")
 			move.y = salto
@@ -52,14 +52,13 @@ func _physics_process(delta):
 			$AnimationPersonaje.play("salto")
 			saltando = true
 			if Global.Energia > 4800:
-				move.y = -salto * 1.5
+				move.y = -salto * 1.8
 			if Global.Energia < 4800 && Global.Energia > 2400:
-				move.y = -salto * 1
+				move.y = -salto * 1.8
 			if Global.Energia < 2400 && Global.Energia > 1200:
-				move.y = -salto * 0.8
+				move.y = -salto * 1.8
 			if Global.Energia < 1200 && Global.Energia > 0:
-				move.y = -salto * 0.5
-			Global.Energia = Global.Energia - 10
+				move.y = -salto * 1.8
 			yield(get_tree().create_timer(0.5),"timeout")
 			move.y = +salto
 			salto = 200
@@ -121,7 +120,7 @@ func _physics_process(delta):
 		
 func _on_Area2D_area_entered(area):
 	if area.name == "AreaFrutilla":
-		Global.Energia = Global.Energia + 1000
+		Global.Energia = Global.Energia + 500
 		
 	pass 
 
@@ -140,13 +139,13 @@ func _on_TextureButton_pressed():
 			$AnimationPersonaje.play("Salto_corto")
 			saltando = true
 			if Global.Energia > 4800:
-				move.y = -salto * 1.5
+				move.y = -salto * 1.8
 			if Global.Energia < 4800 && Global.Energia > 2400:
-				move.y = -salto * 1
+				move.y = -salto * 1.8
 			if Global.Energia < 2400 && Global.Energia > 1200:
-				move.y = -salto * 0.8
+				move.y = -salto * 1.8
 			if Global.Energia < 1200 && Global.Energia > 0:
-				move.y = -salto * 0.5
+				move.y = -salto * 1.8
 			Global.Energia = Global.Energia - 10
 			yield(get_tree().create_timer(0.5),"timeout")
 			move.y = salto
@@ -165,14 +164,13 @@ func _on_TextureButton_pressed():
 			$AnimationPersonaje.play("salto")
 			saltando = true
 			if Global.Energia > 4800:
-				move.y = -salto * 1.5
+				move.y = -salto * 1.8
 			if Global.Energia < 4800 && Global.Energia > 2400:
-				move.y = -salto * 1
+				move.y = -salto * 1.8
 			if Global.Energia < 2400 && Global.Energia > 1200:
-				move.y = -salto * 0.8
+				move.y = -salto * 1.8
 			if Global.Energia < 1200 && Global.Energia > 0:
-				move.y = -salto * 0.5
-			Global.Energia = Global.Energia - 10
+				move.y = -salto * 1.8
 			yield(get_tree().create_timer(0.5),"timeout")
 			move.y = +salto
 			salto = 200
@@ -193,14 +191,13 @@ func _on_TextureButton_pressed():
 			$AnimationPersonaje.play("Salto_corto")
 			saltando = true
 			if Global.Energia > 4800:
-				move.y = -salto * 1.5
+				move.y = -salto * 1.8
 			if Global.Energia < 4800 && Global.Energia > 2400:
-				move.y = -salto * 1
+				move.y = -salto * 1.8
 			if Global.Energia < 2400 && Global.Energia > 1200:
-				move.y = -salto * 0.8
+				move.y = -salto * 1.8
 			if Global.Energia < 1200 && Global.Energia > 0:
-				move.y = -salto * 0.5
-			Global.Energia = Global.Energia - 10
+				move.y = -salto * 1.8
 			yield(get_tree().create_timer(0.5),"timeout")
 			move.y = salto
 			salto = 200
@@ -218,14 +215,13 @@ func _on_TextureButton_pressed():
 			$AnimationPersonaje.play("salto")
 			saltando = true
 			if Global.Energia > 4800:
-				move.y = -salto * 1.5
+				move.y = -salto * 1.8
 			if Global.Energia < 4800 && Global.Energia > 2400:
-				move.y = -salto * 1
+				move.y = -salto * 1.8
 			if Global.Energia < 2400 && Global.Energia > 1200:
-				move.y = -salto * 0.8
+				move.y = -salto * 1.8
 			if Global.Energia < 1200 && Global.Energia > 0:
-				move.y = -salto * 0.5
-			Global.Energia = Global.Energia - 10
+				move.y = -salto * 1.8
 			yield(get_tree().create_timer(0.5),"timeout")
 			move.y = +salto
 			salto = 200
