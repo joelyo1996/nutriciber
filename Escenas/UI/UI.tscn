@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Escenas/UI/UI.gd" type="Script" id=1]
 [ext_resource path="res://Asset/UI/Fuente.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Asset/UI/texto1.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Asset/menu/boton_play_normal.png" type="Texture" id=4]
 [ext_resource path="res://Asset/menu/boton_play_presionado.png" type="Texture" id=5]
+[ext_resource path="res://Asset/UI/dreaming.ogg" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -42,4 +43,8 @@ margin_bottom = 754.718
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 4 )
 texture_pressed = ExtResource( 5 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
 [connection signal="pressed" from="BotonReintentar" to="." method="_on_BotonReintentar_pressed"]

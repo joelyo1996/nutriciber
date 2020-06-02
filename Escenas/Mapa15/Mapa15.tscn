@@ -61,10 +61,10 @@ shape = SubResource( 2 )
 [node name="UI" parent="." instance=ExtResource( 4 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 763.01
-margin_top = 420.183
-margin_right = 1067.01
-margin_bottom = 757.183
+margin_left = 907.358
+margin_top = 588.589
+margin_right = 1211.36
+margin_bottom = 925.589
 rect_rotation = -91.3301
 rect_scale = Vector2( 0.3, 0.3 )
 toggle_mode = true
@@ -72,10 +72,10 @@ texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
-margin_left = 789.382
-margin_top = 501.055
-margin_right = 1093.38
-margin_bottom = 838.055
+margin_left = 115.757
+margin_top = 584.333
+margin_right = 419.757
+margin_bottom = 921.333
 rect_rotation = 179.343
 rect_scale = Vector2( 0.3, 0.3 )
 toggle_mode = true
@@ -83,10 +83,10 @@ texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
 
 [node name="Derecha" type="TextureButton" parent="UI"]
-margin_left = 836.85
-margin_top = 402.602
-margin_right = 1140.85
-margin_bottom = 739.602
+margin_left = 129.914
+margin_top = 480.328
+margin_right = 433.914
+margin_bottom = 817.328
 rect_rotation = 0.470204
 rect_scale = Vector2( 0.3, 0.3 )
 toggle_mode = true
@@ -99,6 +99,9 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 7 )
 [connection signal="area_entered" from="Arriba" to="." method="_on_Arriba_area_entered"]
 [connection signal="area_entered" from="Abajo" to="." method="_on_Abajo_area_entered"]
+[connection signal="button_down" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_button_down"]
 [connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]
 [connection signal="button_down" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_down"]
+[connection signal="button_up" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_up"]
+[connection signal="button_down" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_down"]
 [connection signal="button_up" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_up"]
