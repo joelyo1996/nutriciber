@@ -1,24 +1,22 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Escenas/ElegirPersonaje/ElegirPersonaje.gd" type="Script" id=1]
 [ext_resource path="res://Asset/fondo_nubes1.png" type="Texture" id=2]
 [ext_resource path="res://Asset/SegundoMenu/idle_menu_custom.png" type="Texture" id=3]
 [ext_resource path="res://Asset/PersonalisarPersonaje/head_idle1.png" type="Texture" id=4]
 [ext_resource path="res://Escenas/ElegirPersonaje/sorbete1.gd" type="Script" id=5]
-[ext_resource path="res://Asset/cara2.png" type="Texture" id=6]
-[ext_resource path="res://Escenas/ElegirPersonaje/sorbete2.gd" type="Script" id=7]
-[ext_resource path="res://Asset/PersonalisarPersonaje/head_idle2.png" type="Texture" id=8]
-[ext_resource path="res://Escenas/ElegirPersonaje/sorbete3.gd" type="Script" id=9]
-[ext_resource path="res://Asset/pelo_largo.png" type="Texture" id=10]
-[ext_resource path="res://Escenas/ElegirPersonaje/sorbete4.gd" type="Script" id=11]
-[ext_resource path="res://Asset/ropa1.png" type="Texture" id=12]
-[ext_resource path="res://Escenas/ElegirPersonaje/sorbete5.gd" type="Script" id=13]
-[ext_resource path="res://Asset/ropa2.png" type="Texture" id=14]
-[ext_resource path="res://Escenas/ElegirPersonaje/sorbete6.gd" type="Script" id=15]
-[ext_resource path="res://Asset/ropa3.png" type="Texture" id=16]
-[ext_resource path="res://Escenas/ElegirPersonaje/sorbete7.gd" type="Script" id=17]
-[ext_resource path="res://Asset/menu/boton_play_normal.png" type="Texture" id=18]
-[ext_resource path="res://Asset/menu/boton_play_presionado.png" type="Texture" id=19]
+[ext_resource path="res://Asset/PersonalisarPersonaje/head_idle2.png" type="Texture" id=6]
+[ext_resource path="res://Escenas/ElegirPersonaje/sorbete3.gd" type="Script" id=7]
+[ext_resource path="res://Asset/PersonalisarPersonaje/plata_remera.png" type="Texture" id=8]
+[ext_resource path="res://Escenas/ElegirPersonaje/sorbete6.gd" type="Script" id=9]
+[ext_resource path="res://Asset/PersonalisarPersonaje/remera_oro.png" type="Texture" id=10]
+[ext_resource path="res://Escenas/ElegirPersonaje/sorbete8.gd" type="Script" id=11]
+[ext_resource path="res://Asset/PersonalisarPersonaje/plata_pantalones.png" type="Texture" id=12]
+[ext_resource path="res://Escenas/ElegirPersonaje/sorbete7.gd" type="Script" id=13]
+[ext_resource path="res://Asset/PersonalisarPersonaje/pantalon_oro.png" type="Texture" id=14]
+[ext_resource path="res://Escenas/ElegirPersonaje/sorbete9.gd" type="Script" id=15]
+[ext_resource path="res://Asset/menu/boton_play_normal.png" type="Texture" id=16]
+[ext_resource path="res://Asset/menu/boton_play_presionado.png" type="Texture" id=17]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.88177, 11.1705 )
@@ -29,30 +27,28 @@ radius = 59.0387
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 4.34924, 3.79492 )
 
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 96.8168, 204.104 )
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 104.106, 82.3149 )
-
-[sub_resource type="RectangleShape2D" id=6]
-
-[sub_resource type="CapsuleShape2D" id=7]
+[sub_resource type="CapsuleShape2D" id=4]
 radius = 37.2997
 height = 26.4045
 
+[sub_resource type="RectangleShape2D" id=5]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 65.4066, 63.3296 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 16.3177, 16.8968 )
+
 [sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 60.3876, 102.396 )
 
 [sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 18.1822, 27.0292 )
 
 [sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 66.4169, 61.4103 )
 
-[sub_resource type="RectangleShape2D" id=11]
-
-[sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 112.874, 79.5 )
-
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=11]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Avanzar:modulate")
 tracks/0/interp = 1
@@ -131,7 +127,7 @@ shape = SubResource( 1 )
 
 [node name="6" type="Area2D" parent="."]
 editor/display_folded = true
-position = Vector2( 517.922, 190.832 )
+position = Vector2( 517.922, 184.68 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -141,7 +137,7 @@ shape = SubResource( 1 )
 
 [node name="7" type="Area2D" parent="."]
 editor/display_folded = true
-position = Vector2( 512.382, 200.805 )
+position = Vector2( 527.455, 339.48 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -161,7 +157,7 @@ shape = SubResource( 1 )
 
 [node name="9" type="Area2D" parent="."]
 editor/display_folded = true
-position = Vector2( 517.063, 202.853 )
+position = Vector2( 521.585, 337.006 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -187,36 +183,11 @@ position = Vector2( -5.69006, -23.3499 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete1/Area_pocicion"]
 shape = SubResource( 3 )
 
-[node name="sorbete2" type="Sprite" parent="."]
-editor/display_folded = true
-position = Vector2( 71.5487, 102.415 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 6 )
-script = ExtResource( 7 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Area2D" type="Area2D" parent="sorbete2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete2/Area2D"]
-shape = SubResource( 4 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="sorbete2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete2/StaticBody2D"]
-shape = SubResource( 5 )
-
-[node name="Area2D2" type="Area2D" parent="sorbete2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete2/Area2D2"]
-shape = SubResource( 6 )
-
 [node name="sorbete3" type="Sprite" parent="."]
 editor/display_folded = true
 position = Vector2( 125.269, 501.045 )
-texture = ExtResource( 8 )
-script = ExtResource( 9 )
+texture = ExtResource( 6 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -225,60 +196,19 @@ __meta__ = {
 position = Vector2( 0.512634, -9.75562 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete3/Area2D"]
-shape = SubResource( 7 )
+shape = SubResource( 4 )
 
 [node name="Area2D2" type="Area2D" parent="sorbete3"]
 position = Vector2( 4.72144, -14.472 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete3/Area2D2"]
-shape = SubResource( 8 )
-
-[node name="sorbete4" type="Sprite" parent="."]
-editor/display_folded = true
-position = Vector2( 908.349, 106.23 )
-scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 10 )
-script = ExtResource( 11 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Area2D" type="Area2D" parent="sorbete4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete4/Area2D"]
-position = Vector2( -10.6895, -25.7746 )
-shape = SubResource( 4 )
-
-[node name="Area2D2" type="Area2D" parent="sorbete4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete4/Area2D2"]
-shape = SubResource( 9 )
-
-[node name="sorbete5" type="Sprite" parent="."]
-editor/display_folded = true
-position = Vector2( 737.253, 599.438 )
-texture = ExtResource( 12 )
-script = ExtResource( 13 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Area2D" type="Area2D" parent="sorbete5"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete5/Area2D"]
-shape = SubResource( 4 )
-
-[node name="Area2D2" type="Area2D" parent="sorbete5"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete5/Area2D2"]
-shape = SubResource( 10 )
+shape = SubResource( 5 )
 
 [node name="sorbete6" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 938.414, 499.007 )
-scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 14 )
-script = ExtResource( 15 )
+position = Vector2( 344.668, 443.224 )
+texture = ExtResource( 8 )
+script = ExtResource( 9 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -286,19 +216,42 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="sorbete6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete6/Area2D"]
-shape = SubResource( 4 )
+position = Vector2( 4.91095, -19.6438 )
+shape = SubResource( 6 )
 
 [node name="Area2D2" type="Area2D" parent="sorbete6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete6/Area2D2"]
-shape = SubResource( 11 )
+shape = SubResource( 7 )
+
+[node name="sorbete8" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 777.275, 569.84 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="sorbete8"]
+position = Vector2( -4.52209, -91.9477 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete8/Area2D"]
+position = Vector2( 4.91095, -19.6438 )
+shape = SubResource( 6 )
+
+[node name="Area2D2" type="Area2D" parent="sorbete8"]
+position = Vector2( 1.50745, -105.514 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete8/Area2D2"]
+position = Vector2( -1.50732, -6.02939 )
+shape = SubResource( 7 )
 
 [node name="sorbete7" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 932.174, 298.732 )
-scale = Vector2( 0.15, 0.15 )
-texture = ExtResource( 16 )
-script = ExtResource( 17 )
+position = Vector2( 885.447, 340.938 )
+texture = ExtResource( 12 )
+script = ExtResource( 13 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -306,12 +259,34 @@ __meta__ = {
 [node name="Area2D" type="Area2D" parent="sorbete7"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete7/Area2D"]
-shape = SubResource( 4 )
+position = Vector2( 27.1322, 10.5514 )
+shape = SubResource( 8 )
 
 [node name="Area2D2" type="Area2D" parent="sorbete7"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete7/Area2D2"]
-shape = SubResource( 12 )
+position = Vector2( 34.6688, -4.52203 )
+shape = SubResource( 9 )
+
+[node name="sorbete9" type="Sprite" parent="."]
+position = Vector2( 508.612, 518.804 )
+texture = ExtResource( 14 )
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="sorbete9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete9/Area2D"]
+position = Vector2( 24.1174, -6.02936 )
+shape = SubResource( 10 )
+
+[node name="Area2D2" type="Area2D" parent="sorbete9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete9/Area2D2"]
+position = Vector2( 34.6688, -4.52203 )
+shape = SubResource( 9 )
 
 [node name="Avanzar" type="TextureButton" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -320,23 +295,21 @@ margin_top = 5.84407
 margin_right = 651.322
 margin_bottom = 419.844
 rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 18 )
-texture_pressed = ExtResource( 19 )
+texture_normal = ExtResource( 16 )
+texture_pressed = ExtResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/boton = SubResource( 13 )
+anims/boton = SubResource( 11 )
 [connection signal="input_event" from="sorbete1/Area2D" to="sorbete1" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="sorbete1/Area_pocicion" to="sorbete1" method="_on_Area_pocicion_area_entered"]
-[connection signal="input_event" from="sorbete2/Area2D" to="sorbete2" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="sorbete2/Area2D2" to="sorbete2" method="_on_Area2D2_area_entered"]
 [connection signal="input_event" from="sorbete3/Area2D" to="sorbete3" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="sorbete3/Area2D2" to="sorbete3" method="_on_Area2D2_area_entered"]
-[connection signal="input_event" from="sorbete4/Area2D" to="sorbete4" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="sorbete4/Area2D2" to="sorbete4" method="_on_Area2D2_area_entered"]
-[connection signal="input_event" from="sorbete5/Area2D" to="sorbete5" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="sorbete5/Area2D2" to="sorbete5" method="_on_Area2D2_area_entered"]
 [connection signal="input_event" from="sorbete6/Area2D" to="sorbete6" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="sorbete6/Area2D2" to="sorbete6" method="_on_Area2D2_area_entered"]
+[connection signal="input_event" from="sorbete8/Area2D" to="sorbete8" method="_on_Area2D_input_event"]
+[connection signal="area_entered" from="sorbete8/Area2D2" to="sorbete8" method="_on_Area2D2_area_entered"]
 [connection signal="input_event" from="sorbete7/Area2D" to="sorbete7" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="sorbete7/Area2D2" to="sorbete7" method="_on_Area2D2_area_entered"]
+[connection signal="input_event" from="sorbete9/Area2D" to="sorbete9" method="_on_Area2D_input_event"]
+[connection signal="area_entered" from="sorbete9/Area2D2" to="sorbete9" method="_on_Area2D2_area_entered"]
 [connection signal="pressed" from="Avanzar" to="." method="_on_Avanzar_pressed"]

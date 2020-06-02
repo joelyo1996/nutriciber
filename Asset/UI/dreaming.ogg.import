@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dreaming.ogg-59687a420415e9bc14de03005c420627.oggstr"
+
+[deps]
+
+source_file="res://Asset/UI/dreaming.ogg"
+dest_files=[ "res://.import/dreaming.ogg-59687a420415e9bc14de03005c420627.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

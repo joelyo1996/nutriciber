@@ -75,12 +75,6 @@ position = Vector2( 1250, 367.441 )
 position = Vector2( -274.059, -13.5205 )
 shape = SubResource( 4 )
 
-[node name="Plataforma5" type="StaticBody2D" parent="."]
-position = Vector2( 680.82, 547.059 )
-
-[node name="Plataforma6" type="StaticBody2D" parent="."]
-position = Vector2( 542.025, 410.596 )
-
 [node name="Tronco" parent="." instance=ExtResource( 5 )]
 position = Vector2( 607.604, 504.365 )
 
@@ -117,40 +111,40 @@ scale = Vector2( 0.5, 1 )
 [node name="UI" parent="." instance=ExtResource( 8 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 66.9038
-margin_top = 503.272
-margin_right = 370.904
-margin_bottom = 840.272
+margin_left = 912.247
+margin_top = 570.668
+margin_right = 1216.25
+margin_bottom = 907.668
 rect_rotation = -90.2057
 rect_scale = Vector2( 0.3, 0.3 )
-toggle_mode = true
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
-margin_left = 102.404
-margin_top = 593.104
-margin_right = 406.404
-margin_bottom = 930.104
+margin_left = 94.404
+margin_top = 590.104
+margin_right = 398.404
+margin_bottom = 927.104
 rect_rotation = 179.289
 rect_scale = Vector2( 0.3, 0.3 )
-toggle_mode = true
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
 
 [node name="Derecha" type="TextureButton" parent="UI"]
-margin_left = 163.64
-margin_top = 495.954
-margin_right = 467.64
-margin_bottom = 832.954
+margin_left = 107.64
+margin_top = 489.954
+margin_right = 411.64
+margin_bottom = 826.954
 rect_rotation = 358.708
 rect_scale = Vector2( 0.3, 0.3 )
-toggle_mode = true
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
 [connection signal="area_entered" from="Mapa13" to="." method="_on_Mapa13_area_entered"]
 [connection signal="area_entered" from="Arriba" to="." method="_on_Arriba_area_entered"]
 [connection signal="area_entered" from="Abajo" to="." method="_on_Abajo_area_entered"]
+[connection signal="button_down" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_button_down"]
 [connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]
 [connection signal="button_down" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_down"]
+[connection signal="button_up" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_up"]
+[connection signal="button_down" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_down"]
 [connection signal="button_up" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_up"]
