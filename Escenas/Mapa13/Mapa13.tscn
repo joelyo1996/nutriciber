@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Escenas/Mapa13/Mapa13.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa13/fondo3.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Asset/Mapa13/boton_salir_normal.png" type="Texture" id=7]
 [ext_resource path="res://Asset/Mapa13/boton_salir_presionado.png" type="Texture" id=8]
 [ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 376.429, 70.4795 )
@@ -137,6 +138,12 @@ rect_scale = Vector2( 0.3, 0.3 )
 toggle_mode = true
 texture_normal = ExtResource( 7 )
 texture_pressed = ExtResource( 8 )
+
+[node name="BarraEnergia" parent="UI" instance=ExtResource( 10 )]
+margin_left = 14.8759
+margin_top = 8.1139
+margin_right = 214.876
+margin_bottom = 38.1139
 
 [node name="Rama" parent="." instance=ExtResource( 9 )]
 position = Vector2( 81.6224, 106.109 )

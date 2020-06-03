@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Escenas/Mapa11/Mapa11.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa11/fondo1.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=7]
 [ext_resource path="res://Escenas/Tronco/Tronco.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 221.568, 136.763 )
@@ -31,11 +32,13 @@ extents = Vector2( 233.487, 12.449 )
 script = ExtResource( 1 )
 
 [node name="Fondo" type="Sprite" parent="."]
-position = Vector2( 531.474, 300.306 )
+position = Vector2( 520.355, 293.357 )
 scale = Vector2( 0.553968, 0.475491 )
 texture = ExtResource( 2 )
 
-[node name="Personaje" parent="." instance=ExtResource( 3 )]
+[node name="Personaje" parent="." groups=[
+"player",
+] instance=ExtResource( 3 )]
 position = Vector2( 31.1037, 320.402 )
 
 [node name="plataforma" type="StaticBody2D" parent="."]
@@ -66,7 +69,6 @@ position = Vector2( 422.811, 385.384 )
 shape = SubResource( 4 )
 
 [node name="Mapa12" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 1004.8, 288.351 )
 
 [node name="CollisionMapa12" type="CollisionShape2D" parent="Mapa12"]
@@ -74,7 +76,6 @@ position = Vector2( 51.8174, 1.85065 )
 shape = SubResource( 5 )
 
 [node name="Mapa13" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 315.637, 691.097 )
 
 [node name="CollisionMapa13" type="CollisionShape2D" parent="Mapa13"]
@@ -114,6 +115,16 @@ margin_bottom = 759.621
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BarraEnergia" parent="UI" instance=ExtResource( 10 )]
+margin_left = 12.0
+margin_top = 8.00001
+margin_right = 212.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 200, 30 )
 
 [node name="Tronco" parent="." instance=ExtResource( 8 )]
 position = Vector2( 538.457, 350.026 )
