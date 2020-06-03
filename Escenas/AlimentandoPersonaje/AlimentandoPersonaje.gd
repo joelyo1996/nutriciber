@@ -15,5 +15,5 @@ func _on_Avanzar_pressed():
 	Global.is_inside1 = true
 	Global.is_inside2 = true
 	Global.is_inside3 = true
-	get_tree().change_scene("res://Escenas/Mapa11/Mapa11.tscn")
+	get_tree().change_scene("res://Escenas/UI/Espera.tscn")
 	pass 
