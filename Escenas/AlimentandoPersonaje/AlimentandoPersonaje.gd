@@ -2,7 +2,10 @@ extends Node2D
 
 func _ready():
 	$Avanzar.disabled 
+	
 func _physics_process(delta):
+	$UI/BotonReintentar.visible = false
+	$UI/Reintentar.visible = false
 	if Global.pos4 == true:
 		$AnimationPlayer.play("boton")
 		$Avanzar.disabled = false

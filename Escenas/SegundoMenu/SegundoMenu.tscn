@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Escenas/SegundoMenu/SegundoMenu.gd" type="Script" id=1]
-[ext_resource path="res://Asset/SegundoMenu/fondo_nubes.png" type="Texture" id=2]
+[ext_resource path="res://Asset/SegundoMenu/fondo.jpeg" type="Texture" id=2]
 [ext_resource path="res://Asset/PersonalisarPersonaje/ide.png" type="Texture" id=3]
 [ext_resource path="res://Asset/AlimentandoPersonaje/idle.png" type="Texture" id=4]
 [ext_resource path="res://Asset/SegundoMenu/Fuente1.ttf" type="DynamicFontData" id=5]
@@ -18,8 +18,8 @@ font_data = ExtResource( 5 )
 script = ExtResource( 1 )
 
 [node name="Fondo" type="Sprite" parent="."]
-position = Vector2( 518.699, 344.05 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 512.547, 300.989 )
+scale = Vector2( 0.799821, 0.708667 )
 texture = ExtResource( 2 )
 
 [node name="NuevaPartida" type="TextureButton" parent="."]

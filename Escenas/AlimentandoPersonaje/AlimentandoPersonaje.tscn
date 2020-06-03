@@ -326,7 +326,7 @@ anims/boton = SubResource( 16 )
 
 [node name="UI" parent="." instance=ExtResource( 19 )]
 
-[node name="BarraEnergia" parent="UI" instance=ExtResource( 20 )]
+[node name="BarraEnergia" parent="." instance=ExtResource( 20 )]
 margin_left = 54.0135
 margin_top = 28.4133
 margin_right = 184.013
