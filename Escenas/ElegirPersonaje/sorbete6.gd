@@ -33,7 +33,9 @@ func _on_Area2D2_area_entered(area):
 		is_inside = false
 		position = posicion
 		Global.is_inside3 = false
+		Global.is_inside1 = false
 		Global.LargoPlata = Global.LargoPlata + 1
+		Global.CortoPlata = Global.CortoPlata + 1
 	pass 
 
 
