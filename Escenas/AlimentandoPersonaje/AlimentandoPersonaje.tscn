@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Escenas/AlimentandoPersonaje/AlimentandoPersonaje.gd" type="Script" id=1]
 [ext_resource path="res://Asset/AlimentandoPersonaje/fondo_alimento.jpeg" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Asset/menu/boton_play_normal.png" type="Texture" id=17]
 [ext_resource path="res://Asset/menu/boton_play_presionado.png" type="Texture" id=18]
 [ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.88177, 11.1705 )
@@ -324,6 +325,12 @@ texture_pressed = ExtResource( 18 )
 anims/boton = SubResource( 16 )
 
 [node name="UI" parent="." instance=ExtResource( 19 )]
+
+[node name="BarraEnergia" parent="UI" instance=ExtResource( 20 )]
+margin_left = 54.0135
+margin_top = 28.4133
+margin_right = 184.013
+margin_bottom = 50.4133
 [connection signal="input_event" from="Banana/Area2D" to="Banana" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="Banana/Area_pocicion" to="Banana" method="_on_Area_pocicion_area_entered"]
 [connection signal="input_event" from="Carne/Area2D" to="Carne" method="_on_Area2D_input_event"]
