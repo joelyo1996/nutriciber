@@ -185,7 +185,7 @@ shape = SubResource( 3 )
 
 [node name="sorbete3" type="Sprite" parent="."]
 editor/display_folded = true
-position = Vector2( 125.269, 501.045 )
+position = Vector2( 127.217, 504.941 )
 texture = ExtResource( 6 )
 script = ExtResource( 7 )
 __meta__ = {

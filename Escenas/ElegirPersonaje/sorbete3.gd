@@ -4,7 +4,7 @@ extends Sprite
 # var a = 2
 var fin = true
 var is_inside = false
-const posicion =Vector2(518,100)
+const posicion =Vector2(512.925,86.117)
 var mauseIn = false
 var a = true
 # Called when the node enters the scene tree for the first time.
@@ -45,7 +45,9 @@ func _on_Area2D2_area_entered(area):
 		position = posicion
 		Global.is_inside1 = false
 		Global.peloCorto = true
-	pass # Replace with function body.
+		Global.CortoPlata = Global.CortoPlata + 1
+		Global.CortoOro = Global.CortoOro + 1
+	pass 
 
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
