@@ -1,5 +1,4 @@
 extends Node2D
-
 func _ready():
 	$BotonReintentar.disabled = true
 func _process(delta):

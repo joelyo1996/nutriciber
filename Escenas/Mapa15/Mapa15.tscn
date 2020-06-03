@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Escenas/Mapa15/Mapa15.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa15/fondo5.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=5]
 [ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=6]
 [ext_resource path="res://Asset/Mapa15/xylon.png" type="Texture" id=7]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 489.285, 40.2864 )
@@ -92,6 +93,13 @@ rect_scale = Vector2( 0.3, 0.3 )
 toggle_mode = true
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
+
+[node name="BarraEnergia" parent="UI" instance=ExtResource( 8 )]
+margin_left = 11.0338
+margin_top = 11.1665
+margin_right = 211.034
+margin_bottom = 41.1665
+rect_min_size = Vector2( 200, 30 )
 
 [node name="Xylon" type="Sprite" parent="."]
 position = Vector2( 917.419, 336.249 )
