@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Escenas/Mapa14/Mapa14.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa14/fondo4.png" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=9]
 [ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=10]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 284.13, 65.0719 )
@@ -139,6 +140,11 @@ rect_rotation = 358.708
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 9 )
 texture_pressed = ExtResource( 10 )
+
+[node name="BarraEnergia" parent="UI" instance=ExtResource( 11 )]
+margin_top = 13.1139
+margin_right = 207.876
+margin_bottom = 43.1139
 [connection signal="area_entered" from="Mapa13" to="." method="_on_Mapa13_area_entered"]
 [connection signal="area_entered" from="Arriba" to="." method="_on_Arriba_area_entered"]
 [connection signal="area_entered" from="Abajo" to="." method="_on_Abajo_area_entered"]

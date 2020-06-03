@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://Escenas/AlimentandoPersonaje/AlimentandoPersonaje.gd" type="Script" id=1]
 [ext_resource path="res://Asset/AlimentandoPersonaje/fondo_alimento.jpeg" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Asset/menu/boton_play_normal.png" type="Texture" id=17]
 [ext_resource path="res://Asset/menu/boton_play_presionado.png" type="Texture" id=18]
 [ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.88177, 11.1705 )
@@ -85,7 +86,6 @@ scale = Vector2( 0.964052, 0.844433 )
 texture = ExtResource( 2 )
 
 [node name="1" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -95,7 +95,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="2" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -105,7 +104,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="3" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -115,7 +113,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="4" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -125,7 +122,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="5" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -135,7 +131,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="6" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -145,7 +140,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="7" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -155,7 +149,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="8" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -165,7 +158,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="9" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -175,7 +167,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="Banana" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 147.082, 134.063 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 3 )
@@ -185,7 +176,6 @@ __meta__ = {
 }
 
 [node name="Area2D" type="Area2D" parent="Banana"]
-editor/display_folded = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Banana/Area2D"]
 position = Vector2( 74.4127, 58.2361 )
@@ -203,7 +193,6 @@ shape = SubResource( 3 )
 shape = SubResource( 4 )
 
 [node name="Carne" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 78.2294, 125.798 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 5 )
@@ -228,7 +217,6 @@ shape = SubResource( 6 )
 shape = SubResource( 7 )
 
 [node name="Frutilla" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 232.247, 131.439 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
@@ -249,7 +237,6 @@ shape = SubResource( 8 )
 shape = SubResource( 9 )
 
 [node name="Galletita" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 73.2577, 214.792 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 9 )
@@ -270,7 +257,6 @@ shape = SubResource( 5 )
 shape = SubResource( 10 )
 
 [node name="Pan" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 187.763, 215.296 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 11 )
@@ -291,7 +277,6 @@ shape = SubResource( 11 )
 shape = SubResource( 12 )
 
 [node name="Tomate" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 98.3123, 303.596 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 13 )
@@ -311,7 +296,6 @@ shape = SubResource( 13 )
 shape = SubResource( 14 )
 
 [node name="Leche" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 220.676, 313.764 )
 scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 15 )
@@ -341,6 +325,12 @@ texture_pressed = ExtResource( 18 )
 anims/boton = SubResource( 16 )
 
 [node name="UI" parent="." instance=ExtResource( 19 )]
+
+[node name="BarraEnergia" parent="UI" instance=ExtResource( 20 )]
+margin_left = 54.0135
+margin_top = 28.4133
+margin_right = 184.013
+margin_bottom = 50.4133
 [connection signal="input_event" from="Banana/Area2D" to="Banana" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="Banana/Area_pocicion" to="Banana" method="_on_Area_pocicion_area_entered"]
 [connection signal="input_event" from="Carne/Area2D" to="Carne" method="_on_Area2D_input_event"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Escenas/Mapa12/Mapa12.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa12/Fondo2.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=6]
 [ext_resource path="res://Escenas/Frutilla/Frutilla.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 87.0023, 197.184 )
@@ -115,6 +116,13 @@ rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
 texture_normal = ExtResource( 5 )
 texture_pressed = ExtResource( 6 )
+
+[node name="BarraEnergia" parent="UI" instance=ExtResource( 9 )]
+margin_left = 9.87595
+margin_top = 11.1139
+margin_right = 209.876
+margin_bottom = 41.1139
+rect_min_size = Vector2( 200, 30 )
 
 [node name="Frutilla" parent="." instance=ExtResource( 7 )]
 position = Vector2( 972.048, -1.49843 )

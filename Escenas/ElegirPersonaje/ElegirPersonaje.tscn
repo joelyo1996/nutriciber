@@ -76,7 +76,6 @@ position = Vector2( 965.746, 456.995 )
 texture = ExtResource( 3 )
 
 [node name="1" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 518.881, 70.6366 )
 __meta__ = {
 "_edit_group_": true
@@ -86,7 +85,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="2" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 521.118, 64.4335 )
 __meta__ = {
 "_edit_group_": true
@@ -96,7 +94,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="3" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 517.95, 68.8656 )
 __meta__ = {
 "_edit_group_": true
@@ -106,7 +103,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="4" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 513.559, 87.2721 )
 __meta__ = {
 "_edit_group_": true
@@ -116,7 +112,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="5" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 524.202, 190.471 )
 __meta__ = {
 "_edit_group_": true
@@ -126,7 +121,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="6" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 517.922, 184.68 )
 __meta__ = {
 "_edit_group_": true
@@ -136,7 +130,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="7" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 527.455, 339.48 )
 __meta__ = {
 "_edit_group_": true
@@ -146,7 +139,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="8" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 520.628, 189.556 )
 __meta__ = {
 "_edit_group_": true
@@ -156,7 +148,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="9" type="Area2D" parent="."]
-editor/display_folded = true
 position = Vector2( 521.585, 337.006 )
 __meta__ = {
 "_edit_group_": true
@@ -166,7 +157,6 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="sorbete1" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 127.597, 329.907 )
 texture = ExtResource( 4 )
 script = ExtResource( 5 )
@@ -184,8 +174,10 @@ position = Vector2( -5.69006, -23.3499 )
 shape = SubResource( 3 )
 
 [node name="sorbete3" type="Sprite" parent="."]
+
 editor/display_folded = true
 position = Vector2( 127.217, 504.941 )
+
 texture = ExtResource( 6 )
 script = ExtResource( 7 )
 __meta__ = {
@@ -205,7 +197,6 @@ position = Vector2( 4.72144, -14.472 )
 shape = SubResource( 5 )
 
 [node name="sorbete6" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 344.668, 443.224 )
 texture = ExtResource( 8 )
 script = ExtResource( 9 )
@@ -225,7 +216,6 @@ shape = SubResource( 6 )
 shape = SubResource( 7 )
 
 [node name="sorbete8" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 777.275, 569.84 )
 texture = ExtResource( 10 )
 script = ExtResource( 11 )
@@ -248,7 +238,6 @@ position = Vector2( -1.50732, -6.02939 )
 shape = SubResource( 7 )
 
 [node name="sorbete7" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 885.447, 340.938 )
 texture = ExtResource( 12 )
 script = ExtResource( 13 )
