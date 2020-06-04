@@ -6,7 +6,7 @@ func _ready():
 	
 func _process(delta):
 	$Energia.text = String(Global.Energia)
-	if Global.Energia <= 0:
+	if Global.Energia <= 0 && Global.Ganaste == false:
 		$Reintentar.visible = true
 		$BotonReintentar.visible = true
 		$BotonReintentar.disabled = false

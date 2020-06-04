@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Escenas/Mapa15/Mapa15.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa15/fondo5.png" type="Texture" id=2]
@@ -9,12 +9,91 @@
 [ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=7]
 [ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Asset/Mapa15/xylon.png" type="Texture" id=9]
+[ext_resource path="res://Asset/Mapa15/globo.png" type="Texture" id=10]
+[ext_resource path="res://Asset/Mapa15/marcotrans.png" type="Texture" id=11]
+[ext_resource path="res://Asset/UI/texto1.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://Asset/UI/Fuente.ttf" type="DynamicFontData" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 489.285, 40.2864 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 10, 198.615 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 5.67993, 348.363 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 28
+font_data = ExtResource( 13 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "final"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Globo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texto:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("texto2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.0190405, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Cartel:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.0190405, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Menu:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.0190405, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [node name="Mapa15" type="Node2D"]
 script = ExtResource( 1 )
@@ -98,9 +177,60 @@ margin_bottom = 41.1665
 rect_min_size = Vector2( 200, 30 )
 
 [node name="Xylon" type="Sprite" parent="."]
-position = Vector2( 917.419, 336.249 )
+position = Vector2( 1052.29, 268.022 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 9 )
+
+[node name="AreaXylon" type="Area2D" parent="Xylon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Xylon/AreaXylon"]
+position = Vector2( -863.151, -355.415 )
+shape = SubResource( 3 )
+
+[node name="Globo" type="Sprite" parent="."]
+position = Vector2( 662.178, 54.0028 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 10 )
+
+[node name="Cartel" type="Sprite" parent="."]
+visible = false
+position = Vector2( 528.016, 247.091 )
+rotation = 1.56542
+scale = Vector2( 1.60141, 1.75515 )
+texture = ExtResource( 11 )
+
+[node name="texto" type="Label" parent="."]
+modulate = Color( 0.027451, 0.12549, 0.94902, 1 )
+margin_left = 568.228
+margin_top = 24.858
+margin_right = 1155.23
+margin_bottom = 63.858
+custom_fonts/font = SubResource( 4 )
+text = "Acercate, Te 
+estaba esperando"
+
+[node name="texto2" type="Label" parent="."]
+visible = false
+margin_left = 358.531
+margin_top = 151.585
+margin_right = 898.531
+margin_bottom = 235.585
+custom_fonts/font = SubResource( 5 )
+text = "Gracias por jugar el Alpha
+
+             de TERRANA!!!!!"
+
+[node name="Menu" type="TextureButton" parent="."]
+visible = false
+margin_left = 455.763
+margin_top = 237.288
+margin_right = 663.763
+margin_bottom = 398.288
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/final = SubResource( 6 )
 [connection signal="area_entered" from="Arriba" to="." method="_on_Arriba_area_entered"]
 [connection signal="area_entered" from="Abajo" to="." method="_on_Abajo_area_entered"]
 [connection signal="button_down" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_button_down"]
@@ -109,3 +239,5 @@ texture = ExtResource( 9 )
 [connection signal="button_up" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_up"]
 [connection signal="button_down" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_down"]
 [connection signal="button_up" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_up"]
+[connection signal="area_entered" from="Xylon/AreaXylon" to="." method="_on_AreaXylon_area_entered"]
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
