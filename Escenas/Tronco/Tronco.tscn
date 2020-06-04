@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Escenas/Tronco/Tronco.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Trocos/tronco_movible.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Trocos/sonido_tronco.ogg" type="AudioStream" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 15.4609
@@ -47,6 +48,10 @@ position = Vector2( 36.8829, 2.1515 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaTronco2"]
 position = Vector2( 6.78596, 1.09191 )
 shape = SubResource( 4 )
+
+[node name="SonidoTronco" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 6.058
 [connection signal="area_entered" from="AreaTronco" to="." method="_on_AreaTronco_area_entered"]
 [connection signal="body_entered" from="AreaTronco" to="." method="_on_AreaTronco_body_entered"]
 [connection signal="area_entered" from="AreaTronco2" to="." method="_on_AreaTronco2_area_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Escenas/Mapa14/Mapa14.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa14/fondo4.png" type="Texture" id=2]
@@ -8,9 +8,10 @@
 [ext_resource path="res://Escenas/Personaje/Personaje.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Escenas/Piedra/Piedra.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=9]
-[ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=10]
-[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Asset/UI/boton_arriba.png" type="Texture" id=9]
+[ext_resource path="res://Asset/UI/boton_izq.png" type="Texture" id=10]
+[ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=11]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 284.13, 65.0719 )
@@ -112,36 +113,31 @@ scale = Vector2( 0.5, 1 )
 [node name="UI" parent="." instance=ExtResource( 8 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 912.247
-margin_top = 570.668
-margin_right = 1216.25
-margin_bottom = 907.668
-rect_rotation = -90.2057
+margin_left = 957.139
+margin_top = 508.091
+margin_right = 1261.14
+margin_bottom = 845.091
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 10 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
-margin_left = 94.404
-margin_top = 590.104
-margin_right = 398.404
-margin_bottom = 927.104
-rect_rotation = 179.289
+margin_left = 19.2458
+margin_top = 509.935
+margin_right = 323.246
+margin_bottom = 846.935
 rect_scale = Vector2( 0.3, 0.3 )
-texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 10 )
+texture_normal = ExtResource( 10 )
 
 [node name="Derecha" type="TextureButton" parent="UI"]
-margin_left = 107.64
-margin_top = 489.954
-margin_right = 411.64
-margin_bottom = 826.954
+margin_left = 114.321
+margin_top = 508.326
+margin_right = 418.321
+margin_bottom = 845.326
 rect_rotation = 358.708
 rect_scale = Vector2( 0.3, 0.3 )
-texture_normal = ExtResource( 9 )
-texture_pressed = ExtResource( 10 )
+texture_normal = ExtResource( 11 )
 
-[node name="BarraEnergia" parent="UI" instance=ExtResource( 11 )]
+[node name="BarraEnergia" parent="UI" instance=ExtResource( 12 )]
 margin_top = 13.1139
 margin_right = 207.876
 margin_bottom = 43.1139

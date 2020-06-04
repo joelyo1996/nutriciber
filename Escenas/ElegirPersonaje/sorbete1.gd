@@ -37,6 +37,7 @@ func _on_Area_pocicion_area_entered(area):
 		Global.largoSalto = true
 		Global.LargoOro = Global.LargoOro + 1
 		Global.LargoPlata = Global.LargoPlata + 1
+		Global.largoOroPlata = Global.largoOroPlata + 1
 	pass # Replace with function body.
 
 

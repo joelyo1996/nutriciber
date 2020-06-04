@@ -4,11 +4,11 @@
 [ext_resource path="res://Asset/Mapa12/Fondo2.png" type="Texture" id=2]
 [ext_resource path="res://Escenas/Personaje/Personaje.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=5]
-[ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=6]
-[ext_resource path="res://Escenas/Frutilla/Frutilla.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=5]
+[ext_resource path="res://Asset/UI/boton_izq.png" type="Texture" id=6]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Escenas/Frutilla/Frutilla.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 87.0023, 197.184 )
@@ -86,68 +86,66 @@ shape = SubResource( 4 )
 [node name="UI" parent="." instance=ExtResource( 4 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 880.049
-margin_top = 641.417
-margin_right = 1184.05
-margin_bottom = 978.417
+margin_left = 913.36
+margin_top = 611.807
+margin_right = 1217.36
+margin_bottom = 948.807
 rect_rotation = -92.4648
 rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
 texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 6 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
-margin_left = 165.31
-margin_top = 604.717
-margin_right = 469.31
-margin_bottom = 941.717
-rect_rotation = -179.269
+margin_left = 26.5136
+margin_top = 497.381
+margin_right = 330.514
+margin_bottom = 834.381
+rect_rotation = -358.928
 rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
 
 [node name="Derecha" type="TextureButton" parent="UI"]
-margin_left = 177.525
-margin_top = 433.657
-margin_right = 481.525
-margin_bottom = 770.657
+margin_left = 164.571
+margin_top = 494.727
+margin_right = 468.571
+margin_bottom = 831.727
+rect_rotation = 2.24376
 rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
 texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 6 )
 
-[node name="BarraEnergia" parent="UI" instance=ExtResource( 9 )]
+[node name="BarraEnergia" parent="UI" instance=ExtResource( 7 )]
 margin_left = 9.87595
 margin_top = 11.1139
 margin_right = 209.876
 margin_bottom = 41.1139
 rect_min_size = Vector2( 200, 30 )
 
-[node name="Frutilla" parent="." instance=ExtResource( 7 )]
+[node name="Frutilla" parent="." instance=ExtResource( 8 )]
 position = Vector2( 972.048, -1.49843 )
 
-[node name="Rama" parent="." instance=ExtResource( 8 )]
+[node name="Rama" parent="." instance=ExtResource( 9 )]
 position = Vector2( 621.665, 310.249 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Rama2" parent="." instance=ExtResource( 8 )]
+[node name="Rama2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 786.803, 218.898 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Rama3" parent="." instance=ExtResource( 8 )]
+[node name="Rama3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 784.954, 443.213 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Rama4" parent="." instance=ExtResource( 8 )]
+[node name="Rama4" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1021.2, 299.752 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Rama5" parent="." instance=ExtResource( 8 )]
+[node name="Rama5" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1010.06, 88.6426 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Rama6" parent="." instance=ExtResource( 8 )]
+[node name="Rama6" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1008.71, 500.414 )
 scale = Vector2( 0.5, 0.5 )
 [connection signal="body_entered" from="Mapa11" to="." method="_on_Mapa11_body_entered"]

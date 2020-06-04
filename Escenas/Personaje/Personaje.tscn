@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Escenas/Mapa11/KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Personaje/corriendo.png" type="Texture" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://Asset/Personaje/corriendo_oro_corto.png" type="Texture" id=15]
 [ext_resource path="res://Asset/Personaje/salto_corto_oro.png" type="Texture" id=16]
 [ext_resource path="res://Asset/Personaje/head_corriendo2.png" type="Texture" id=17]
+[ext_resource path="res://Asset/Personaje/largo_oro_plata_caminando.png" type="Texture" id=18]
+[ext_resource path="res://Asset/Personaje/largo_oro_plata_saltando.png" type="Texture" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 114.753, 178.775 )
@@ -109,7 +111,36 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=8]
-loop = true
+resource_name = "LargoOroPlataCaminar"
+tracks/0/type = "value"
+tracks/0/path = NodePath("LargoOroPlataCaminando:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "LargoOroPlataSalto"
+tracks/0/type = "value"
+tracks/0/path = NodePath("LargoOroPlataSalto:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 0 ]
+}
+
+[sub_resource type="Animation" id=10]
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoSaltoOro:frame")
 tracks/0/interp = 1
@@ -123,7 +154,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=11]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("CortoSalto:frame")
@@ -138,7 +169,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=12]
 length = 0.8
 loop = true
 tracks/0/type = "value"
@@ -154,7 +185,7 @@ tracks/0/keys = {
 "values": [ 2, 3, 6, 7 ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=13]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoCaminar:frame")
@@ -169,7 +200,7 @@ tracks/0/keys = {
 "values": [ 0, 6, 2, 0 ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=14]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("CortoCaminar:frame")
@@ -184,7 +215,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=15]
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoSaltoPlata:frame")
 tracks/0/interp = 1
@@ -198,7 +229,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=16]
 length = 1.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoSalto:frame")
@@ -213,7 +244,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=17]
 tracks/0/type = "value"
 tracks/0/path = NodePath("SpriteSalto:frame")
 tracks/0/interp = 1
@@ -227,7 +258,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=18]
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoSalto:frame")
 tracks/0/interp = 1
@@ -241,7 +272,7 @@ tracks/0/keys = {
 "values": [ 0, 2, 3 ]
 }
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 123.182, 175.157 )
 
 [node name="Personaje" type="KinematicBody2D"]
@@ -268,13 +299,15 @@ anims/CortoSaltoOro = SubResource( 4 )
 anims/CortoSaltoPlata = SubResource( 5 )
 anims/LargoCaminarOro = SubResource( 6 )
 anims/LargoCaminarPlata = SubResource( 7 )
-anims/SaltoLargoOro = SubResource( 8 )
-anims/Salto_corto = SubResource( 9 )
-anims/caminar = SubResource( 10 )
-anims/caminar_largo = SubResource( 11 )
-anims/corto_caminar = SubResource( 12 )
-anims/largoSaltoPlata = SubResource( 13 )
-anims/salto = SubResource( 14 )
+anims/LargoOroPlataCaminar = SubResource( 8 )
+anims/LargoOroPlataSalto = SubResource( 9 )
+anims/SaltoLargoOro = SubResource( 10 )
+anims/Salto_corto = SubResource( 11 )
+anims/caminar = SubResource( 12 )
+anims/caminar_largo = SubResource( 13 )
+anims/corto_caminar = SubResource( 14 )
+anims/largoSaltoPlata = SubResource( 15 )
+anims/salto = SubResource( 16 )
 
 [node name="SpriteSalto" type="Sprite" parent="."]
 visible = false
@@ -283,19 +316,19 @@ vframes = 2
 hframes = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/saltar = SubResource( 15 )
-anims/saltar_largo = SubResource( 16 )
+anims/saltar = SubResource( 17 )
+anims/saltar_largo = SubResource( 18 )
 
 [node name="AreaPersonaje" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPersonaje"]
 visible = false
 position = Vector2( 22.752, 2.84387 )
-shape = SubResource( 17 )
+shape = SubResource( 19 )
 
 [node name="AudioPersonaje" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-volume_db = 19.373
+volume_db = 0.189
 
 [node name="AudioSaltar" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
@@ -383,5 +416,19 @@ texture = ExtResource( 17 )
 vframes = 2
 hframes = 4
 frame = 4
+
+[node name="LargoOroPlataCaminando" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 18 )
+vframes = 2
+hframes = 4
+frame = 5
+
+[node name="LargoOroPlataSalto" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 19 )
+vframes = 2
+hframes = 4
+frame = 1
 [connection signal="area_entered" from="AreaPersonaje" to="." method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="AreaPersonaje" to="." method="_on_Area2D_body_entered"]

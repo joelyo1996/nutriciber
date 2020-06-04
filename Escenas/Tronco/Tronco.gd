@@ -9,10 +9,11 @@ func _physics_process(delta):
 	move_and_slide(move)
 func _on_AreaTronco_area_entered(area):
 	if area.name == "AreaPersonaje":
+		$SonidoTronco.play()
 		position.x = position.x + mover
 		Global.Energia = Global.Energia - 25
-
-
+		yield(get_tree().create_timer(1),"timeout")
+		$SonidoTronco.stop()
 func _on_AreaTronco_body_entered(body):
 	if body.name =="plataforma3":
 		position.x = position.x

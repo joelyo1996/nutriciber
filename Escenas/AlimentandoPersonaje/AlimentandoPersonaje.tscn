@@ -466,8 +466,17 @@ custom_fonts/font = SubResource( 21 )
 text = "Carbohidratos"
 
 [node name="TildeVerde" type="Sprite" parent="Titulo"]
-visible = false
 position = Vector2( 217.66, 67.3027 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 24 )
+
+[node name="TildeVerde2" type="Sprite" parent="Titulo"]
+position = Vector2( 214.796, 126.014 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 24 )
+
+[node name="TildeVerde3" type="Sprite" parent="Titulo"]
+position = Vector2( 217.66, 177.565 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 24 )
 

@@ -7,6 +7,11 @@ var saltando = false
 var veri = true
 func _physics_process(delta):
 	if veri == true:
+		if Global.largoOroPlata == 3:
+			$LargoOroPlataCaminando.visible = true
+			veri = false
+			Global.largoOroPlataAnimacion = true
+			Global.largoSalto = false
 		if Global.CortoOro == 3:
 			$CortoCaminarOro.visible = true
 			veri = false
@@ -25,6 +30,7 @@ func _physics_process(delta):
 		if Global.LargoOro == 3:
 			$LargoCaminarOro.visible = true
 			veri = false
+			Global.largoSalto = false
 		if Global.peloCorto:
 			$CortoSalto.visible = true
 			$LargoCaminar.visible = false
@@ -38,6 +44,10 @@ func _physics_process(delta):
 		$LargoCaminar.visible = false
 		$SpritePersonaje.visible = false
 		$LargoCaminar.visible = false
+		if Global.largoOroPlataAnimacion == true:
+			$LargoOroPlataSalto.visible = true
+			$LargoOroPlataCaminando.visible = false
+			$AnimationPersonaje.play("LargoOroPlataSalto")
 		if Global.CortoOroAnimacion == true:
 			$CortoSaltoOro.visible = true
 			$CortoCaminarOro.visible = false
@@ -83,6 +93,7 @@ func _physics_process(delta):
 		_largo_plata()
 		_corto_plata()
 		_corto_oro()
+		_largo_oro_plata()
 		if Global.largoSalto == true && !saltando== true:
 			$AnimationPersonaje.play("LargoCaminarOro")
 			$LargoSaltoOro.visible = false
@@ -103,11 +114,13 @@ func _physics_process(delta):
 		$LargoCaminarPlata.flip_h = false
 		$CortoCaminarPlata.flip_h = false
 		$CortoCaminarOro.flip_h = false
+		$LargoOroPlataCaminando.flip_h = false
 		Global.Energia = Global.Energia - 1
 	if Input.is_action_pressed("ui_left")&& Global.Energia > 0:
 		_largo_plata()
 		_corto_plata()
 		_corto_oro()
+		_largo_oro_plata()
 		if Global.largoSalto == true && !saltando== true:
 			$AnimationPersonaje.play("LargoCaminarOro")
 			$LargoSaltoOro.visible = false
@@ -128,6 +141,7 @@ func _physics_process(delta):
 		$LargoCaminarPlata.flip_h = true
 		$CortoCaminarPlata.flip_h = true
 		$CortoCaminarOro.flip_h = true
+		$LargoOroPlataCaminando.flip_h = true
 		Global.Energia = Global.Energia - 1
 	#Input.is_action_just_released("abajo") or Input.is_action_just_released("arriba") or Input.is_action_just_released("abajo") or 
 	if Input.is_action_just_released("ui_right") or Input.is_action_just_released("ui_left"):
@@ -160,6 +174,7 @@ func _on_Izquierda_button_down():
 		_corto_plata()
 		_largo_plata()
 		_corto_oro()
+		_largo_oro_plata()
 		$CortoCaminarOro.flip_h = true
 		$SpritePersonaje.flip_h = true
 		$SpriteSalto.flip_h = true
@@ -169,6 +184,7 @@ func _on_Izquierda_button_down():
 		$LargoCaminarOro.flip_h = true
 		$LargoCaminarPlata.flip_h = true
 		$CortoCaminarPlata.flip_h = true
+		$LargoOroPlataCaminando.flip_h = true
 		_largo_caminar_oro()
 		if Global.peloCorto:
 			$CortoCaminar.visible = true
@@ -221,6 +237,10 @@ func _on_Izquierda_button_up():
 
 func _on_TextureButton_button_down():
 	if !saltando== true && Global.Energia > 0 :
+		if Global.largoOroPlataAnimacion == true:
+			$LargoOroPlataSalto.visible = true
+			$LargoOroPlataCaminando.visible = false
+			$AnimationPersonaje.play("LargoOroPlataSalto")
 		if Global.CortoOroAnimacion == true:
 			$CortoSaltoOro.visible = true
 			$CortoCaminarOro.visible = false
@@ -326,9 +346,11 @@ func _on_Derecha_button_down():
 		$LargoCaminarPlata.flip_h = false
 		$CortoCaminarPlata.flip_h = false
 		$CortoCaminarOro.flip_h = false
+		$LargoOroPlataCaminando.flip_h = false
 		_corto_plata()
 		_largo_plata()
 		_corto_oro()
+		_largo_oro_plata()
 		if Global.LargoOro == 3:
 			$AnimationPersonaje.play("LargoCaminarOro")
 			$LargoSaltoOro.visible = false
@@ -370,3 +392,9 @@ func _corto_oro():
 		$AnimationPersonaje.play("CortoCaminarOro")
 		$CortoSaltoOro.visible = false
 		$CortoCaminarOro.visible = true
+		
+func _largo_oro_plata():
+	if Global.largoOroPlataAnimacion == true && !saltando== true:
+		$AnimationPersonaje.play("LargoOroPlataCaminar")
+		$LargoOroPlataCaminando.visible = true
+		$LargoOroPlataSalto.visible = false

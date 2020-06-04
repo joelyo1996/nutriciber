@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Escenas/SegundoMenu/SegundoMenu.gd" type="Script" id=1]
 [ext_resource path="res://Asset/SegundoMenu/fondo.jpeg" type="Texture" id=2]
 [ext_resource path="res://Asset/PersonalisarPersonaje/ide.png" type="Texture" id=3]
 [ext_resource path="res://Asset/AlimentandoPersonaje/idle.png" type="Texture" id=4]
 [ext_resource path="res://Asset/SegundoMenu/Fuente1.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Asset/menu/musica_menu.ogg" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -51,4 +52,9 @@ margin_right = 953.277
 margin_bottom = 528.081
 custom_fonts/font = SubResource( 2 )
 text = "Cargar Partida"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -20.264
+autoplay = true
 [connection signal="pressed" from="NuevaPartida" to="." method="_on_NuevaPartida_pressed"]
