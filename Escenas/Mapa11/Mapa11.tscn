@@ -84,7 +84,7 @@ position = Vector2( 25.9086, 25.9086 )
 shape = SubResource( 6 )
 
 [node name="Frutilla" parent="." instance=ExtResource( 4 )]
-position = Vector2( 346.897, 126.886 )
+position = Vector2( 345.995, 166.596 )
 
 [node name="UI" parent="." instance=ExtResource( 5 )]
 
