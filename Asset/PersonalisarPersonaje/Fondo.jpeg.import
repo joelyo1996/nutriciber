@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fondo.jpeg-a82d836101804130883f0587562affb2.stex"
+path="res://.import/fondo.jpeg-d0c24c449073a376bea7ce84b4844ad9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/PersonalisarPersonaje/Fondo.jpeg"
-dest_files=[ "res://.import/Fondo.jpeg-a82d836101804130883f0587562affb2.stex" ]
+source_file="res://Asset/PersonalisarPersonaje/fondo.jpeg"
+dest_files=[ "res://.import/fondo.jpeg-d0c24c449073a376bea7ce84b4844ad9.stex" ]
 
 [params]
 
