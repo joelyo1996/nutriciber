@@ -367,6 +367,6 @@ func _corto_plata():
 		
 func _corto_oro():
 	if Global.CortoOroAnimacion == true && !saltando== true:
-		$AnimationPersonaje.play("CaminarCortoOro")
+		$AnimationPersonaje.play("CortoCaminarOro")
 		$CortoSaltoOro.visible = false
 		$CortoCaminarOro.visible = true
