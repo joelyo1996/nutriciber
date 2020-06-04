@@ -27,4 +27,5 @@ var CortoOroAnimacion = false
 var largoOroPlata = 0
 var largoOroPlataAnimacion = false
 var fin = false
+var Ganaste = false
 
