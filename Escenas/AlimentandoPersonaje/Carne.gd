@@ -1,17 +1,11 @@
 extends Sprite
 
-# Declare member variables here. Examples:
-# var a = 2
 var fin = true
 var is_inside = false
-const posicion = Vector2(518,60)
+var con  = 0
 var mauseIn = false
 var a = true
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if a == true :
 		if (mauseIn == true && Input.is_action_pressed("click")):
@@ -26,17 +20,6 @@ func _on_Area2D_mouse_entered():
 
 func _on_Area2D_mouse_exited():
 	mauseIn = false
-
-
-func _on_Area2D_area_entered(area):
-
-	pass # Replace with function body.
-
-
-func _on_Area_pocicion_area_entered(area):
-	
-	pass # Replace with function body.
-
 
 func _on_Area2D2_area_entered(area):
 	if area.name == "1":
