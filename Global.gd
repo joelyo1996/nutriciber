@@ -24,5 +24,7 @@ var CortoPlata = 0
 var CortoPlataAnimacion = false
 var CortoOro = 0
 var CortoOroAnimacion = false
+var largoOroPlata = 0
+var largoOroPlataAnimacion = false
 var fin = false
 

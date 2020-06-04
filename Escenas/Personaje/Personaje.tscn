@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://Escenas/Mapa11/KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Personaje/corriendo.png" type="Texture" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://Asset/Personaje/corriendo_oro_corto.png" type="Texture" id=15]
 [ext_resource path="res://Asset/Personaje/salto_corto_oro.png" type="Texture" id=16]
 [ext_resource path="res://Asset/Personaje/head_corriendo2.png" type="Texture" id=17]
+[ext_resource path="res://Asset/Personaje/largo_oro_plata_caminando.png" type="Texture" id=18]
+[ext_resource path="res://Asset/Personaje/largo_oro_plata_saltando.png" type="Texture" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 114.753, 178.775 )
@@ -106,6 +108,36 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "LargoOroPlataCaminar"
+tracks/0/type = "value"
+tracks/0/path = NodePath("LargoOroPlataCaminando:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "LargoOroPlataSalto"
+tracks/0/type = "value"
+tracks/0/path = NodePath("LargoOroPlataSalto:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 0 ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -268,6 +300,8 @@ anims/CortoSaltoOro = SubResource( 4 )
 anims/CortoSaltoPlata = SubResource( 5 )
 anims/LargoCaminarOro = SubResource( 6 )
 anims/LargoCaminarPlata = SubResource( 7 )
+anims/LargoOroPlataCaminar = SubResource( 18 )
+anims/LargoOroPlataSalto = SubResource( 19 )
 anims/SaltoLargoOro = SubResource( 8 )
 anims/Salto_corto = SubResource( 9 )
 anims/caminar = SubResource( 10 )
@@ -383,5 +417,19 @@ texture = ExtResource( 17 )
 vframes = 2
 hframes = 4
 frame = 4
+
+[node name="LargoOroPlataCaminando" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 18 )
+vframes = 2
+hframes = 4
+frame = 5
+
+[node name="LargoOroPlataSalto" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 19 )
+vframes = 2
+hframes = 4
+frame = 1
 [connection signal="area_entered" from="AreaPersonaje" to="." method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="AreaPersonaje" to="." method="_on_Area2D_body_entered"]
