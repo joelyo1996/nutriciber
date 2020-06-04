@@ -39,7 +39,7 @@ extents = Vector2( 96.3335, 95.3488 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 4.34924, 3.79492 )
 
-[sub_resource type="CapsuleShape2D" id=17]
+[sub_resource type="CapsuleShape2D" id=5]
 radius = 184.97
 height = 346.634
 
@@ -53,28 +53,28 @@ radius = 421.382
 
 [sub_resource type="RectangleShape2D" id=9]
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 378.882, 159.048 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 90.7322, 54.7112 )
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 238.623, 312.437 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 61.7458, 61.8647 )
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 511.197, 226.793 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 77.9004, 61.3523 )
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 112.874, 66.5283 )
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=17]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Avanzar:modulate")
 tracks/0/interp = 1
@@ -88,23 +88,23 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=20]
+[sub_resource type="DynamicFont" id=18]
 size = 30
 font_data = ExtResource( 22 )
 
-[sub_resource type="DynamicFont" id=21]
+[sub_resource type="DynamicFont" id=19]
 size = 25
 font_data = ExtResource( 22 )
 
+[sub_resource type="DynamicFont" id=20]
+size = 25
+font_data = ExtResource( 23 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 25
+font_data = ExtResource( 23 )
+
 [sub_resource type="DynamicFont" id=22]
-size = 25
-font_data = ExtResource( 23 )
-
-[sub_resource type="DynamicFont" id=23]
-size = 25
-font_data = ExtResource( 23 )
-
-[sub_resource type="DynamicFont" id=24]
 size = 30
 outline_color = Color( 1, 0, 0, 1 )
 font_data = ExtResource( 22 )
@@ -249,7 +249,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CarneRoja/Area2D"]
 position = Vector2( 16.5856, 58.0491 )
 rotation = 0.773276
-shape = SubResource( 17 )
+shape = SubResource( 5 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="CarneRoja"]
 
@@ -296,13 +296,13 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PapasFritas/Area2D"]
 position = Vector2( -64.2757, 167.135 )
-shape = SubResource( 5 )
+shape = SubResource( 10 )
 
 [node name="Area2D2" type="Area2D" parent="PapasFritas"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PapasFritas/Area2D2"]
 position = Vector2( -63.7024, 162.152 )
-shape = SubResource( 10 )
+shape = SubResource( 11 )
 
 [node name="Hamburguesa" type="Sprite" parent="."]
 editor/display_folded = true
@@ -319,13 +319,13 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hamburguesa/Area2D"]
 position = Vector2( -27.5662, 137.829 )
 rotation = 1.56303
-shape = SubResource( 18 )
+shape = SubResource( 12 )
 
 [node name="Area2D2" type="Area2D" parent="Hamburguesa"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hamburguesa/Area2D2"]
 position = Vector2( -36.7543, 101.075 )
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="FrutosSecos" type="Sprite" parent="."]
 editor/display_folded = true
@@ -341,12 +341,12 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FrutosSecos/Area2D"]
 position = Vector2( 23.6343, 102.416 )
-shape = SubResource( 19 )
+shape = SubResource( 14 )
 
 [node name="Area2D2" type="Area2D" parent="FrutosSecos"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FrutosSecos/Area2D2"]
-shape = SubResource( 14 )
+shape = SubResource( 15 )
 
 [node name="Pescado" type="Sprite" parent="."]
 editor/display_folded = true
@@ -361,13 +361,13 @@ tipo = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pescado/Area2D"]
 position = Vector2( 32.1514, 160.758 )
-shape = SubResource( 5 )
+shape = SubResource( 10 )
 
 [node name="Area2D2" type="Area2D" parent="Pescado"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pescado/Area2D2"]
 position = Vector2( 21.4343, 171.475 )
-shape = SubResource( 15 )
+shape = SubResource( 16 )
 
 [node name="Spaguetti" type="Sprite" parent="."]
 editor/display_folded = true
@@ -382,14 +382,14 @@ tipo = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spaguetti/Area2D"]
 position = Vector2( 32.1514, 160.758 )
-shape = SubResource( 5 )
+shape = SubResource( 10 )
 
 [node name="Area2D2" type="Area2D" parent="Spaguetti"]
 position = Vector2( -10.717, 32.1519 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Spaguetti/Area2D2"]
 position = Vector2( 21.4343, 171.475 )
-shape = SubResource( 15 )
+shape = SubResource( 16 )
 
 [node name="Falafel" type="Sprite" parent="."]
 editor/display_folded = true
@@ -404,14 +404,14 @@ tipo = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Falafel/Area2D"]
 position = Vector2( -64.3032, 107.172 )
-shape = SubResource( 5 )
+shape = SubResource( 10 )
 
 [node name="Area2D2" type="Area2D" parent="Falafel"]
 position = Vector2( -10.717, 32.1519 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Falafel/Area2D2"]
 position = Vector2( -45.9236, 89.1484 )
-shape = SubResource( 15 )
+shape = SubResource( 16 )
 
 [node name="Avanzar" type="TextureButton" parent="."]
 modulate = Color( 1, 1, 1, 0 )
@@ -425,7 +425,7 @@ texture_normal = ExtResource( 19 )
 texture_pressed = ExtResource( 20 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/boton = SubResource( 16 )
+anims/boton = SubResource( 17 )
 
 [node name="BarraEnergia" parent="." instance=ExtResource( 21 )]
 margin_left = 54.0135
@@ -438,7 +438,7 @@ margin_left = 724.578
 margin_top = 239.139
 margin_right = 1105.58
 margin_bottom = 277.139
-custom_fonts/font = SubResource( 20 )
+custom_fonts/font = SubResource( 18 )
 text = "Este plato contiene:"
 
 [node name="Proteinas" type="Label" parent="Titulo"]
@@ -446,7 +446,7 @@ margin_left = 4.2959
 margin_top = 64.4387
 margin_right = 118.296
 margin_bottom = 87.4387
-custom_fonts/font = SubResource( 21 )
+custom_fonts/font = SubResource( 19 )
 text = "Proteinas"
 
 [node name="Grasas" type="Label" parent="Titulo"]
@@ -454,7 +454,7 @@ margin_left = 5.72791
 margin_top = 123.15
 margin_right = 88.7279
 margin_bottom = 146.15
-custom_fonts/font = SubResource( 22 )
+custom_fonts/font = SubResource( 20 )
 text = "Grasas"
 
 [node name="Carbohidratos" type="Label" parent="Titulo"]
@@ -462,7 +462,7 @@ margin_left = 5.72778
 margin_top = 174.701
 margin_right = 174.728
 margin_bottom = 197.701
-custom_fonts/font = SubResource( 23 )
+custom_fonts/font = SubResource( 21 )
 text = "Carbohidratos"
 
 [node name="TildeVerde" type="Sprite" parent="Titulo"]
@@ -478,7 +478,7 @@ margin_left = 294.986
 margin_top = 191.884
 margin_right = 790.986
 margin_bottom = 218.884
-custom_fonts/font = SubResource( 24 )
+custom_fonts/font = SubResource( 22 )
 text = "No creo que sea suficiente alimento"
 
 [node name="Reiniciar" type="TextureButton" parent="."]

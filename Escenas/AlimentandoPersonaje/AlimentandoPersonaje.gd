@@ -11,6 +11,7 @@ func _physics_process(delta):
 			$Aleta.visible = true
 			$Reiniciar.visible = true
 			$Reiniciar.disabled = false
+		$Avanzar.visible = true
 		$AnimationPlayer.play("boton")
 		$Avanzar.disabled = false
 		Global.is_inside1 = true
@@ -57,4 +58,9 @@ func _on_Reiniciar_pressed():
 	$Avanzar.visible = false
 	$Titulo/TildeVerde.visible = false
 	$Reiniciar.visible = false
-
+	Global.fin = false
+	Global.pos1 = false
+	Global.pos2 = false
+	Global.pos3 = false
+	Global.pos4 = false
+	Global.tipo = 0

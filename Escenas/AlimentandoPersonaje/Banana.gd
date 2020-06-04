@@ -6,7 +6,6 @@ var con  = 0
 var mauseIn = false
 var a = true
 
-
 func _process(delta):
 	if a == true :
 		if (mauseIn == true && Input.is_action_pressed("click")):
