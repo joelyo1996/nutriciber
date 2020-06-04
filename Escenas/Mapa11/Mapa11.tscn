@@ -7,9 +7,9 @@
 [ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=6]
 [ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=7]
-[ext_resource path="res://Escenas/Tronco/Tronco.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escenas/Tronco/Tronco.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 221.568, 136.763 )
@@ -119,17 +119,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BarraEnergia" parent="UI" instance=ExtResource( 10 )]
+[node name="BarraEnergia" parent="UI" instance=ExtResource( 8 )]
 margin_left = 12.0
 margin_top = 8.00001
 margin_right = 212.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 200, 30 )
 
-[node name="Tronco" parent="." instance=ExtResource( 8 )]
+[node name="Tronco" parent="." instance=ExtResource( 9 )]
 position = Vector2( 538.457, 350.026 )
 
-[node name="Rama3" parent="." instance=ExtResource( 9 )]
+[node name="Rama3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 372.266, 230.142 )
 scale = Vector2( 0.5, 0.5 )
 [connection signal="body_entered" from="Mapa12" to="." method="_on_Mapa12_body_entered"]

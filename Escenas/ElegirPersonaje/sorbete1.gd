@@ -5,7 +5,7 @@ var is_inside = false
 var con  = 0
 var mauseIn = false
 var a = true
-var posicion = Vector2(500,90)
+var posicion = Vector2(645.77,238.35)
 
 func _process(delta):
 	if a == true :

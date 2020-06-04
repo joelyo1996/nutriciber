@@ -1,41 +1,47 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Escenas/AlimentandoPersonaje/AlimentandoPersonaje.gd" type="Script" id=1]
 [ext_resource path="res://Asset/AlimentandoPersonaje/fondo_alimento.jpeg" type="Texture" id=2]
-[ext_resource path="res://Asset/AlimentandoPersonaje/banana.png" type="Texture" id=3]
+[ext_resource path="res://Asset/AlimentandoPersonaje/vegetales.png" type="Texture" id=3]
 [ext_resource path="res://Escenas/AlimentandoPersonaje/Banana.gd" type="Script" id=4]
-[ext_resource path="res://Asset/AlimentandoPersonaje/carne.png" type="Texture" id=5]
+[ext_resource path="res://Asset/AlimentandoPersonaje/carneroja.png" type="Texture" id=5]
 [ext_resource path="res://Escenas/AlimentandoPersonaje/Carne.gd" type="Script" id=6]
-[ext_resource path="res://Asset/AlimentandoPersonaje/frutilla.png" type="Texture" id=7]
+[ext_resource path="res://Asset/AlimentandoPersonaje/choclos.png" type="Texture" id=7]
 [ext_resource path="res://Escenas/AlimentandoPersonaje/Frutilla.gd" type="Script" id=8]
-[ext_resource path="res://Asset/AlimentandoPersonaje/galletita.png" type="Texture" id=9]
+[ext_resource path="res://Asset/AlimentandoPersonaje/papasfritas.png" type="Texture" id=9]
 [ext_resource path="res://Escenas/AlimentandoPersonaje/Galletita.gd" type="Script" id=10]
-[ext_resource path="res://Asset/AlimentandoPersonaje/pan.png" type="Texture" id=11]
+[ext_resource path="res://Asset/AlimentandoPersonaje/hamburguesa.png" type="Texture" id=11]
 [ext_resource path="res://Escenas/AlimentandoPersonaje/Pan.gd" type="Script" id=12]
-[ext_resource path="res://Asset/AlimentandoPersonaje/tomate.png" type="Texture" id=13]
+[ext_resource path="res://Asset/AlimentandoPersonaje/frutossecos.png" type="Texture" id=13]
 [ext_resource path="res://Escenas/AlimentandoPersonaje/Tomate.gd" type="Script" id=14]
-[ext_resource path="res://Asset/AlimentandoPersonaje/leche.png" type="Texture" id=15]
+[ext_resource path="res://Asset/AlimentandoPersonaje/pescado.png" type="Texture" id=15]
 [ext_resource path="res://Escenas/AlimentandoPersonaje/Leche.gd" type="Script" id=16]
-[ext_resource path="res://Asset/menu/boton_play_normal.png" type="Texture" id=17]
-[ext_resource path="res://Asset/menu/boton_play_presionado.png" type="Texture" id=18]
-[ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=19]
-[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Asset/AlimentandoPersonaje/spaguetti.png" type="Texture" id=17]
+[ext_resource path="res://Asset/AlimentandoPersonaje/falafel.png" type="Texture" id=18]
+[ext_resource path="res://Asset/menu/boton_play_normal.png" type="Texture" id=19]
+[ext_resource path="res://Asset/menu/boton_play_presionado.png" type="Texture" id=20]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Asset/UI/Fuente.ttf" type="DynamicFontData" id=22]
+[ext_resource path="res://Asset/UI/texto1.ttf" type="DynamicFontData" id=23]
+[ext_resource path="res://Asset/UI/tilde_verde.png" type="Texture" id=24]
+[ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=25]
+[ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=26]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.88177, 11.1705 )
 
-[sub_resource type="CapsuleShape2D" id=2]
-radius = 128.642
-height = 321.257
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 346.332, 239.622 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 46.6176, 61.5756 )
+extents = Vector2( 96.3335, 95.3488 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 4.34924, 3.79492 )
 
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 165.309, 159.048 )
+[sub_resource type="CapsuleShape2D" id=17]
+radius = 184.97
+height = 346.634
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 104.106, 82.3149 )
@@ -43,25 +49,30 @@ extents = Vector2( 104.106, 82.3149 )
 [sub_resource type="RectangleShape2D" id=7]
 
 [sub_resource type="CircleShape2D" id=8]
-radius = 108.178
+radius = 421.382
 
 [sub_resource type="RectangleShape2D" id=9]
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 378.882, 159.048 )
 
-[sub_resource type="CapsuleShape2D" id=11]
-radius = 82.8177
-height = 430.386
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 90.7322, 54.7112 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 238.623, 312.437 )
 
 [sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 61.7458, 61.8647 )
 
-[sub_resource type="CircleShape2D" id=13]
-radius = 66.4984
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 511.197, 226.793 )
 
 [sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 77.9004, 61.3523 )
 
 [sub_resource type="RectangleShape2D" id=15]
-extents = Vector2( 112.874, 79.5 )
+extents = Vector2( 112.874, 66.5283 )
 
 [sub_resource type="Animation" id=16]
 tracks/0/type = "value"
@@ -77,6 +88,27 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="DynamicFont" id=20]
+size = 30
+font_data = ExtResource( 22 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 25
+font_data = ExtResource( 22 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 25
+font_data = ExtResource( 23 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 25
+font_data = ExtResource( 23 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 30
+outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 22 )
+
 [node name="AlimentarPersonaje" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -86,6 +118,7 @@ scale = Vector2( 0.964052, 0.844433 )
 texture = ExtResource( 2 )
 
 [node name="1" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -95,6 +128,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="2" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -104,6 +138,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="3" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -113,6 +148,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="4" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -122,6 +158,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="5" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -131,6 +168,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="6" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -140,6 +178,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="7" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -149,6 +188,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="8" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -158,6 +198,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="9" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 516.706, 384.767 )
 __meta__ = {
 "_edit_group_": true
@@ -166,183 +207,308 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="9"]
 shape = SubResource( 1 )
 
-[node name="Banana" type="Sprite" parent="."]
-position = Vector2( 147.082, 134.063 )
-scale = Vector2( 0.1, 0.1 )
+[node name="Vegetales" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 136.933, 126.102 )
+scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 3 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Area2D" type="Area2D" parent="Banana"]
+[node name="Area2D" type="Area2D" parent="Vegetales"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Banana/Area2D"]
-position = Vector2( 74.4127, 58.2361 )
-rotation = 0.826821
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vegetales/Area2D"]
+position = Vector2( 1.43665, 51.6019 )
+rotation = -0.0159866
 shape = SubResource( 2 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Banana"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Vegetales"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Banana/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vegetales/StaticBody2D"]
 shape = SubResource( 3 )
 
-[node name="Area_pocicion" type="Area2D" parent="Banana"]
+[node name="Area_pocicion" type="Area2D" parent="Vegetales"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Banana/Area_pocicion"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vegetales/Area_pocicion"]
 shape = SubResource( 4 )
 
-[node name="Carne" type="Sprite" parent="."]
-position = Vector2( 78.2294, 125.798 )
-scale = Vector2( 0.2, 0.2 )
+[node name="CarneRoja" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 59.6536, 124.471 )
+scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 5 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Area2D" type="Area2D" parent="Carne"]
+[node name="Area2D" type="Area2D" parent="CarneRoja"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carne/Area2D"]
-shape = SubResource( 5 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarneRoja/Area2D"]
+position = Vector2( 16.5856, 58.0491 )
+rotation = 0.773276
+shape = SubResource( 17 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Carne"]
+[node name="StaticBody2D" type="StaticBody2D" parent="CarneRoja"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carne/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarneRoja/StaticBody2D"]
 shape = SubResource( 6 )
 
-[node name="Area2D2" type="Area2D" parent="Carne"]
+[node name="Area2D2" type="Area2D" parent="CarneRoja"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Carne/Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CarneRoja/Area2D2"]
 shape = SubResource( 7 )
 
-[node name="Frutilla" type="Sprite" parent="."]
-position = Vector2( 232.247, 131.439 )
-scale = Vector2( 0.3, 0.3 )
+[node name="Choclos" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 213.008, 119.497 )
+scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 7 )
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Area2D" type="Area2D" parent="Frutilla"]
+[node name="Area2D" type="Area2D" parent="Choclos"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Frutilla/Area2D"]
-position = Vector2( 0, 22.7582 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Choclos/Area2D"]
+position = Vector2( 15.3464, 176.225 )
 shape = SubResource( 8 )
 
-[node name="Area2D2" type="Area2D" parent="Frutilla"]
+[node name="Area2D2" type="Area2D" parent="Choclos"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Frutilla/Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Choclos/Area2D2"]
 shape = SubResource( 9 )
 
-[node name="Galletita" type="Sprite" parent="."]
+[node name="PapasFritas" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 73.2577, 214.792 )
-scale = Vector2( 0.2, 0.2 )
+scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 9 )
 script = ExtResource( 10 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Area2D" type="Area2D" parent="Galletita"]
+[node name="Area2D" type="Area2D" parent="PapasFritas"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Galletita/Area2D"]
-position = Vector2( -10.6895, -25.7746 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PapasFritas/Area2D"]
+position = Vector2( -64.2757, 167.135 )
 shape = SubResource( 5 )
 
-[node name="Area2D2" type="Area2D" parent="Galletita"]
+[node name="Area2D2" type="Area2D" parent="PapasFritas"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Galletita/Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PapasFritas/Area2D2"]
+position = Vector2( -63.7024, 162.152 )
 shape = SubResource( 10 )
 
-[node name="Pan" type="Sprite" parent="."]
-position = Vector2( 187.763, 215.296 )
-scale = Vector2( 0.2, 0.2 )
+[node name="Hamburguesa" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 138.512, 215.296 )
+scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 11 )
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Area2D" type="Area2D" parent="Pan"]
+[node name="Area2D" type="Area2D" parent="Hamburguesa"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pan/Area2D"]
-rotation = 1.23785
-shape = SubResource( 11 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hamburguesa/Area2D"]
+position = Vector2( -27.5662, 137.829 )
+rotation = 1.56303
+shape = SubResource( 18 )
 
-[node name="Area2D2" type="Area2D" parent="Pan"]
+[node name="Area2D2" type="Area2D" parent="Hamburguesa"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pan/Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hamburguesa/Area2D2"]
+position = Vector2( -36.7543, 101.075 )
 shape = SubResource( 12 )
 
-[node name="Tomate" type="Sprite" parent="."]
-position = Vector2( 98.3123, 303.596 )
-scale = Vector2( 0.4, 0.4 )
+[node name="FrutosSecos" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 213.648, 219.773 )
+scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 13 )
 script = ExtResource( 14 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Area2D" type="Area2D" parent="Tomate"]
+[node name="Area2D" type="Area2D" parent="FrutosSecos"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tomate/Area2D"]
-shape = SubResource( 13 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FrutosSecos/Area2D"]
+position = Vector2( 23.6343, 102.416 )
+shape = SubResource( 19 )
 
-[node name="Area2D2" type="Area2D" parent="Tomate"]
+[node name="Area2D2" type="Area2D" parent="FrutosSecos"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Tomate/Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FrutosSecos/Area2D2"]
 shape = SubResource( 14 )
 
-[node name="Leche" type="Sprite" parent="."]
-position = Vector2( 220.676, 313.764 )
-scale = Vector2( 0.15, 0.15 )
+[node name="Pescado" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 226.758, 285.592 )
+scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 15 )
 script = ExtResource( 16 )
+energia = 2100
+tipo = 2
 
-[node name="Area2D" type="Area2D" parent="Leche"]
+[node name="Area2D" type="Area2D" parent="Pescado"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Leche/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pescado/Area2D"]
+position = Vector2( 32.1514, 160.758 )
 shape = SubResource( 5 )
 
-[node name="Area2D2" type="Area2D" parent="Leche"]
+[node name="Area2D2" type="Area2D" parent="Pescado"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Leche/Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pescado/Area2D2"]
+position = Vector2( 21.4343, 171.475 )
+shape = SubResource( 15 )
+
+[node name="Spaguetti" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 147.022, 284.136 )
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 17 )
+script = ExtResource( 16 )
+energia = 1000
+tipo = 3
+
+[node name="Area2D" type="Area2D" parent="Spaguetti"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spaguetti/Area2D"]
+position = Vector2( 32.1514, 160.758 )
+shape = SubResource( 5 )
+
+[node name="Area2D2" type="Area2D" parent="Spaguetti"]
+position = Vector2( -10.717, 32.1519 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spaguetti/Area2D2"]
+position = Vector2( 21.4343, 171.475 )
+shape = SubResource( 15 )
+
+[node name="Falafel" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 66.5531, 287.048 )
+scale = Vector2( 0.08, 0.08 )
+texture = ExtResource( 18 )
+script = ExtResource( 16 )
+energia = 3000
+tipo = 1
+
+[node name="Area2D" type="Area2D" parent="Falafel"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Falafel/Area2D"]
+position = Vector2( -64.3032, 107.172 )
+shape = SubResource( 5 )
+
+[node name="Area2D2" type="Area2D" parent="Falafel"]
+position = Vector2( -10.717, 32.1519 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Falafel/Area2D2"]
+position = Vector2( -45.9236, 89.1484 )
 shape = SubResource( 15 )
 
 [node name="Avanzar" type="TextureButton" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 771.945
-margin_top = 374.524
-margin_right = 1247.95
-margin_bottom = 788.524
+margin_left = 786.265
+margin_top = 403.163
+margin_right = 1262.27
+margin_bottom = 817.163
 rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 17 )
-texture_pressed = ExtResource( 18 )
+disabled = true
+texture_normal = ExtResource( 19 )
+texture_pressed = ExtResource( 20 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/boton = SubResource( 16 )
 
-[node name="UI" parent="." instance=ExtResource( 19 )]
-
-[node name="BarraEnergia" parent="UI" instance=ExtResource( 20 )]
+[node name="BarraEnergia" parent="." instance=ExtResource( 21 )]
 margin_left = 54.0135
 margin_top = 28.4133
 margin_right = 184.013
 margin_bottom = 50.4133
-[connection signal="input_event" from="Banana/Area2D" to="Banana" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="Banana/Area_pocicion" to="Banana" method="_on_Area_pocicion_area_entered"]
-[connection signal="input_event" from="Carne/Area2D" to="Carne" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="Carne/Area2D2" to="Carne" method="_on_Area2D2_area_entered"]
-[connection signal="input_event" from="Frutilla/Area2D" to="Frutilla" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="Frutilla/Area2D2" to="Frutilla" method="_on_Area2D2_area_entered"]
-[connection signal="input_event" from="Galletita/Area2D" to="Galletita" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="Galletita/Area2D2" to="Galletita" method="_on_Area2D2_area_entered"]
-[connection signal="input_event" from="Pan/Area2D" to="Pan" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="Pan/Area2D2" to="Pan" method="_on_Area2D2_area_entered"]
-[connection signal="input_event" from="Tomate/Area2D" to="Tomate" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="Tomate/Area2D2" to="Tomate" method="_on_Area2D2_area_entered"]
-[connection signal="input_event" from="Leche/Area2D" to="Leche" method="_on_Area2D_input_event"]
-[connection signal="area_entered" from="Leche/Area2D2" to="Leche" method="_on_Area2D2_area_entered"]
+
+[node name="Titulo" type="Label" parent="."]
+margin_left = 724.578
+margin_top = 239.139
+margin_right = 1105.58
+margin_bottom = 277.139
+custom_fonts/font = SubResource( 20 )
+text = "Este plato contiene:"
+
+[node name="Proteinas" type="Label" parent="Titulo"]
+margin_left = 4.2959
+margin_top = 64.4387
+margin_right = 118.296
+margin_bottom = 87.4387
+custom_fonts/font = SubResource( 21 )
+text = "Proteinas"
+
+[node name="Grasas" type="Label" parent="Titulo"]
+margin_left = 5.72791
+margin_top = 123.15
+margin_right = 88.7279
+margin_bottom = 146.15
+custom_fonts/font = SubResource( 22 )
+text = "Grasas"
+
+[node name="Carbohidratos" type="Label" parent="Titulo"]
+margin_left = 5.72778
+margin_top = 174.701
+margin_right = 174.728
+margin_bottom = 197.701
+custom_fonts/font = SubResource( 23 )
+text = "Carbohidratos"
+
+[node name="TildeVerde" type="Sprite" parent="Titulo"]
+visible = false
+position = Vector2( 217.66, 67.3027 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 24 )
+
+[node name="Aleta" type="Label" parent="."]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+margin_left = 294.986
+margin_top = 191.884
+margin_right = 790.986
+margin_bottom = 218.884
+custom_fonts/font = SubResource( 24 )
+text = "No creo que sea suficiente alimento"
+
+[node name="Reiniciar" type="TextureButton" parent="."]
+visible = false
+margin_left = 167.541
+margin_top = 578.516
+margin_right = 471.541
+margin_bottom = 915.516
+rect_rotation = -179.973
+rect_scale = Vector2( 0.5, 0.5 )
+disabled = true
+texture_normal = ExtResource( 25 )
+texture_pressed = ExtResource( 26 )
+[connection signal="input_event" from="Vegetales/Area2D" to="Vegetales" method="_on_Area2D_input_event"]
+[connection signal="area_entered" from="Vegetales/Area_pocicion" to="Vegetales" method="_on_Area_pocicion_area_entered"]
+[connection signal="input_event" from="CarneRoja/Area2D" to="CarneRoja" method="_on_Area2D_input_event"]
+[connection signal="area_entered" from="CarneRoja/Area2D2" to="CarneRoja" method="_on_Area2D2_area_entered"]
+[connection signal="input_event" from="Choclos/Area2D" to="Choclos" method="_on_Area2D_input_event"]
+[connection signal="area_entered" from="Choclos/Area2D2" to="Choclos" method="_on_Area2D2_area_entered"]
+[connection signal="input_event" from="PapasFritas/Area2D" to="PapasFritas" method="_on_Area2D_input_event"]
+[connection signal="area_entered" from="PapasFritas/Area2D2" to="PapasFritas" method="_on_Area2D2_area_entered"]
+[connection signal="input_event" from="Hamburguesa/Area2D" to="Hamburguesa" method="_on_Area2D_input_event"]
+[connection signal="area_entered" from="Hamburguesa/Area2D2" to="Hamburguesa" method="_on_Area2D2_area_entered"]
+[connection signal="input_event" from="FrutosSecos/Area2D" to="FrutosSecos" method="_on_Area2D_input_event"]
+[connection signal="area_entered" from="FrutosSecos/Area2D2" to="FrutosSecos" method="_on_Area2D2_area_entered"]
+[connection signal="input_event" from="Pescado/Area2D" to="Pescado" method="_on_Area2D_input_event"]
+[connection signal="area_entered" from="Pescado/Area2D2" to="Pescado" method="_on_Area2D2_area_entered"]
+[connection signal="input_event" from="Spaguetti/Area2D" to="Spaguetti" method="_on_Area2D_input_event"]
+[connection signal="area_entered" from="Spaguetti/Area2D2" to="Spaguetti" method="_on_Area2D2_area_entered"]
+[connection signal="input_event" from="Falafel/Area2D" to="Falafel" method="_on_Area2D_input_event"]
+[connection signal="area_entered" from="Falafel/Area2D2" to="Falafel" method="_on_Area2D2_area_entered"]
 [connection signal="pressed" from="Avanzar" to="." method="_on_Avanzar_pressed"]
+[connection signal="pressed" from="Reiniciar" to="." method="_on_Reiniciar_pressed"]

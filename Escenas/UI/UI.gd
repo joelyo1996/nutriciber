@@ -1,6 +1,9 @@
 extends Node2D
 func _ready():
 	$BotonReintentar.disabled = true
+	$BotonReintentar.visible = false
+	$Reintentar.visible = false
+	
 func _process(delta):
 	$Energia.text = String(Global.Energia)
 	if Global.Energia <= 0:
@@ -17,5 +20,6 @@ func _on_BotonReintentar_pressed():
 	$Reintentar.visible = false
 	$BotonReintentar.visible = false
 	Global.fin = false
-	get_tree().change_scene("res://Escenas/ElegirPersonaje/ElegirPersonaje.tscn")
+	$BotonReintentar.visible = false
+	get_tree().change_scene("res://Escenas/AlimentandoPersonaje/AlimentandoPersonaje.tscn")
 	pass 

@@ -5,6 +5,8 @@ var is_inside = false
 const posicion =Vector2(519,176)
 var mauseIn = false
 var a = true
+export var  energia = 0
+export var tipo = 0
 
 func _process(delta):
 	if a == true :
@@ -23,7 +25,8 @@ func _on_Area2D_mouse_exited():
 
 func _on_Area2D2_area_entered(area):
 	if area.name == "1":
-		Global.Energia = Global.Energia + 2000
+		Global.tipo = tipo
+		Global.Energia = Global.Energia + energia
 		fin = false
 		is_inside = false
 		Global.pos1 = true

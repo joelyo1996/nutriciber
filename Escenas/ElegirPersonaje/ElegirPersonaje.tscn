@@ -1,7 +1,7 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Escenas/ElegirPersonaje/ElegirPersonaje.gd" type="Script" id=1]
-[ext_resource path="res://Asset/fondo_nubes1.png" type="Texture" id=2]
+[ext_resource path="res://Asset/PersonalisarPersonaje/Fondo.jpeg" type="Texture" id=2]
 [ext_resource path="res://Asset/SegundoMenu/idle_menu_custom.png" type="Texture" id=3]
 [ext_resource path="res://Asset/PersonalisarPersonaje/head_idle1.png" type="Texture" id=4]
 [ext_resource path="res://Escenas/ElegirPersonaje/sorbete1.gd" type="Script" id=5]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Escenas/ElegirPersonaje/sorbete9.gd" type="Script" id=15]
 [ext_resource path="res://Asset/menu/boton_play_normal.png" type="Texture" id=16]
 [ext_resource path="res://Asset/menu/boton_play_presionado.png" type="Texture" id=17]
+[ext_resource path="res://Asset/UI/Fuente.ttf" type="DynamicFontData" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.88177, 11.1705 )
@@ -62,21 +63,26 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
+[sub_resource type="DynamicFont" id=12]
+size = 50
+font_data = ExtResource( 18 )
+
 [node name="ElegirPersonaje" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Fondo" type="Sprite" parent="."]
-position = Vector2( 513.085, 259.634 )
-scale = Vector2( 0.3, 0.3 )
+position = Vector2( 515.033, 305.412 )
+scale = Vector2( 0.805267, 0.713355 )
 texture = ExtResource( 2 )
 
 [node name="bruno" type="Sprite" parent="."]
-modulate = Color( 1, 1, 1, 0.215686 )
-position = Vector2( 965.746, 456.995 )
+modulate = Color( 1, 1, 1, 0.756863 )
+position = Vector2( 1106, 601.148 )
 texture = ExtResource( 3 )
 
 [node name="1" type="Area2D" parent="."]
-position = Vector2( 518.881, 70.6366 )
+editor/display_folded = true
+position = Vector2( 649.398, 206.998 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -85,7 +91,8 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="2" type="Area2D" parent="."]
-position = Vector2( 521.118, 64.4335 )
+editor/display_folded = true
+position = Vector2( 651.635, 200.795 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -94,7 +101,8 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="3" type="Area2D" parent="."]
-position = Vector2( 517.95, 68.8656 )
+editor/display_folded = true
+position = Vector2( 648.467, 205.227 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -103,7 +111,8 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="4" type="Area2D" parent="."]
-position = Vector2( 513.559, 87.2721 )
+editor/display_folded = true
+position = Vector2( 644.076, 223.633 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -112,7 +121,8 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="5" type="Area2D" parent="."]
-position = Vector2( 524.202, 190.471 )
+editor/display_folded = true
+position = Vector2( 654.719, 326.832 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -121,7 +131,8 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="6" type="Area2D" parent="."]
-position = Vector2( 517.922, 184.68 )
+editor/display_folded = true
+position = Vector2( 648.439, 321.041 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -130,7 +141,8 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="7" type="Area2D" parent="."]
-position = Vector2( 527.455, 339.48 )
+editor/display_folded = true
+position = Vector2( 657.972, 475.841 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -139,7 +151,8 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="8" type="Area2D" parent="."]
-position = Vector2( 520.628, 189.556 )
+editor/display_folded = true
+position = Vector2( 651.145, 325.917 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -148,7 +161,8 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="9" type="Area2D" parent="."]
-position = Vector2( 521.585, 337.006 )
+editor/display_folded = true
+position = Vector2( 652.102, 473.367 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -157,7 +171,8 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="sorbete1" type="Sprite" parent="."]
-position = Vector2( 127.597, 329.907 )
+editor/display_folded = true
+position = Vector2( 240.582, 205.234 )
 texture = ExtResource( 4 )
 script = ExtResource( 5 )
 
@@ -174,10 +189,8 @@ position = Vector2( -5.69006, -23.3499 )
 shape = SubResource( 3 )
 
 [node name="sorbete3" type="Sprite" parent="."]
-
 editor/display_folded = true
-position = Vector2( 127.217, 504.941 )
-
+position = Vector2( 359.031, 193.258 )
 texture = ExtResource( 6 )
 script = ExtResource( 7 )
 __meta__ = {
@@ -197,7 +210,8 @@ position = Vector2( 4.72144, -14.472 )
 shape = SubResource( 5 )
 
 [node name="sorbete6" type="Sprite" parent="."]
-position = Vector2( 344.668, 443.224 )
+editor/display_folded = true
+position = Vector2( 218.047, 361.407 )
 texture = ExtResource( 8 )
 script = ExtResource( 9 )
 __meta__ = {
@@ -216,7 +230,8 @@ shape = SubResource( 6 )
 shape = SubResource( 7 )
 
 [node name="sorbete8" type="Sprite" parent="."]
-position = Vector2( 777.275, 569.84 )
+editor/display_folded = true
+position = Vector2( 372.087, 449.063 )
 texture = ExtResource( 10 )
 script = ExtResource( 11 )
 __meta__ = {
@@ -238,7 +253,8 @@ position = Vector2( -1.50732, -6.02939 )
 shape = SubResource( 7 )
 
 [node name="sorbete7" type="Sprite" parent="."]
-position = Vector2( 885.447, 340.938 )
+editor/display_folded = true
+position = Vector2( 180.264, 481.195 )
 texture = ExtResource( 12 )
 script = ExtResource( 13 )
 __meta__ = {
@@ -258,7 +274,8 @@ position = Vector2( 34.6688, -4.52203 )
 shape = SubResource( 9 )
 
 [node name="sorbete9" type="Sprite" parent="."]
-position = Vector2( 508.612, 518.804 )
+editor/display_folded = true
+position = Vector2( 350.823, 542.18 )
 texture = ExtResource( 14 )
 script = ExtResource( 15 )
 __meta__ = {
@@ -279,16 +296,25 @@ shape = SubResource( 9 )
 
 [node name="Avanzar" type="TextureButton" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 175.322
-margin_top = 5.84407
-margin_right = 651.322
-margin_bottom = 419.844
+margin_left = 781.156
+margin_top = 3.89607
+margin_right = 1257.16
+margin_bottom = 417.896
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 16 )
 texture_pressed = ExtResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/boton = SubResource( 11 )
+
+[node name="Titulo" type="Label" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = 399.344
+margin_top = 44.8044
+margin_right = 763.344
+margin_bottom = 91.8044
+custom_fonts/font = SubResource( 12 )
+text = "¡Personalizate!"
 [connection signal="input_event" from="sorbete1/Area2D" to="sorbete1" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="sorbete1/Area_pocicion" to="sorbete1" method="_on_Area_pocicion_area_entered"]
 [connection signal="input_event" from="sorbete3/Area2D" to="sorbete3" method="_on_Area2D_input_event"]

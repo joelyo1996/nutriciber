@@ -4,7 +4,7 @@ extends Sprite
 # var a = 2
 var fin = true
 var is_inside = false
-var posicion =Vector2(502.939,191.498)
+var posicion =Vector2(644.663,338.031)
 var mauseIn = false
 var a = true
 # Called when the node enters the scene tree for the first time.
@@ -33,7 +33,6 @@ func _on_Area2D2_area_entered(area):
 		is_inside = false
 		position = posicion
 		Global.is_inside3 = false
-		Global.is_inside1 = false
 		Global.LargoPlata = Global.LargoPlata + 1
 		Global.CortoPlata = Global.CortoPlata + 1
 	pass 

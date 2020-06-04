@@ -4,7 +4,7 @@ extends Sprite
 # var a = 2
 var fin = true
 var is_inside = false
-const posicion =Vector2(490.523,304.761)
+const posicion =Vector2(632.205,442.235)
 var mauseIn = false
 var a = true
 # Called when the node enters the scene tree for the first time.
