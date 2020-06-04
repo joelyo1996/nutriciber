@@ -1,15 +1,16 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Escenas/Mapa11/Mapa11.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa11/fondo1.png" type="Texture" id=2]
 [ext_resource path="res://Escenas/Personaje/Personaje.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Escenas/Frutilla/Frutilla.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=6]
-[ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=7]
-[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Escenas/Tronco/Tronco.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Asset/UI/boton_arriba.png" type="Texture" id=6]
+[ext_resource path="res://Asset/UI/boton_izq.png" type="Texture" id=7]
+[ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=8]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Escenas/Tronco/Tronco.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 221.568, 136.763 )
@@ -88,48 +89,45 @@ position = Vector2( 346.897, 126.886 )
 [node name="UI" parent="." instance=ExtResource( 5 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 843.303
-margin_top = 591.87
-margin_right = 1147.3
-margin_bottom = 928.87
-rect_rotation = 270.491
+margin_left = 930.367
+margin_top = 474.878
+margin_right = 1234.36
+margin_bottom = 811.878
+rect_rotation = 359.889
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 7 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
-margin_left = 130.539
-margin_top = 596.182
-margin_right = 434.539
-margin_bottom = 933.182
-rect_rotation = -179.787
+margin_left = 14.9072
+margin_top = 495.514
+margin_right = 318.907
+margin_bottom = 832.514
+rect_rotation = -359.464
 rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 7 )
+texture_normal = ExtResource( 7 )
 
 [node name="Derecha" type="TextureButton" parent="UI"]
-margin_left = 131.059
-margin_top = 422.621
-margin_right = 435.059
-margin_bottom = 759.621
+margin_left = 156.906
+margin_top = 498.802
+margin_right = 460.906
+margin_bottom = 835.802
 rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 7 )
+texture_normal = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BarraEnergia" parent="UI" instance=ExtResource( 8 )]
+[node name="BarraEnergia" parent="UI" instance=ExtResource( 9 )]
 margin_left = 12.0
 margin_top = 8.00001
 margin_right = 212.0
 margin_bottom = 38.0
 rect_min_size = Vector2( 200, 30 )
 
-[node name="Tronco" parent="." instance=ExtResource( 9 )]
+[node name="Tronco" parent="." instance=ExtResource( 10 )]
 position = Vector2( 538.457, 350.026 )
 
-[node name="Rama3" parent="." instance=ExtResource( 10 )]
+[node name="Rama3" parent="." instance=ExtResource( 11 )]
 position = Vector2( 372.266, 230.142 )
 scale = Vector2( 0.5, 0.5 )
 [connection signal="body_entered" from="Mapa12" to="." method="_on_Mapa12_body_entered"]

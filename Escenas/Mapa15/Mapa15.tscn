@@ -1,13 +1,14 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Escenas/Mapa15/Mapa15.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa15/fondo5.png" type="Texture" id=2]
 [ext_resource path="res://Escenas/Personaje/Personaje.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=5]
-[ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=6]
-[ext_resource path="res://Asset/Mapa15/xylon.png" type="Texture" id=7]
+[ext_resource path="res://Asset/UI/boton_arriba.png" type="Texture" id=5]
+[ext_resource path="res://Asset/UI/boton_izq.png" type="Texture" id=6]
+[ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=7]
 [ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Asset/Mapa15/xylon.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 489.285, 40.2864 )
@@ -62,37 +63,32 @@ shape = SubResource( 2 )
 [node name="UI" parent="." instance=ExtResource( 4 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 907.358
-margin_top = 588.589
-margin_right = 1211.36
-margin_bottom = 925.589
-rect_rotation = -91.3301
+margin_left = 911.059
+margin_top = 505.311
+margin_right = 1215.06
+margin_bottom = 842.311
 rect_scale = Vector2( 0.3, 0.3 )
 toggle_mode = true
 texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 6 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
-margin_left = 115.757
-margin_top = 584.333
-margin_right = 419.757
-margin_bottom = 921.333
-rect_rotation = 179.343
+margin_left = 32.4792
+margin_top = 515.86
+margin_right = 336.479
+margin_bottom = 852.86
 rect_scale = Vector2( 0.3, 0.3 )
 toggle_mode = true
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 6 )
+texture_normal = ExtResource( 6 )
 
 [node name="Derecha" type="TextureButton" parent="UI"]
-margin_left = 129.914
-margin_top = 480.328
-margin_right = 433.914
-margin_bottom = 817.328
+margin_left = 124.362
+margin_top = 513.639
+margin_right = 428.362
+margin_bottom = 850.639
 rect_rotation = 0.470204
 rect_scale = Vector2( 0.3, 0.3 )
 toggle_mode = true
-texture_normal = ExtResource( 5 )
-texture_pressed = ExtResource( 6 )
+texture_normal = ExtResource( 7 )
 
 [node name="BarraEnergia" parent="UI" instance=ExtResource( 8 )]
 margin_left = 11.0338
@@ -104,7 +100,7 @@ rect_min_size = Vector2( 200, 30 )
 [node name="Xylon" type="Sprite" parent="."]
 position = Vector2( 917.419, 336.249 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 7 )
+texture = ExtResource( 9 )
 [connection signal="area_entered" from="Arriba" to="." method="_on_Arriba_area_entered"]
 [connection signal="area_entered" from="Abajo" to="." method="_on_Abajo_area_entered"]
 [connection signal="button_down" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_button_down"]

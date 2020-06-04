@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/comiendo.ogg-5c0eaf433a645f921745ca43b7e8d39a.oggstr"
+
+[deps]
+
+source_file="res://Asset/frutilla/comiendo.ogg"
+dest_files=[ "res://.import/comiendo.ogg-5c0eaf433a645f921745ca43b7e8d39a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -30,6 +30,7 @@ func _physics_process(delta):
 		if Global.LargoOro == 3:
 			$LargoCaminarOro.visible = true
 			veri = false
+			Global.largoSalto = false
 		if Global.peloCorto:
 			$CortoSalto.visible = true
 			$LargoCaminar.visible = false
