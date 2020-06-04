@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Escenas/ElegirPersonaje/ElegirPersonaje.gd" type="Script" id=1]
 [ext_resource path="res://Asset/PersonalisarPersonaje/Fondo.jpeg" type="Texture" id=2]
@@ -15,10 +15,9 @@
 [ext_resource path="res://Escenas/ElegirPersonaje/sorbete7.gd" type="Script" id=13]
 [ext_resource path="res://Asset/PersonalisarPersonaje/pantalon_oro.png" type="Texture" id=14]
 [ext_resource path="res://Escenas/ElegirPersonaje/sorbete9.gd" type="Script" id=15]
-[ext_resource path="res://Asset/menu/boton_play_normal.png" type="Texture" id=16]
-[ext_resource path="res://Asset/menu/boton_play_presionado.png" type="Texture" id=17]
-[ext_resource path="res://Asset/UI/Fuente.ttf" type="DynamicFontData" id=18]
-[ext_resource path="res://Asset/menu/musica_menu.ogg" type="AudioStream" id=19]
+[ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=16]
+[ext_resource path="res://Asset/UI/Fuente.ttf" type="DynamicFontData" id=17]
+[ext_resource path="res://Asset/menu/musica_menu.ogg" type="AudioStream" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.88177, 11.1705 )
@@ -66,7 +65,7 @@ tracks/0/keys = {
 
 [sub_resource type="DynamicFont" id=12]
 size = 50
-font_data = ExtResource( 18 )
+font_data = ExtResource( 17 )
 
 [node name="ElegirPersonaje" type="Node2D"]
 script = ExtResource( 1 )
@@ -303,7 +302,6 @@ margin_right = 1257.16
 margin_bottom = 417.896
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 16 )
-texture_pressed = ExtResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/boton = SubResource( 11 )
@@ -318,7 +316,7 @@ custom_fonts/font = SubResource( 12 )
 text = "¡Personalizate!"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 19 )
+stream = ExtResource( 18 )
 volume_db = -9.087
 autoplay = true
 [connection signal="input_event" from="sorbete1/Area2D" to="sorbete1" method="_on_Area2D_input_event"]
