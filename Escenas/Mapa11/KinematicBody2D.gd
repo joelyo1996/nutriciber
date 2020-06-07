@@ -5,6 +5,8 @@ var move = Vector2(0,100)
 var direccion 
 var saltando = false
 var veri = true
+const mapa12 = ("res://Escenas/Mapa12/Mapa12.tscn")
+
 func _physics_process(delta):
 	if veri == true:
 		if Global.largoOroPlata == 3:
@@ -171,6 +173,8 @@ func _on_Area2D_area_entered(area):
 
 func _on_Izquierda_button_down():
 	if Global.Energia >0:
+		if Global.Cambio == 1:
+			get_tree().change_scene(mapa12)
 		_corto_plata()
 		_largo_plata()
 		_corto_oro()
@@ -270,10 +274,12 @@ func _on_TextureButton_button_down():
 			$LargoCaminar.visible = false
 		saltando = true
 		_salto()
+		move.x = 300
 		Global.Energia = Global.Energia - 10
 		yield(get_tree().create_timer(0.5),"timeout")
 		move.y = 400
 		salto = 200
+		move.x = 0
 		yield(get_tree().create_timer(1),"timeout")
 		saltando = false
 			
