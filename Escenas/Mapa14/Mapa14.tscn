@@ -141,21 +141,11 @@ texture_normal = ExtResource( 11 )
 margin_top = 13.1139
 margin_right = 207.876
 margin_bottom = 43.1139
-
-[node name="TextureButton2" type="TextureButton" parent="UI"]
-margin_left = 886.642
-margin_top = 506.462
-margin_right = 1047.64
-margin_bottom = 714.462
-rect_scale = Vector2( 0.3, 0.3 )
-texture_normal = ExtResource( 9 )
 [connection signal="area_entered" from="Mapa13" to="." method="_on_Mapa13_area_entered"]
 [connection signal="area_entered" from="Arriba" to="." method="_on_Arriba_area_entered"]
 [connection signal="area_entered" from="Abajo" to="." method="_on_Abajo_area_entered"]
-[connection signal="button_down" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_button_down"]
-[connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]
-[connection signal="button_down" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_down"]
+[connection signal="gui_input" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_gui_input"]
 [connection signal="button_up" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_up"]
-[connection signal="button_down" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_down"]
+[connection signal="gui_input" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_gui_input"]
 [connection signal="button_up" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_up"]
-[connection signal="button_down" from="UI/TextureButton2" to="Personaje" method="_on_TextureButton2_button_down"]
+[connection signal="gui_input" from="UI/Derecha" to="Personaje" method="_on_Derecha_gui_input"]
