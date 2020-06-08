@@ -6,7 +6,7 @@ var direccion
 var saltando = false
 var veri = true
 const mapa12 = ("res://Escenas/Mapa12/Mapa12.tscn")
-
+const mapa13 = ("res://Escenas/Mapa13/Mapa13.tscn")
 func _physics_process(delta):
 	if veri == true:
 		if Global.largoOroPlata == 3:
@@ -173,8 +173,6 @@ func _on_Area2D_area_entered(area):
 
 func _on_Izquierda_button_down():
 	if Global.Energia >0:
-		if Global.Cambio == 1:
-			get_tree().change_scene(mapa12)
 		_corto_plata()
 		_largo_plata()
 		_corto_oro()
@@ -343,6 +341,12 @@ func _on_TextureButton_button_down():
 
 func _on_Derecha_button_down():
 	if  Global.Energia > 0 :
+		if Global.Cambio == 1:
+			get_tree().change_scene(mapa12)
+			Global.Cambio = 0
+		if Global.Cambio == 2:
+			get_tree().change_scene(mapa13)
+			Global.Cambio = 0
 		$SpritePersonaje.flip_h = false
 		$SpriteSalto.flip_h = false
 		$LargoCaminar.flip_h = false

@@ -23,7 +23,7 @@ extents = Vector2( 131.577, 185.535 )
 [sub_resource type="RectangleShape2D" id=4]
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 10, 295.429 )
+extents = Vector2( 52.4284, 295.429 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 233.487, 12.449 )
@@ -62,6 +62,13 @@ position = Vector2( 838.083, 522.853 )
 position = Vector2( 75.4426, -75.8586 )
 shape = SubResource( 3 )
 
+[node name="plataforma5" type="StaticBody2D" parent="."]
+position = Vector2( 1103.55, 209.913 )
+
+[node name="CollisionPlataforma" type="CollisionShape2D" parent="plataforma5"]
+position = Vector2( 75.4426, -75.8586 )
+shape = SubResource( 3 )
+
 [node name="plataforma4" type="StaticBody2D" parent="."]
 position = Vector2( 422.811, 385.384 )
 
@@ -72,7 +79,7 @@ shape = SubResource( 4 )
 position = Vector2( 1004.8, 288.351 )
 
 [node name="CollisionMapa12" type="CollisionShape2D" parent="Mapa12"]
-position = Vector2( 51.8174, 1.85065 )
+position = Vector2( 3.98488, 2.75315 )
 shape = SubResource( 5 )
 
 [node name="Mapa13" type="Area2D" parent="."]
