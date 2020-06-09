@@ -25,6 +25,7 @@ extents = Vector2( 114.753, 178.775 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "CaminarCortoPlata"
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("CortoCaminarPlata:frame")
 tracks/0/interp = 1
@@ -40,6 +41,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=3]
 resource_name = "CortoCaminarOro"
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("CortoCaminarOro:frame")
 tracks/0/interp = 1
@@ -83,6 +85,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=6]
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoCaminarOro:frame")
 tracks/0/interp = 1
@@ -97,6 +100,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=7]
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoCaminarPlata:frame")
 tracks/0/interp = 1
@@ -112,6 +116,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=8]
 resource_name = "LargoOroPlataCaminar"
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("LargoOroPlataCaminando:frame")
 tracks/0/interp = 1

@@ -170,14 +170,8 @@ func _on_Area2D_area_entered(area):
 		
 	pass 
 
-
-func _on_Izquierda_button_down():
-	
-	pass # Replace with function body.
-
-
-
 func _on_Derecha_button_up():
+	$AnimationPersonaje.stop()
 	move.x = 0
 	
 func _salto():
@@ -196,11 +190,13 @@ func _largo_caminar_oro():
 		$AnimationPersonaje.play("LargoCaminarOro")
 
 func _on_Izquierda_toggled(button_pressed):
+	
 	move.x = 0
 	pass # Replace with function body.
 
 
 func _on_Izquierda_button_up():
+	$AnimationPersonaje.stop()
 	move.x = 0
 	pass # Replace with function body.
 
