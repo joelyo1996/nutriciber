@@ -113,11 +113,11 @@ scale = Vector2( 0.5, 1 )
 [node name="UI" parent="." instance=ExtResource( 8 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 957.139
-margin_top = 508.091
-margin_right = 1261.14
-margin_bottom = 845.091
-rect_scale = Vector2( 0.3, 0.3 )
+margin_left = 931.752
+margin_top = 474.771
+margin_right = 1235.75
+margin_bottom = 811.771
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 9 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
@@ -125,16 +125,16 @@ margin_left = 19.2458
 margin_top = 509.935
 margin_right = 323.246
 margin_bottom = 846.935
-rect_scale = Vector2( 0.3, 0.3 )
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 10 )
 
 [node name="Derecha" type="TextureButton" parent="UI"]
-margin_left = 114.321
-margin_top = 508.326
-margin_right = 418.321
-margin_bottom = 845.326
+margin_left = 134.948
+margin_top = 514.673
+margin_right = 438.948
+margin_bottom = 851.673
 rect_rotation = 358.708
-rect_scale = Vector2( 0.3, 0.3 )
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 11 )
 
 [node name="BarraEnergia" parent="UI" instance=ExtResource( 12 )]

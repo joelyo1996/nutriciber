@@ -8,6 +8,7 @@
 [ext_resource path="res://Asset/UI/boton_izq.png" type="Texture" id=6]
 [ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Escenas/Frutilla/Frutilla.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 87.0023, 202.956 )
@@ -23,9 +24,6 @@ extents = Vector2( 12.7924, 132.758 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 10, 531.974 )
-
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 92.6117, 10 )
 
 [node name="Mapa12" type="Node2D"]
 script = ExtResource( 1 )
@@ -77,21 +75,21 @@ shape = SubResource( 4 )
 position = Vector2( 1111.92, 554.706 )
 
 [node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa13"]
-position = Vector2( -73.6716, -600.326 )
+position = Vector2( -63.9315, -602.274 )
 shape = SubResource( 4 )
 
 [node name="Mapa13Abajo" type="Area2D" parent="."]
 position = Vector2( 1116.24, 977.766 )
 
 [node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa13Abajo"]
-position = Vector2( -82.7475, -492.132 )
+position = Vector2( -69.1113, -486.288 )
 shape = SubResource( 4 )
 
 [node name="Mapa13Medio" type="Area2D" parent="."]
 position = Vector2( 1107.89, 678.803 )
 
 [node name="CollisionMapa11" type="CollisionShape2D" parent="Mapa13Medio"]
-position = Vector2( -72.7263, -462.069 )
+position = Vector2( -57.1422, -456.225 )
 shape = SubResource( 4 )
 
 [node name="pozo" type="Area2D" parent="."]
@@ -144,28 +142,14 @@ rect_min_size = Vector2( 200, 30 )
 [node name="Frutilla" parent="." instance=ExtResource( 8 )]
 position = Vector2( 978.85, 35.2317 )
 
-[node name="Rama" type="StaticBody2D" parent="."]
-editor/display_folded = true
+[node name="Rama4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 727.405, 349.672 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Rama"]
-position = Vector2( 649.701, 303.973 )
-shape = SubResource( 6 )
+[node name="Rama5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 989.421, 176.05 )
 
-[node name="Rama2" type="StaticBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( 297.293, -212.113 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Rama2"]
-position = Vector2( 649.701, 303.973 )
-shape = SubResource( 6 )
-
-[node name="Rama3" type="StaticBody2D" parent="."]
-editor/display_folded = true
-position = Vector2( 288.942, 138.625 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Rama3"]
-position = Vector2( 649.701, 303.973 )
-shape = SubResource( 6 )
+[node name="Rama6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 975.629, 461.913 )
 [connection signal="area_entered" from="Mapa11" to="." method="_on_Mapa11_area_entered"]
 [connection signal="area_entered" from="Mapa13" to="." method="_on_Mapa13_area_entered"]
 [connection signal="area_entered" from="Mapa13Abajo" to="." method="_on_Mapa13Abajo_area_entered"]

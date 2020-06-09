@@ -10,7 +10,7 @@ const mapa13 = ("res://Escenas/Mapa13/Mapa13.tscn")
 func _physics_process(delta):
 	if veri == true:
 		if Global.largoOroPlata == 3:
-			$LargoOroPlataCaminando.visible = true
+			$LargoOroPlataSalto.visible = true
 			veri = false
 			Global.largoOroPlataAnimacion = true
 			Global.largoSalto = false

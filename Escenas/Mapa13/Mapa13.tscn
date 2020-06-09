@@ -60,7 +60,7 @@ position = Vector2( -77.838, 77.731 )
 rotation = 1.5682
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa12"]
-position = Vector2( -44.3937, -12.8087 )
+position = Vector2( -44.4137, -5.09236 )
 shape = SubResource( 3 )
 
 [node name="Mapa12Abajo" type="Area2D" parent="."]
@@ -108,11 +108,11 @@ position = Vector2( 732.851, 347.61 )
 [node name="UI" parent="." instance=ExtResource( 6 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 938.931
-margin_top = 520.83
-margin_right = 1242.93
-margin_bottom = 857.83
-rect_scale = Vector2( 0.3, 0.3 )
+margin_left = 916.076
+margin_top = 476.878
+margin_right = 1220.07
+margin_bottom = 813.878
+rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
 texture_normal = ExtResource( 7 )
 
@@ -121,16 +121,16 @@ margin_left = 24.7518
 margin_top = 474.725
 margin_right = 328.752
 margin_bottom = 811.725
-rect_scale = Vector2( 0.3, 0.3 )
+rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
 texture_normal = ExtResource( 8 )
 
 [node name="Derecha" type="TextureButton" parent="UI"]
-margin_left = 113.781
+margin_left = 143.668
 margin_top = 476.056
-margin_right = 417.784
+margin_right = 447.671
 margin_bottom = 813.056
-rect_scale = Vector2( 0.3, 0.3 )
+rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
 texture_normal = ExtResource( 9 )
 
