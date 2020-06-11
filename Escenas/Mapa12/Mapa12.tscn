@@ -103,10 +103,10 @@ shape = SubResource( 5 )
 [node name="UI" parent="." instance=ExtResource( 4 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 913.36
-margin_top = 611.807
-margin_right = 1217.36
-margin_bottom = 948.807
+margin_left = 894.49
+margin_top = 588.789
+margin_right = 1198.49
+margin_bottom = 925.789
 rect_rotation = -92.4648
 rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
@@ -124,9 +124,9 @@ texture_normal = ExtResource( 6 )
 
 [node name="Derecha" type="TextureButton" parent="UI"]
 margin_left = 164.571
-margin_top = 494.727
+margin_top = 495.514
 margin_right = 468.571
-margin_bottom = 831.727
+margin_bottom = 832.514
 rect_rotation = 2.24376
 rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true

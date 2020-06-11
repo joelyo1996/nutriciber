@@ -113,9 +113,9 @@ scale = Vector2( 0.5, 1 )
 [node name="UI" parent="." instance=ExtResource( 8 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 931.752
+margin_left = 900.0
 margin_top = 474.771
-margin_right = 1235.75
+margin_right = 1204.0
 margin_bottom = 811.771
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 9 )

@@ -95,18 +95,18 @@ position = Vector2( 541.889, 154.353 )
 [node name="UI" parent="." instance=ExtResource( 5 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 930.367
-margin_top = 474.878
-margin_right = 1234.36
-margin_bottom = 811.878
+margin_left = 897.754
+margin_top = 473.415
+margin_right = 1201.75
+margin_bottom = 810.415
 rect_rotation = 359.889
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 6 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
-margin_left = 14.9072
+margin_left = 26.514
 margin_top = 495.514
-margin_right = 318.907
+margin_right = 330.514
 margin_bottom = 832.514
 rect_rotation = -359.464
 rect_scale = Vector2( 0.5, 0.5 )
