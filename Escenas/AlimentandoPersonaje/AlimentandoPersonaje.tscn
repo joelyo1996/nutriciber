@@ -4,7 +4,7 @@
 [ext_resource path="res://Asset/AlimentandoPersonaje/fondo_alimento.jpg" type="Texture" id=2]
 [ext_resource path="res://Asset/AlimentandoPersonaje/vegetales.png" type="Texture" id=3]
 [ext_resource path="res://Escenas/AlimentandoPersonaje/Banana.gd" type="Script" id=4]
-[ext_resource path="res://Asset/AlimentandoPersonaje/carneroja.png" type="Texture" id=5]
+[ext_resource path="res://Asset/AlimentandoPersonaje/carne3.png" type="Texture" id=5]
 [ext_resource path="res://Escenas/AlimentandoPersonaje/Carne.gd" type="Script" id=6]
 [ext_resource path="res://Asset/AlimentandoPersonaje/choclos.png" type="Texture" id=7]
 [ext_resource path="res://Escenas/AlimentandoPersonaje/Frutilla.gd" type="Script" id=8]
@@ -38,9 +38,8 @@ extents = Vector2( 96.3335, 95.3488 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 4.34924, 3.79492 )
 
-[sub_resource type="CapsuleShape2D" id=5]
-radius = 184.97
-height = 346.634
+[sub_resource type="CircleShape2D" id=5]
+radius = 438.81
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 104.106, 82.3149 )
@@ -118,6 +117,7 @@ scale = Vector2( 0.99857, 0.999563 )
 texture = ExtResource( 2 )
 
 [node name="1" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -127,6 +127,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="2" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -136,6 +137,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="3" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -145,6 +147,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="4" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -154,6 +157,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="5" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -163,6 +167,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="6" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -172,6 +177,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="7" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true

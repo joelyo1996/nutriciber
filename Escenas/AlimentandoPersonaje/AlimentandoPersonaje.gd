@@ -10,10 +10,12 @@ func _ready():
 func _physics_process(delta):
 	if Global.pos4 == true:
 		if Global.Energia < 6000:
-			$Aleta.visible = true
+			$Aleta.visible = false
 			$Reiniciar.visible = true
 			$Reiniciar.disabled = false
-		$Avanzar.visible = true
+			$Avanzar.visible = false
+		else:
+			$Avanzar.visible = true
 		$AnimationPlayer.play("boton")
 		$Avanzar.disabled = false
 		Global.is_inside1 = true
@@ -46,15 +48,15 @@ func _on_Avanzar_pressed():
 
 func _on_Reiniciar_pressed():
 	Global.Energia = 0
-	$Vegetales.position = Vector2(136.933,126)
-	$CarneRoja.position = Vector2(59,124)
-	$Choclos.position = Vector2(213,119)
-	$PapasFritas.position = Vector2 (73,214)
-	$Hamburguesa.position = Vector2 (138,215)
-	$FrutosSecos.position = Vector2 (213,219)
-	$Pescado.position = Vector2 (226,285)
-	$Spaguetti.position = Vector2 (147,284)
-	$Falafel.position = Vector2 (66,287)
+	$Vegetales.position = Vector2(161.872,216.571)
+	$CarneRoja.position = Vector2(71.459,221.675)
+	$Choclos.position = Vector2(239.713,208.245)
+	$PapasFritas.position = Vector2 (74.878,293.659)
+	$Hamburguesa.position = Vector2 (156.652,296.089)
+	$FrutosSecos.position = Vector2 (234.411,297.58)
+	$Pescado.position = Vector2 (244.406,353.378)
+	$Spaguetti.position = Vector2 (165.467,350.501)
+	$Falafel.position = Vector2 (73.073,359.179)
 	$Aleta.visible = false
 	$Avanzar.visible = false
 	$Titulo/TildeVerde.visible = false
