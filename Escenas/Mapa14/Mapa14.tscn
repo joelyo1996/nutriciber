@@ -83,13 +83,13 @@ position = Vector2( 607.604, 504.365 )
 [node name="Personaje" parent="." instance=ExtResource( 6 )]
 
 [node name="Mapa13" type="Area2D" parent="."]
-position = Vector2( -40.0845, 300.633 )
+position = Vector2( -41.6712, 303.806 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa13"]
 shape = SubResource( 5 )
 
 [node name="Arriba" type="Area2D" parent="."]
-position = Vector2( 1057.33, 289.273 )
+position = Vector2( 1017.66, 324.18 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Arriba"]
 position = Vector2( -2.27209, -170.406 )
@@ -113,11 +113,11 @@ scale = Vector2( 0.5, 1 )
 [node name="UI" parent="." instance=ExtResource( 8 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 957.139
-margin_top = 508.091
-margin_right = 1261.14
-margin_bottom = 845.091
-rect_scale = Vector2( 0.3, 0.3 )
+margin_left = 900.0
+margin_top = 474.771
+margin_right = 1204.0
+margin_bottom = 811.771
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 9 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
@@ -125,16 +125,16 @@ margin_left = 19.2458
 margin_top = 509.935
 margin_right = 323.246
 margin_bottom = 846.935
-rect_scale = Vector2( 0.3, 0.3 )
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 10 )
 
 [node name="Derecha" type="TextureButton" parent="UI"]
-margin_left = 114.321
-margin_top = 508.326
-margin_right = 418.321
-margin_bottom = 845.326
+margin_left = 134.948
+margin_top = 514.673
+margin_right = 438.948
+margin_bottom = 851.673
 rect_rotation = 358.708
-rect_scale = Vector2( 0.3, 0.3 )
+rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 11 )
 
 [node name="BarraEnergia" parent="UI" instance=ExtResource( 12 )]
@@ -144,9 +144,8 @@ margin_bottom = 43.1139
 [connection signal="area_entered" from="Mapa13" to="." method="_on_Mapa13_area_entered"]
 [connection signal="area_entered" from="Arriba" to="." method="_on_Arriba_area_entered"]
 [connection signal="area_entered" from="Abajo" to="." method="_on_Abajo_area_entered"]
-[connection signal="button_down" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_button_down"]
-[connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]
-[connection signal="button_down" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_down"]
+[connection signal="gui_input" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_gui_input"]
 [connection signal="button_up" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_up"]
-[connection signal="button_down" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_down"]
+[connection signal="gui_input" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_gui_input"]
 [connection signal="button_up" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_up"]
+[connection signal="gui_input" from="UI/Derecha" to="Personaje" method="_on_Derecha_gui_input"]

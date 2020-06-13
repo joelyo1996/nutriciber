@@ -23,7 +23,7 @@ extents = Vector2( 131.577, 185.535 )
 [sub_resource type="RectangleShape2D" id=4]
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 10, 295.429 )
+extents = Vector2( 52.4284, 295.429 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 233.487, 12.449 )
@@ -62,6 +62,13 @@ position = Vector2( 838.083, 522.853 )
 position = Vector2( 75.4426, -75.8586 )
 shape = SubResource( 3 )
 
+[node name="plataforma5" type="StaticBody2D" parent="."]
+position = Vector2( 1103.55, 209.913 )
+
+[node name="CollisionPlataforma" type="CollisionShape2D" parent="plataforma5"]
+position = Vector2( 75.4426, -75.8586 )
+shape = SubResource( 3 )
+
 [node name="plataforma4" type="StaticBody2D" parent="."]
 position = Vector2( 422.811, 385.384 )
 
@@ -72,7 +79,7 @@ shape = SubResource( 4 )
 position = Vector2( 1004.8, 288.351 )
 
 [node name="CollisionMapa12" type="CollisionShape2D" parent="Mapa12"]
-position = Vector2( 51.8174, 1.85065 )
+position = Vector2( 3.98488, 2.75315 )
 shape = SubResource( 5 )
 
 [node name="Mapa13" type="Area2D" parent="."]
@@ -88,18 +95,18 @@ position = Vector2( 541.889, 154.353 )
 [node name="UI" parent="." instance=ExtResource( 5 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 930.367
-margin_top = 474.878
-margin_right = 1234.36
-margin_bottom = 811.878
+margin_left = 897.754
+margin_top = 473.415
+margin_right = 1201.75
+margin_bottom = 810.415
 rect_rotation = 359.889
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 6 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
-margin_left = 14.9072
+margin_left = 26.514
 margin_top = 495.514
-margin_right = 318.907
+margin_right = 330.514
 margin_bottom = 832.514
 rect_rotation = -359.464
 rect_scale = Vector2( 0.5, 0.5 )
@@ -125,11 +132,11 @@ rect_min_size = Vector2( 200, 30 )
 
 [node name="Tronco" parent="." instance=ExtResource( 10 )]
 position = Vector2( 538.457, 350.026 )
+[connection signal="area_entered" from="Mapa12" to="." method="_on_Mapa12_area_entered"]
 [connection signal="body_entered" from="Mapa12" to="." method="_on_Mapa12_body_entered"]
 [connection signal="body_entered" from="Mapa13" to="." method="_on_Mapa13_body_entered"]
-[connection signal="button_down" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_button_down"]
-[connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]
-[connection signal="button_down" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_down"]
+[connection signal="gui_input" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_gui_input"]
 [connection signal="button_up" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_up"]
-[connection signal="button_down" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_down"]
+[connection signal="gui_input" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_gui_input"]
 [connection signal="button_up" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_up"]
+[connection signal="gui_input" from="UI/Derecha" to="Personaje" method="_on_Derecha_gui_input"]

@@ -142,11 +142,11 @@ shape = SubResource( 2 )
 [node name="UI" parent="." instance=ExtResource( 4 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
-margin_left = 911.059
-margin_top = 505.311
-margin_right = 1215.06
-margin_bottom = 842.311
-rect_scale = Vector2( 0.3, 0.3 )
+margin_left = 879.599
+margin_top = 492.357
+margin_right = 1183.6
+margin_bottom = 829.357
+rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
 texture_normal = ExtResource( 5 )
 
@@ -155,17 +155,17 @@ margin_left = 32.4792
 margin_top = 515.86
 margin_right = 336.479
 margin_bottom = 852.86
-rect_scale = Vector2( 0.3, 0.3 )
+rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
 texture_normal = ExtResource( 6 )
 
 [node name="Derecha" type="TextureButton" parent="UI"]
-margin_left = 124.362
-margin_top = 513.639
-margin_right = 428.362
-margin_bottom = 850.639
+margin_left = 148.42
+margin_top = 519.191
+margin_right = 452.42
+margin_bottom = 856.191
 rect_rotation = 0.470204
-rect_scale = Vector2( 0.3, 0.3 )
+rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
 texture_normal = ExtResource( 7 )
 
@@ -233,11 +233,10 @@ texture_normal = ExtResource( 6 )
 anims/final = SubResource( 6 )
 [connection signal="area_entered" from="Arriba" to="." method="_on_Arriba_area_entered"]
 [connection signal="area_entered" from="Abajo" to="." method="_on_Abajo_area_entered"]
-[connection signal="button_down" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_button_down"]
-[connection signal="pressed" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_pressed"]
-[connection signal="button_down" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_down"]
+[connection signal="gui_input" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_gui_input"]
 [connection signal="button_up" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_button_up"]
-[connection signal="button_down" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_down"]
+[connection signal="gui_input" from="UI/Izquierda" to="Personaje" method="_on_Izquierda_gui_input"]
 [connection signal="button_up" from="UI/Derecha" to="Personaje" method="_on_Derecha_button_up"]
+[connection signal="gui_input" from="UI/Derecha" to="Personaje" method="_on_Derecha_gui_input"]
 [connection signal="area_entered" from="Xylon/AreaXylon" to="." method="_on_AreaXylon_area_entered"]
 [connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]

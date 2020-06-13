@@ -2,12 +2,12 @@
 
 importer="ogg_vorbis"
 type="AudioStreamOGGVorbis"
-path="res://.import/Salto.ogg-16a7270c102c05b6f168b9a3c80e9bca.oggstr"
+path="res://.import/salto.ogg-fe73c6eace51ed16fb1f674aadd62595.oggstr"
 
 [deps]
 
-source_file="res://Asset/Personaje/Salto.ogg"
-dest_files=[ "res://.import/Salto.ogg-16a7270c102c05b6f168b9a3c80e9bca.oggstr" ]
+source_file="res://Asset/Personaje/salto.ogg"
+dest_files=[ "res://.import/salto.ogg-fe73c6eace51ed16fb1f674aadd62595.oggstr" ]
 
 [params]
 

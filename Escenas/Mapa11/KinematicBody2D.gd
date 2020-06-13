@@ -5,10 +5,12 @@ var move = Vector2(0,100)
 var direccion 
 var saltando = false
 var veri = true
+const mapa12 = ("res://Escenas/Mapa12/Mapa12.tscn")
+const mapa13 = ("res://Escenas/Mapa13/Mapa13.tscn")
 func _physics_process(delta):
 	if veri == true:
 		if Global.largoOroPlata == 3:
-			$LargoOroPlataCaminando.visible = true
+			$LargoOroPlataSalto.visible = true
 			veri = false
 			Global.largoOroPlataAnimacion = true
 			Global.largoSalto = false
@@ -168,46 +170,8 @@ func _on_Area2D_area_entered(area):
 		
 	pass 
 
-
-func _on_Izquierda_button_down():
-	if Global.Energia >0:
-		_corto_plata()
-		_largo_plata()
-		_corto_oro()
-		_largo_oro_plata()
-		$CortoCaminarOro.flip_h = true
-		$SpritePersonaje.flip_h = true
-		$SpriteSalto.flip_h = true
-		$LargoCaminar.flip_h = true
-		$LargoSalto.flip_h = true
-		$CortoCaminar.flip_h = true
-		$LargoCaminarOro.flip_h = true
-		$LargoCaminarPlata.flip_h = true
-		$CortoCaminarPlata.flip_h = true
-		$LargoOroPlataCaminando.flip_h = true
-		_largo_caminar_oro()
-		if Global.peloCorto:
-			$CortoCaminar.visible = true
-			$LargoSalto.visible = false
-			$SpriteSalto.visible = false
-			$CortoSalto.visible = false
-			$AnimationPersonaje.play("corto_caminar")
-		if Global.largoSalto == true && !saltando== true:
-			$AnimationPersonaje.play("LargoCaminarOro")
-			$LargoSaltoOro.visible = false
-			$LargoCaminarOro.visible = true
-		$AudioPersonaje.play()
-		move.x = -100
-		$LargoCaminar.flip_h = true
-		$LargoSalto.flip_h = true
-		Global.Energia = Global.Energia - 1
-		yield(get_tree().create_timer(0.5),"timeout")
-		$AudioPersonaje.stop()
-	pass # Replace with function body.
-
-
-
 func _on_Derecha_button_up():
+	$AnimationPersonaje.stop()
 	move.x = 0
 	
 func _salto():
@@ -226,11 +190,13 @@ func _largo_caminar_oro():
 		$AnimationPersonaje.play("LargoCaminarOro")
 
 func _on_Izquierda_toggled(button_pressed):
+	
 	move.x = 0
 	pass # Replace with function body.
 
 
 func _on_Izquierda_button_up():
+	$AnimationPersonaje.stop()
 	move.x = 0
 	pass # Replace with function body.
 
@@ -270,10 +236,12 @@ func _on_TextureButton_button_down():
 			$LargoCaminar.visible = false
 		saltando = true
 		_salto()
+		move.x = 300
 		Global.Energia = Global.Energia - 10
 		yield(get_tree().create_timer(0.5),"timeout")
 		move.y = 400
 		salto = 200
+		move.x = 0
 		yield(get_tree().create_timer(1),"timeout")
 		saltando = false
 			
@@ -336,43 +304,7 @@ func _on_TextureButton_button_down():
 
 
 func _on_Derecha_button_down():
-	if  Global.Energia > 0 :
-		$SpritePersonaje.flip_h = false
-		$SpriteSalto.flip_h = false
-		$LargoCaminar.flip_h = false
-		$LargoSalto.flip_h = false
-		$CortoCaminar.flip_h = false
-		$LargoCaminarOro.flip_h = false
-		$LargoCaminarPlata.flip_h = false
-		$CortoCaminarPlata.flip_h = false
-		$CortoCaminarOro.flip_h = false
-		$LargoOroPlataCaminando.flip_h = false
-		_corto_plata()
-		_largo_plata()
-		_corto_oro()
-		_largo_oro_plata()
-		if Global.LargoOro == 3:
-			$AnimationPersonaje.play("LargoCaminarOro")
-			$LargoSaltoOro.visible = false
-			$LargoCaminarOro.visible = true
-		if Global.peloCorto:
-			$CortoCaminar.visible = true
-			$LargoSalto.visible = false
-			$SpriteSalto.visible = false
-			$CortoSalto.visible = false
-			$AnimationPersonaje.play("corto_caminar")
-		if Global.largoSalto == true && !saltando== true:
-			$AnimationPersonaje.play("LargoCaminarOro")
-			$LargoSaltoOro.visible = false
-			$LargoCaminarOro.visible = true
-		$AudioPersonaje.play()
-		move.x = 100
-		$LargoCaminar.flip_h = false
-		$LargoSalto.flip_h = false
-		Global.Energia = Global.Energia - 1
-		yield(get_tree().create_timer(0.5),"timeout")
-		
-		$AudioPersonaje.stop()
+	
 	pass 
 
 func _largo_plata():
@@ -398,3 +330,194 @@ func _largo_oro_plata():
 		$AnimationPersonaje.play("LargoOroPlataCaminar")
 		$LargoOroPlataCaminando.visible = true
 		$LargoOroPlataSalto.visible = false
+
+func _on_TextureButton2_button_down():
+	
+		
+	pass # Replace with function body.
+
+
+func _on_TextureButton_gui_input(event):
+	if event is InputEventScreenTouch and event.is_pressed():
+		if !saltando== true && Global.Energia > 0 :
+			if Global.largoOroPlataAnimacion == true:
+				$LargoOroPlataSalto.visible = true
+				$LargoOroPlataCaminando.visible = false
+				$AnimationPersonaje.play("LargoOroPlataSalto")
+			if Global.CortoOroAnimacion == true:
+				$CortoSaltoOro.visible = true
+				$CortoCaminarOro.visible = false
+				$AnimationPersonaje.play("CortoSaltoOro")
+			if Global.CortoPlataAnimacion == true:
+				$CortoSaltoPlata.visible = true
+				$CortoCaminarPlata.visible = false
+				$AnimationPersonaje.play("CortoSaltoPlata")
+			if Global.LargoPlataAnimacion == true:
+				$LargoSaltoPlata.visible = true
+				$LargoCaminarPlata.visible = false
+				$AnimationPersonaje.play("largoSaltoPlata")
+			$AudioSaltar.play()
+			if Global.LargoOro == 3:
+				$LargoSaltoOro.visible = true
+				$LargoCaminarOro.visible = false
+				$AnimationPersonaje.play("SaltoLargoOro")
+			if Global.peloCorto:
+				$CortoCaminar.visible = false
+				$LargoSalto.visible = false
+				$SpriteSalto.visible = false
+				$CortoSalto.visible = true
+				$AnimationPersonaje.play("Salto_corto")
+				saltando = true
+				$SpriteSalto.visible = false
+				$LargoSalto.visible = false
+				$LargoCaminar.visible = false
+			saltando = true
+			_salto()
+			Global.Energia = Global.Energia - 10
+			yield(get_tree().create_timer(0.5),"timeout")
+			move.y = 400
+			salto = 200
+			yield(get_tree().create_timer(1),"timeout")
+			saltando = false
+			
+			$AudioSaltar.stop()
+			if Global.largoSalto == true:
+				$LargoCaminar.visible = false
+				$LargoSalto.visible = false
+				$SpriteSalto.visible = false
+				$AnimationPersonaje.play("salto")
+				saltando = true
+				_salto()
+				yield(get_tree().create_timer(0.5),"timeout")
+				move.y = 400
+				salto = 200
+				yield(get_tree().create_timer(1),"timeout")
+				saltando = false
+				$SpriteSalto.visible = false
+				$AudioSaltar.stop()
+				$LargoSalto.visible = false
+				$LargoCaminar.visible=false
+		if  !saltando == true && Input.is_action_pressed("ui_right")&& Global.Energia > 0:
+			$AudioSaltar.play()
+		
+			if Global.peloCorto:
+				$CortoCaminar.visible = false
+				$LargoSalto.visible = false
+				$SpriteSalto.visible = false
+				$CortoSalto.visible = true
+				$AnimationPersonaje.play("Salto_corto")
+				saltando = true
+				_salto()
+				yield(get_tree().create_timer(0.5),"timeout")
+				move.y = 400
+				salto = 200
+				yield(get_tree().create_timer(1),"timeout")
+				saltando = false
+				$SpriteSalto.visible = false
+				$AudioSaltar.stop()
+				$LargoSalto.visible = false
+				$LargoCaminar.visible = false
+		
+			if Global.largoSalto == true:
+				$LargoSalto.visible = true
+				$SpriteSalto.visible = false
+				$LargoCaminar.visible = false
+				$AnimationPersonaje.play("salto")
+				saltando = true
+				_salto()
+				yield(get_tree().create_timer(0.5),"timeout")
+				move.y = +400
+				salto = 200
+				yield(get_tree().create_timer(1),"timeout")
+				saltando = false
+				$SpriteSalto.visible = false
+				$AudioSaltar.stop()
+				$LargoSalto.visible = false
+				$LargoCaminar.visible=true
+	pass # Replace with function body.
+
+
+func _on_Derecha_gui_input(event):
+	if event is InputEventScreenTouch and event.is_pressed():
+		if  Global.Energia > 0 :
+			if Global.Cambio == 1:
+				get_tree().change_scene(mapa12)
+				Global.Cambio = 0
+			if Global.Cambio == 2:
+				get_tree().change_scene(mapa13)
+				Global.Cambio = 0
+			$SpritePersonaje.flip_h = false
+			$SpriteSalto.flip_h = false
+			$LargoCaminar.flip_h = false
+			$LargoSalto.flip_h = false
+			$CortoCaminar.flip_h = false
+			$LargoCaminarOro.flip_h = false
+			$LargoCaminarPlata.flip_h = false
+			$CortoCaminarPlata.flip_h = false
+			$CortoCaminarOro.flip_h = false
+			$LargoOroPlataCaminando.flip_h = false
+			_corto_plata()
+			_largo_plata()
+			_corto_oro()
+			_largo_oro_plata()
+			if Global.LargoOro == 3:
+				$AnimationPersonaje.play("LargoCaminarOro")
+				$LargoSaltoOro.visible = false
+				$LargoCaminarOro.visible = true
+			if Global.peloCorto:
+				$CortoCaminar.visible = true
+				$LargoSalto.visible = false
+				$SpriteSalto.visible = false
+				$CortoSalto.visible = false
+				$AnimationPersonaje.play("corto_caminar")
+			if Global.largoSalto == true && !saltando== true:
+				$AnimationPersonaje.play("LargoCaminarOro")
+				$LargoSaltoOro.visible = false
+				$LargoCaminarOro.visible = true
+			$AudioPersonaje.play()
+			move.x = 200
+			$LargoCaminar.flip_h = false
+			$LargoSalto.flip_h = false
+			Global.Energia = Global.Energia - 1
+			yield(get_tree().create_timer(0.5),"timeout")
+		
+			$AudioPersonaje.stop()
+	pass # Replace with function body.
+
+
+func _on_Izquierda_gui_input(event):
+	if event is InputEventScreenTouch and event.is_pressed():
+		if Global.Energia >0:
+			_corto_plata()
+			_largo_plata()
+			_corto_oro()
+			_largo_oro_plata()
+			$CortoCaminarOro.flip_h = true
+			$SpritePersonaje.flip_h = true
+			$SpriteSalto.flip_h = true
+			$LargoCaminar.flip_h = true
+			$LargoSalto.flip_h = true
+			$CortoCaminar.flip_h = true
+			$LargoCaminarOro.flip_h = true
+			$LargoCaminarPlata.flip_h = true
+			$CortoCaminarPlata.flip_h = true
+			$LargoOroPlataCaminando.flip_h = true
+			_largo_caminar_oro()
+			if Global.peloCorto:
+				$CortoCaminar.visible = true
+				$LargoSalto.visible = false
+				$SpriteSalto.visible = false
+				$CortoSalto.visible = false
+				$AnimationPersonaje.play("corto_caminar")
+			if Global.largoSalto == true && !saltando== true:
+				$AnimationPersonaje.play("LargoCaminarOro")
+				$LargoSaltoOro.visible = false
+				$LargoCaminarOro.visible = true
+			$AudioPersonaje.play()
+			move.x = -200
+			$LargoCaminar.flip_h = true
+			$LargoSalto.flip_h = true
+			Global.Energia = Global.Energia - 1
+			yield(get_tree().create_timer(0.5),"timeout")
+			$AudioPersonaje.stop()
+	pass # Replace with function body.

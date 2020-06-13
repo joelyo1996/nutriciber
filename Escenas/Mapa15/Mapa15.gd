@@ -31,4 +31,4 @@ func _on_AreaXylon_area_entered(area):
 
 
 func _on_Menu_pressed():
-	get_tree().change_scene("res://Escenas/menu/Menu.tscn")
+	get_tree().change_scene("res://Escenas/menu/Creditos.tscn")
