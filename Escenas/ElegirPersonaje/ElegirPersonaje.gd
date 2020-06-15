@@ -1,6 +1,10 @@
 extends Node2D
 
 func _ready():
+	if Global.silencio:
+		$ReproductorMusica.stop()
+	else:
+		$ReproductorMusica.play()
 	$Avanzar.disabled 
 	
 	

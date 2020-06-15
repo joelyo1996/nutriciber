@@ -315,10 +315,9 @@ margin_bottom = 91.8044
 custom_fonts/font = SubResource( 12 )
 text = "¡Personalizate!"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="ReproductorMusica" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 18 )
 volume_db = -9.087
-autoplay = true
 [connection signal="input_event" from="sorbete1/Area2D" to="sorbete1" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="sorbete1/Area_pocicion" to="sorbete1" method="_on_Area_pocicion_area_entered"]
 [connection signal="input_event" from="sorbete3/Area2D" to="sorbete3" method="_on_Area2D_input_event"]

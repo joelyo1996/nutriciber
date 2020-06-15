@@ -1,5 +1,9 @@
 extends Node2D
 func _ready():
+	if Global.silencio:
+		$ReproductorMusica.stop()
+	else:
+		$ReproductorMusica.play()
 	$BotonReintentar.disabled = true
 	$BotonReintentar.visible = false
 	$Reintentar.visible = false

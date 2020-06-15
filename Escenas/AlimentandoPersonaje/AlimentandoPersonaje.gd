@@ -1,6 +1,10 @@
 extends Node2D
 var tipo = 0
 func _ready():
+	if Global.silencio:
+		$ReproductorMusica.stop()
+	else:
+		$ReproductorMusica.play()
 	$Avanzar.disabled 
 	$Titulo/TildeVerde.visible = false
 	$Titulo/TildeVerde2.visible = false
