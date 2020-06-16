@@ -97,10 +97,10 @@ position = Vector2( -394.639, -72.9241 )
 shape = SubResource( 5 )
 
 [node name="Frutilla" parent="." instance=ExtResource( 4 )]
-position = Vector2( 190.906, 79.8689 )
+position = Vector2( 192.338, 119.964 )
 
 [node name="Frutilla2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 715.065, 76.2171 )
+position = Vector2( 715.065, 103.425 )
 
 [node name="Tronco" parent="." instance=ExtResource( 5 )]
 position = Vector2( 732.851, 347.61 )

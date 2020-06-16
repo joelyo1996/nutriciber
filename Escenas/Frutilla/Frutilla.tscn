@@ -9,7 +9,7 @@ radius = 91.1112
 height = 309.7
 
 [node name="Frutilla" type="Node2D"]
-scale = Vector2( 0.3, 0.3 )
+scale = Vector2( 0.2, 0.2 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
