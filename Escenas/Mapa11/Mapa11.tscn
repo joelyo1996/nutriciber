@@ -62,6 +62,13 @@ position = Vector2( 838.083, 522.853 )
 position = Vector2( 75.4426, -75.8586 )
 shape = SubResource( 3 )
 
+[node name="plataforma6" type="StaticBody2D" parent="."]
+position = Vector2( -224.318, 291.24 )
+
+[node name="CollisionPlataforma" type="CollisionShape2D" parent="plataforma6"]
+position = Vector2( 75.4426, -75.8586 )
+shape = SubResource( 3 )
+
 [node name="plataforma5" type="StaticBody2D" parent="."]
 position = Vector2( 1103.55, 209.913 )
 
