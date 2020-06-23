@@ -3,6 +3,8 @@ var barra1= true
 var barra2 = true
 var barra3 = true
 func _process(delta):
+	if Global.agua == true:
+		$AnimacionBarra.play("titilar") 
 	value = Global.Energia
 	if Global.Energia > 3999 && barra1 == true:
 		$AnimacionBarra.play("BarraVerde")

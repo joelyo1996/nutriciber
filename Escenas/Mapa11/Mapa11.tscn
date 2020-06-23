@@ -131,11 +131,10 @@ __meta__ = {
 }
 
 [node name="BarraEnergia" parent="UI" instance=ExtResource( 9 )]
-margin_left = 12.0
-margin_top = 8.00001
-margin_right = 212.0
-margin_bottom = 38.0
-rect_min_size = Vector2( 200, 30 )
+margin_left = 34.8862
+margin_top = 22.7475
+margin_right = 147.886
+margin_bottom = 36.7475
 
 [node name="Tronco" parent="." instance=ExtResource( 10 )]
 position = Vector2( 538.457, 350.026 )

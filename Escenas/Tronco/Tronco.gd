@@ -21,5 +21,9 @@ func _on_AreaTronco_body_entered(body):
 
 func _on_AreaTronco2_area_entered(area):
 	if area.name == "AreaPersonaje":
+		$SonidoTronco.play()
 		position.x = position.x - mover
+		Global.Energia = Global.Energia - 25
+		yield(get_tree().create_timer(1),"timeout")
+		$SonidoTronco.stop()
 	

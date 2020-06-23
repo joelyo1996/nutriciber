@@ -170,11 +170,10 @@ toggle_mode = true
 texture_normal = ExtResource( 7 )
 
 [node name="BarraEnergia" parent="UI" instance=ExtResource( 8 )]
-margin_left = 11.0338
-margin_top = 11.1665
-margin_right = 211.034
-margin_bottom = 41.1665
-rect_min_size = Vector2( 200, 30 )
+margin_left = 22.6809
+margin_top = 26.4127
+margin_right = 135.681
+margin_bottom = 40.4127
 
 [node name="Xylon" type="Sprite" parent="."]
 position = Vector2( 1052.29, 268.022 )

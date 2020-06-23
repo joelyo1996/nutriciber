@@ -332,12 +332,6 @@ func _largo_oro_plata():
 		$LargoOroPlataCaminando.visible = true
 		$LargoOroPlataSalto.visible = false
 
-func _on_TextureButton2_button_down():
-	
-		
-	pass # Replace with function body.
-
-
 func _on_TextureButton_gui_input(event):
 	if event is InputEventScreenTouch and event.is_pressed():
 		if !saltando== true && Global.Energia > 0 :
@@ -435,7 +429,7 @@ func _on_TextureButton_gui_input(event):
 				$AudioSaltar.stop()
 				$LargoSalto.visible = false
 				$LargoCaminar.visible=true
-	pass # Replace with function body.
+	pass 
 
 
 func _on_Derecha_gui_input(event):
