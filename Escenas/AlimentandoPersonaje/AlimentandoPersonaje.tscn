@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://Escenas/AlimentandoPersonaje/AlimentandoPersonaje.gd" type="Script" id=1]
 [ext_resource path="res://Asset/AlimentandoPersonaje/fondo_alimento.jpg" type="Texture" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://Asset/UI/tilde_verde.png" type="Texture" id=23]
 [ext_resource path="res://Asset/UI/boton_izq.png" type="Texture" id=24]
 [ext_resource path="res://Asset/menu/musica_menu.ogg" type="AudioStream" id=25]
+[ext_resource path="res://Asset/AlimentandoPersonaje/estrellas.png" type="Texture" id=26]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 59.6191, 15.0973 )
@@ -83,9 +84,33 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=17]
-size = 20
-font_data = ExtResource( 21 )
+[sub_resource type="Animation" id=17]
+resource_name = "estrella"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Estrellas:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.9, 1.2, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Estrellas:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 521.382, 401.799 ), Vector2( 215.249, 28.6999 ) ]
+}
 
 [sub_resource type="DynamicFont" id=18]
 size = 20
@@ -93,13 +118,17 @@ font_data = ExtResource( 21 )
 
 [sub_resource type="DynamicFont" id=19]
 size = 20
-font_data = ExtResource( 22 )
+font_data = ExtResource( 21 )
 
 [sub_resource type="DynamicFont" id=20]
 size = 20
 font_data = ExtResource( 22 )
 
 [sub_resource type="DynamicFont" id=21]
+size = 20
+font_data = ExtResource( 22 )
+
+[sub_resource type="DynamicFont" id=22]
 size = 30
 outline_color = Color( 1, 0, 0, 1 )
 font_data = ExtResource( 21 )
@@ -390,6 +419,7 @@ texture = ExtResource( 18 )
 script = ExtResource( 16 )
 energia = 3000
 tipo = 1
+estrella = true
 
 [node name="Area2D" type="Area2D" parent="Falafel"]
 
@@ -405,7 +435,7 @@ position = Vector2( -45.9236, 89.1484 )
 shape = SubResource( 15 )
 
 [node name="Avanzar" type="TextureButton" parent="."]
-modulate = Color( 1, 1, 1, 0 )
+visible = false
 margin_left = 786.265
 margin_top = 403.163
 margin_right = 1262.27
@@ -416,6 +446,7 @@ texture_normal = ExtResource( 19 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/boton = SubResource( 16 )
+anims/estrella = SubResource( 17 )
 
 [node name="BarraEnergia" parent="." instance=ExtResource( 20 )]
 margin_left = 54.0135
@@ -428,7 +459,7 @@ margin_left = 60.2938
 margin_top = 64.6641
 margin_right = 441.296
 margin_bottom = 102.664
-custom_fonts/font = SubResource( 17 )
+custom_fonts/font = SubResource( 18 )
 text = "Este plato contiene:"
 
 [node name="Proteinas" type="Label" parent="Titulo"]
@@ -436,7 +467,7 @@ margin_left = 20.8766
 margin_top = 28.2626
 margin_right = 134.877
 margin_bottom = 51.2626
-custom_fonts/font = SubResource( 18 )
+custom_fonts/font = SubResource( 19 )
 text = "Proteinas"
 
 [node name="Grasas" type="Label" parent="Titulo"]
@@ -444,7 +475,7 @@ margin_left = 20.8013
 margin_top = 59.8418
 margin_right = 103.801
 margin_bottom = 82.8418
-custom_fonts/font = SubResource( 19 )
+custom_fonts/font = SubResource( 20 )
 text = "Grasas"
 
 [node name="Carbohidratos" type="Label" parent="Titulo"]
@@ -452,7 +483,7 @@ margin_left = 16.2792
 margin_top = 85.7681
 margin_right = 185.279
 margin_bottom = 108.768
-custom_fonts/font = SubResource( 20 )
+custom_fonts/font = SubResource( 21 )
 text = "Carbohidratos"
 
 [node name="TildeVerde" type="Sprite" parent="Titulo"]
@@ -477,7 +508,7 @@ margin_left = 307.874
 margin_top = 362.289
 margin_right = 803.874
 margin_bottom = 389.289
-custom_fonts/font = SubResource( 21 )
+custom_fonts/font = SubResource( 22 )
 text = "No creo que sea suficiente alimento"
 
 [node name="Reiniciar" type="TextureButton" parent="."]
@@ -494,6 +525,13 @@ texture_normal = ExtResource( 24 )
 [node name="ReproductorMusica" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 25 )
 volume_db = -19.184
+
+[node name="Estrellas" type="Sprite" parent="."]
+visible = false
+position = Vector2( 215.249, 28.6999 )
+texture = ExtResource( 26 )
+hframes = 6
+frame = 5
 [connection signal="input_event" from="Vegetales/Area2D" to="Vegetales" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="Vegetales/Area_pocicion" to="Vegetales" method="_on_Area_pocicion_area_entered"]
 [connection signal="input_event" from="CarneRoja/Area2D" to="CarneRoja" method="_on_Area2D_input_event"]

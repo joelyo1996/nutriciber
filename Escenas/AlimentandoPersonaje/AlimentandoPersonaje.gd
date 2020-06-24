@@ -12,6 +12,12 @@ func _ready():
 	tipo = 0
 	
 func _physics_process(delta):
+	if Global.estrella == true:
+		$Estrellas.visible = true
+		$AnimationPlayer.play("estrella")
+		yield(get_tree().create_timer(2),"timeout")
+		$Estrellas.visible = false
+		Global.estrella = false
 	if Global.pos4 == true:
 		if Global.Energia < 6000:
 			$Aleta.visible = false
@@ -20,7 +26,7 @@ func _physics_process(delta):
 			$Avanzar.visible = false
 		else:
 			$Avanzar.visible = true
-		$AnimationPlayer.play("boton")
+			Global.pos4 = true
 		$Avanzar.disabled = false
 		Global.is_inside1 = true
 		Global.pos4 = false

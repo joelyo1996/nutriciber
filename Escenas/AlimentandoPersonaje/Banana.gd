@@ -25,6 +25,7 @@ func _on_Area_pocicion_area_entered(area):
 	if area.name == "1":
 		Global.tipo = 3
 		Global.Energia = Global.Energia + 2800
+		Global.estrella = true
 		fin = false
 		is_inside = false
 		Global.pos1 = true

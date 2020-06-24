@@ -30,4 +30,5 @@ var fin = false
 var Ganaste = false
 var Cambio = 0
 var agua = false
+var estrella = false
 
