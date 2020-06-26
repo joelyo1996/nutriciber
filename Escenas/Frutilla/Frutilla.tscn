@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Escenas/Frutilla/Frutilla.gd" type="Script" id=1]
 [ext_resource path="res://Asset/AlimentandoPersonaje/agua.png" type="Texture" id=2]
-[ext_resource path="res://Asset/frutilla/comiendo.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Asset/Mapa11/botella1.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Asset/UI/remplaz_fruta.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
@@ -52,6 +52,7 @@ shape = SubResource( 1 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = 5.049
 
 [node name="Estrella" type="Sprite" parent="."]
 visible = false

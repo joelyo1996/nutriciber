@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/botella1.ogg-df942cfd3d84b7823e72eda07f3ac241.oggstr"
+
+[deps]
+
+source_file="res://Asset/Mapa11/botella1.ogg"
+dest_files=[ "res://.import/botella1.ogg-df942cfd3d84b7823e72eda07f3ac241.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

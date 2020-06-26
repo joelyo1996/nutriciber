@@ -13,14 +13,21 @@ func _ready():
 	
 func _physics_process(delta):
 	if Global.estrella == true:
-		$Estrellas.visible = true
+		$Estrella.visible = true
 		$AnimationPlayer.play("estrella")
 		yield(get_tree().create_timer(2),"timeout")
-		$Estrellas.visible = false
+		$Estrella.visible = false
 		Global.estrella = false
+	if Global.estrellaMedia == true:
+		$EstrellasMedia.visible = true
+		$AnimationPlayer.play("estrellaMedia")
+		yield(get_tree().create_timer(2),"timeout")
+		$EstrellasMedia.visible = false
+		Global.estrellaMedia = false
 	if Global.pos4 == true:
 		if Global.Energia < 6000:
-			$Aleta.visible = false
+			$Cartel.visible = true
+			$Aleta.visible = true
 			$Reiniciar.visible = true
 			$Reiniciar.disabled = false
 			$Avanzar.visible = false
@@ -52,11 +59,13 @@ func _on_Avanzar_pressed():
 	Global.is_inside2 = true
 	Global.is_inside3 = true
 	Global.posicion_personaje = Vector2(100,100)
+	Global.espera = 2
 	get_tree().change_scene("res://Escenas/UI/Espera.tscn")
 	pass 
 
 
 func _on_Reiniciar_pressed():
+	$Cartel.visible = false
 	Global.Energia = 0
 	$Vegetales.position = Vector2(161.872,216.571)
 	$CarneRoja.position = Vector2(71.459,221.675)
@@ -79,3 +88,4 @@ func _on_Reiniciar_pressed():
 	Global.pos3 = false
 	Global.pos4 = false
 	Global.tipo = 0
+

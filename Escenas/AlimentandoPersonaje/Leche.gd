@@ -8,6 +8,7 @@ var a = true
 export var  energia = 0
 export var tipo = 0
 export var estrella = false
+export var estrellaMedia = false
 
 func _process(delta):
 	if a == true :
@@ -28,6 +29,8 @@ func _on_Area2D2_area_entered(area):
 	if area.name == "1":
 		if estrella == true:
 			Global.estrella = true
+		if estrellaMedia == true:
+			Global.estrellaMedia = true
 		Global.tipo = tipo
 		Global.Energia = Global.Energia + energia
 		fin = false

@@ -1,10 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Escenas/UI/Espera.gd" type="Script" id=1]
 [ext_resource path="res://Asset/UI/Fuente.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Asset/menu/title.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 50
+size = 30
+extra_spacing_bottom = 10
 font_data = ExtResource( 2 )
 
 [sub_resource type="Animation" id=2]
@@ -32,23 +34,26 @@ margin_bottom = 607.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Label" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 0 )
-margin_left = 235.853
-margin_top = 103.352
-margin_right = 1156.85
-margin_bottom = 350.352
+margin_left = 102.695
+margin_top = 331.918
+margin_right = 1023.69
+margin_bottom = 578.918
 custom_fonts/font = SubResource( 1 )
-text = "Después de comer hay
-
- que esperar 30 minutos
-
- para salir a jugar"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "transicion"
 anims/transicion = SubResource( 2 )
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 4.0
 autostart = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="Terrana" type="Sprite" parent="."]
+position = Vector2( 548.557, 156.352 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]

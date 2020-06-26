@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/comida3.ogg-0af167c639cba4514696d029df81709b.oggstr"
+
+[deps]
+
+source_file="res://Asset/AlimentandoPersonaje/comida3.ogg"
+dest_files=[ "res://.import/comida3.ogg-0af167c639cba4514696d029df81709b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

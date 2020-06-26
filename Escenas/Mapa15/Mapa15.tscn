@@ -24,7 +24,7 @@ extents = Vector2( 10, 198.615 )
 extents = Vector2( 5.67993, 348.363 )
 
 [sub_resource type="DynamicFont" id=4]
-size = 20
+size = 15
 font_data = ExtResource( 12 )
 
 [sub_resource type="DynamicFont" id=5]
@@ -187,44 +187,44 @@ position = Vector2( -863.151, -355.415 )
 shape = SubResource( 3 )
 
 [node name="Globo" type="Sprite" parent="."]
-position = Vector2( 662.178, 54.0028 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 655.146, 75.0998 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 10 )
 
 [node name="Cartel" type="Sprite" parent="."]
 visible = false
-position = Vector2( 528.016, 247.091 )
-rotation = 1.56542
-scale = Vector2( 1.60141, 1.75515 )
+position = Vector2( 517.416, 282.867 )
+rotation = -0.000374911
+scale = Vector2( 2.2, 0.9 )
 texture = ExtResource( 11 )
 
 [node name="texto" type="Label" parent="."]
 modulate = Color( 0.027451, 0.12549, 0.94902, 1 )
-margin_left = 568.228
-margin_top = 24.858
-margin_right = 1155.23
-margin_bottom = 63.858
+margin_left = 521.065
+margin_top = 31.0096
+margin_right = 1108.07
+margin_bottom = 70.0096
 custom_fonts/font = SubResource( 4 )
-text = "Acercate, Te 
-estaba esperando"
 
 [node name="texto2" type="Label" parent="."]
 visible = false
-margin_left = 358.531
-margin_top = 151.585
-margin_right = 898.531
-margin_bottom = 235.585
+margin_left = 388.141
+margin_top = 196.22
+margin_right = 928.141
+margin_bottom = 338.22
 custom_fonts/font = SubResource( 5 )
-text = "Gracias por jugar el Alpha
+text = "Gracias por jugar 
 
-             de TERRANA!!!!!"
+            el Alpha
+
+        de TERRANA!!!!!"
 
 [node name="Menu" type="TextureButton" parent="."]
 visible = false
-margin_left = 455.763
-margin_top = 237.288
-margin_right = 663.763
-margin_bottom = 398.288
+margin_left = 424.302
+margin_top = 357.578
+margin_right = 632.302
+margin_bottom = 518.578
 rect_scale = Vector2( 0.8, 0.8 )
 texture_normal = ExtResource( 6 )
 
