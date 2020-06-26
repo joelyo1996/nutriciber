@@ -3,6 +3,15 @@ var barra1= true
 var barra2 = true
 var barra3 = true
 func _process(delta):
+	if Global.estrella == true:
+		yield(get_tree().create_timer(2),"timeout")
+		$AnimacionBarra.play("titilar")
+	if Global.estrellaMedia == true:
+		yield(get_tree().create_timer(2),"timeout")
+		$AnimacionBarra.play("titilar")
+	if Global.agua == true:
+		$AnimacionBarra.play("titilar") 
+		Global.agua = false
 	value = Global.Energia
 	if Global.Energia > 3999 && barra1 == true:
 		$AnimacionBarra.play("BarraVerde")

@@ -1,19 +1,16 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Escenas/SegundoMenu/SegundoMenu.gd" type="Script" id=1]
 [ext_resource path="res://Asset/SegundoMenu/fondo.jpeg" type="Texture" id=2]
-[ext_resource path="res://Asset/PersonalisarPersonaje/ide.png" type="Texture" id=3]
-[ext_resource path="res://Asset/AlimentandoPersonaje/idle.png" type="Texture" id=4]
-[ext_resource path="res://Asset/SegundoMenu/Fuente1.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://Asset/menu/musica_menu.ogg" type="AudioStream" id=6]
-
-[sub_resource type="DynamicFont" id=1]
-size = 40
-font_data = ExtResource( 5 )
-
-[sub_resource type="DynamicFont" id=2]
-size = 40
-font_data = ExtResource( 5 )
+[ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=3]
+[ext_resource path="res://Asset/menu/musica_menu.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Asset/menu/title.png" type="Texture" id=5]
+[ext_resource path="res://Asset/presentacion/logo_unpaz.png" type="Texture" id=6]
+[ext_resource path="res://Asset/presentacion/psyc.png" type="Texture" id=7]
+[ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=8]
+[ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=9]
+[ext_resource path="res://Asset/menu/boton_sonido_activo.png" type="Texture" id=10]
+[ext_resource path="res://Asset/menu/boton_sonido_desactivado.png" type="Texture" id=11]
 
 [node name="SegundoMenu" type="Node2D"]
 script = ExtResource( 1 )
@@ -24,37 +21,50 @@ scale = Vector2( 0.799821, 0.708667 )
 texture = ExtResource( 2 )
 
 [node name="NuevaPartida" type="TextureButton" parent="."]
-margin_left = 8.20215
-margin_top = -51.2636
-margin_right = 1288.2
-margin_bottom = 987.736
+margin_left = 416.153
+margin_top = 382.589
+margin_right = 1696.15
+margin_bottom = 1421.59
 texture_normal = ExtResource( 3 )
 
-[node name="CargarPartida" type="TextureButton" parent="."]
-margin_left = 563.901
-margin_top = -38.9603
-margin_right = 1843.9
-margin_bottom = 1000.04
-texture_normal = ExtResource( 4 )
-
-[node name="LabelNuevaPartida" type="Label" parent="."]
-margin_left = 53.3144
-margin_top = 506.486
-margin_right = 325.314
-margin_bottom = 544.486
-custom_fonts/font = SubResource( 1 )
-text = "Nueva Partida"
-
-[node name="LabelCargarPartida" type="Label" parent="."]
-margin_left = 660.277
-margin_top = 490.081
-margin_right = 953.277
-margin_bottom = 528.081
-custom_fonts/font = SubResource( 2 )
-text = "Cargar Partida"
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
+[node name="ReproductorMusica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 volume_db = -20.264
 autoplay = true
+
+[node name="LogoTerrana" type="Sprite" parent="."]
+position = Vector2( 556.001, 278.103 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+
+[node name="UNPAZ" type="Sprite" parent="."]
+position = Vector2( 158.667, 57.1202 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="PSYC" type="Sprite" parent="."]
+position = Vector2( 858.39, 36.4935 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="Salir" type="TextureButton" parent="."]
+margin_left = 1.58669
+margin_top = 437.922
+margin_right = 305.587
+margin_bottom = 774.922
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
+
+[node name="sonido" type="TextureButton" parent="."]
+margin_left = 818.724
+margin_top = 418.882
+margin_right = 1294.72
+margin_bottom = 831.882
+rect_scale = Vector2( 0.5, 0.5 )
+toggle_mode = true
+texture_normal = ExtResource( 10 )
+texture_pressed = ExtResource( 11 )
 [connection signal="pressed" from="NuevaPartida" to="." method="_on_NuevaPartida_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
+[connection signal="pressed" from="sonido" to="." method="_on_sonido_pressed"]

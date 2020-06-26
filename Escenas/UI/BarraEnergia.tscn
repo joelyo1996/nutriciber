@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Escenas/Mapa11/BarraEnergia.gd" type="Script" id=1]
+[ext_resource path="res://Asset/UI/barra_normal.png" type="Texture" id=2]
+[ext_resource path="res://Asset/UI/barra_fruta.png" type="Texture" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.996078, 0.933333, 0, 1 )
@@ -53,6 +55,21 @@ tracks/0/keys = {
 "values": [ Color( 0, 0.996078, 0.054902, 1 ) ]
 }
 
+[sub_resource type="Animation" id=6]
+resource_name = "titilar"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Normal:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5, 0.7, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.117647, 0.913725, 0.00392157, 1 ), Color( 1, 1, 1, 1 ), Color( 0.337255, 1, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="BarraEnergia" type="ProgressBar" groups=[
 "energia_jugador",
 ]]
@@ -75,3 +92,15 @@ __meta__ = {
 anims/BarraAmallira = SubResource( 3 )
 anims/BarraRoja = SubResource( 4 )
 anims/BarraVerde = SubResource( 5 )
+anims/titilar = SubResource( 6 )
+
+[node name="Normal" type="Sprite" parent="."]
+position = Vector2( 262.556, 136.514 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 2 )
+
+[node name="agua" type="Sprite" parent="."]
+visible = false
+position = Vector2( 293.145, 153.537 )
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 3 )

@@ -4,7 +4,7 @@
 [ext_resource path="res://Asset/SegundoMenu/fondo.jpeg" type="Texture" id=2]
 [ext_resource path="res://Asset/menu/musica_menu.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=4]
-[ext_resource path="res://Asset/menu/boton_sonido.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Asset/frutilla/comiendo.ogg" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "salir"

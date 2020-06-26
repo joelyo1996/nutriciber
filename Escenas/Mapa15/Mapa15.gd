@@ -26,6 +26,14 @@ func _on_AreaXylon_area_entered(area):
 		Global.Energia = 0
 		$texto.visible = true
 		$Globo.visible = true
+		$texto.text = "Acercate, Te \n estaba esperando"
+		yield(get_tree().create_timer(2),"timeout")
+		$texto.text = "Hace años se ha \n roto la armonía entre humanos y \n habitantes del bosque"
+		yield(get_tree().create_timer(2),"timeout")
+		$texto.text = "Necesitó de tu ayuda para \n restaurar el equilibrio"
+		yield(get_tree().create_timer(2),"timeout")
+		$texto.text = "Me ayudarías?"
+		
 		$AnimationPlayer.play("final")
 	pass # Replace with function body.
 

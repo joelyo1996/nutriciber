@@ -1,6 +1,10 @@
 extends Node2D
 var tipo = 0
 func _ready():
+	if Global.silencio:
+		$ReproductorMusica.stop()
+	else:
+		$ReproductorMusica.play()
 	$Avanzar.disabled 
 	$Titulo/TildeVerde.visible = false
 	$Titulo/TildeVerde2.visible = false
@@ -8,13 +12,28 @@ func _ready():
 	tipo = 0
 	
 func _physics_process(delta):
+	if Global.estrella == true:
+		$Estrella.visible = true
+		$AnimationPlayer.play("estrella")
+		yield(get_tree().create_timer(2),"timeout")
+		$Estrella.visible = false
+		Global.estrella = false
+	if Global.estrellaMedia == true:
+		$EstrellasMedia.visible = true
+		$AnimationPlayer.play("estrellaMedia")
+		yield(get_tree().create_timer(2),"timeout")
+		$EstrellasMedia.visible = false
+		Global.estrellaMedia = false
 	if Global.pos4 == true:
 		if Global.Energia < 6000:
+			$Cartel.visible = true
 			$Aleta.visible = true
 			$Reiniciar.visible = true
 			$Reiniciar.disabled = false
-		$Avanzar.visible = true
-		$AnimationPlayer.play("boton")
+			$Avanzar.visible = false
+		else:
+			$Avanzar.visible = true
+			Global.pos4 = true
 		$Avanzar.disabled = false
 		Global.is_inside1 = true
 		Global.pos4 = false
@@ -40,21 +59,23 @@ func _on_Avanzar_pressed():
 	Global.is_inside2 = true
 	Global.is_inside3 = true
 	Global.posicion_personaje = Vector2(100,100)
+	Global.espera = 2
 	get_tree().change_scene("res://Escenas/UI/Espera.tscn")
 	pass 
 
 
 func _on_Reiniciar_pressed():
+	$Cartel.visible = false
 	Global.Energia = 0
-	$Vegetales.position = Vector2(136.933,126)
-	$CarneRoja.position = Vector2(59,124)
-	$Choclos.position = Vector2(213,119)
-	$PapasFritas.position = Vector2 (73,214)
-	$Hamburguesa.position = Vector2 (138,215)
-	$FrutosSecos.position = Vector2 (213,219)
-	$Pescado.position = Vector2 (226,285)
-	$Spaguetti.position = Vector2 (147,284)
-	$Falafel.position = Vector2 (66,287)
+	$Vegetales.position = Vector2(161.872,216.571)
+	$CarneRoja.position = Vector2(71.459,221.675)
+	$Choclos.position = Vector2(239.713,208.245)
+	$PapasFritas.position = Vector2 (74.878,293.659)
+	$Hamburguesa.position = Vector2 (156.652,296.089)
+	$FrutosSecos.position = Vector2 (234.411,297.58)
+	$Pescado.position = Vector2 (244.406,353.378)
+	$Spaguetti.position = Vector2 (165.467,350.501)
+	$Falafel.position = Vector2 (73.073,359.179)
 	$Aleta.visible = false
 	$Avanzar.visible = false
 	$Titulo/TildeVerde.visible = false
@@ -67,3 +88,4 @@ func _on_Reiniciar_pressed():
 	Global.pos3 = false
 	Global.pos4 = false
 	Global.tipo = 0
+

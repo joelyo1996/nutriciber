@@ -133,23 +133,33 @@ toggle_mode = true
 texture_normal = ExtResource( 5 )
 
 [node name="BarraEnergia" parent="UI" instance=ExtResource( 7 )]
-margin_left = 9.87595
-margin_top = 11.1139
-margin_right = 209.876
-margin_bottom = 41.1139
-rect_min_size = Vector2( 200, 30 )
+margin_left = 32.0
+margin_top = 23.0
+margin_right = 145.0
+margin_bottom = 37.0
 
 [node name="Frutilla" parent="." instance=ExtResource( 8 )]
-position = Vector2( 978.85, 35.2317 )
+position = Vector2( 968.826, 93.9426 )
 
 [node name="Rama4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 727.405, 349.672 )
+position = Vector2( 728.837, 253.73 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Rama8" parent="." instance=ExtResource( 9 )]
+position = Vector2( 737.429, 418.407 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Rama5" parent="." instance=ExtResource( 9 )]
 position = Vector2( 989.421, 176.05 )
+scale = Vector2( 0.5, 0.5 )
 
 [node name="Rama6" parent="." instance=ExtResource( 9 )]
 position = Vector2( 975.629, 461.913 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Rama7" parent="." instance=ExtResource( 9 )]
+position = Vector2( 985.653, 330.172 )
+scale = Vector2( 0.5, 0.5 )
 [connection signal="area_entered" from="Mapa11" to="." method="_on_Mapa11_area_entered"]
 [connection signal="area_entered" from="Mapa13" to="." method="_on_Mapa13_area_entered"]
 [connection signal="area_entered" from="Mapa13Abajo" to="." method="_on_Mapa13Abajo_area_entered"]

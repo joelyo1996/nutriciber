@@ -13,10 +13,9 @@ position = Vector2( 515.236, 303.376 )
 scale = Vector2( 0.803622, 0.582474 )
 texture = ExtResource( 2 )
 
-[node name="Musica" type="AudioStreamPlayer" parent="."]
+[node name="ReproductorMusica" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -10.598
-autoplay = true
 
 [node name="TextureButton" type="TextureButton" parent="."]
 margin_left = 880.077

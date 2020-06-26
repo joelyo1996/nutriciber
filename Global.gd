@@ -29,4 +29,8 @@ var largoOroPlataAnimacion = false
 var fin = false
 var Ganaste = false
 var Cambio = 0
+var agua = false
+var estrella = false
+var estrellaMedia = false
+var espera = 0
 

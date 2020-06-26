@@ -8,6 +8,7 @@ var veri = true
 const mapa12 = ("res://Escenas/Mapa12/Mapa12.tscn")
 const mapa13 = ("res://Escenas/Mapa13/Mapa13.tscn")
 func _physics_process(delta):
+	Global.Energia = Global.Energia - 1
 	if veri == true:
 		if Global.largoOroPlata == 3:
 			$LargoOroPlataSalto.visible = true
@@ -237,7 +238,7 @@ func _on_TextureButton_button_down():
 		saltando = true
 		_salto()
 		move.x = 300
-		Global.Energia = Global.Energia - 10
+		Global.Energia = Global.Energia - 20
 		yield(get_tree().create_timer(0.5),"timeout")
 		move.y = 400
 		salto = 200
@@ -330,12 +331,6 @@ func _largo_oro_plata():
 		$AnimationPersonaje.play("LargoOroPlataCaminar")
 		$LargoOroPlataCaminando.visible = true
 		$LargoOroPlataSalto.visible = false
-
-func _on_TextureButton2_button_down():
-	
-		
-	pass # Replace with function body.
-
 
 func _on_TextureButton_gui_input(event):
 	if event is InputEventScreenTouch and event.is_pressed():
@@ -434,7 +429,7 @@ func _on_TextureButton_gui_input(event):
 				$AudioSaltar.stop()
 				$LargoSalto.visible = false
 				$LargoCaminar.visible=true
-	pass # Replace with function body.
+	pass 
 
 
 func _on_Derecha_gui_input(event):
@@ -478,7 +473,7 @@ func _on_Derecha_gui_input(event):
 			move.x = 200
 			$LargoCaminar.flip_h = false
 			$LargoSalto.flip_h = false
-			Global.Energia = Global.Energia - 1
+			Global.Energia = Global.Energia - 10
 			yield(get_tree().create_timer(0.5),"timeout")
 		
 			$AudioPersonaje.stop()
@@ -517,7 +512,7 @@ func _on_Izquierda_gui_input(event):
 			move.x = -200
 			$LargoCaminar.flip_h = true
 			$LargoSalto.flip_h = true
-			Global.Energia = Global.Energia - 1
+			Global.Energia = Global.Energia - 10
 			yield(get_tree().create_timer(0.5),"timeout")
 			$AudioPersonaje.stop()
 	pass # Replace with function body.
