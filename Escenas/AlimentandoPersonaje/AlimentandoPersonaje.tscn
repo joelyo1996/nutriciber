@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://Escenas/AlimentandoPersonaje/AlimentandoPersonaje.gd" type="Script" id=1]
 [ext_resource path="res://Asset/AlimentandoPersonaje/fondo_alimento.jpg" type="Texture" id=2]
@@ -31,6 +31,11 @@
 [ext_resource path="res://Asset/AlimentandoPersonaje/comida1.ogg" type="AudioStream" id=29]
 [ext_resource path="res://Asset/AlimentandoPersonaje/comida2.ogg" type="AudioStream" id=30]
 [ext_resource path="res://Asset/AlimentandoPersonaje/comida3.ogg" type="AudioStream" id=31]
+[ext_resource path="res://Asset/Mapa15/globo.png" type="Texture" id=32]
+[ext_resource path="res://Asset/AlimentandoPersonaje/interfaz_woman.png" type="Texture" id=33]
+[ext_resource path="res://Asset/AlimentandoPersonaje/interfaz_man.png" type="Texture" id=34]
+[ext_resource path="res://Asset/AlimentandoPersonaje/mano_slide.png" type="Texture" id=35]
+[ext_resource path="res://Asset/AlimentandoPersonaje/circulo_luz.png" type="Texture" id=36]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 59.6191, 15.0973 )
@@ -187,6 +192,15 @@ font_data = ExtResource( 22 )
 [sub_resource type="DynamicFont" id=23]
 size = 25
 outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 20
+extra_spacing_bottom = 10
+font_data = ExtResource( 21 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 20
 font_data = ExtResource( 21 )
 
 [node name="AlimentarPersonaje" type="Node2D"]
@@ -618,6 +632,67 @@ stream = ExtResource( 30 )
 
 [node name="Comida3" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 31 )
+
+[node name="Nube" type="Sprite" parent="."]
+visible = false
+position = Vector2( 432.17, 391.86 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 32 )
+flip_h = true
+
+[node name="CabezaLargo" type="Sprite" parent="."]
+visible = false
+position = Vector2( 143.198, 473.984 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 33 )
+
+[node name="Texto" type="Label" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 300.0
+margin_top = 335.082
+margin_right = 340.0
+margin_bottom = 363.082
+custom_fonts/font = SubResource( 24 )
+
+[node name="CabezaCorto" type="Sprite" parent="."]
+visible = false
+position = Vector2( 118.854, 478.28 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 34 )
+
+[node name="Mano" type="Sprite" parent="."]
+visible = false
+position = Vector2( 130.31, 408.113 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 35 )
+
+[node name="Mano2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 597.134, 505.488 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 35 )
+
+[node name="Circulo" type="Sprite" parent="."]
+visible = false
+position = Vector2( 77.3267, 370.882 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 36 )
+
+[node name="Circulo2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 137.47, 37.2314 )
+scale = Vector2( 0.2, 0.1 )
+texture = ExtResource( 36 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 499.76
+margin_top = 77.3267
+margin_right = 539.76
+margin_bottom = 91.3267
+custom_fonts/font = SubResource( 25 )
+text = "Arrastra dos alimetos mas al plato"
 [connection signal="input_event" from="Vegetales/Area2D" to="Vegetales" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="Vegetales/Area_pocicion" to="Vegetales" method="_on_Area_pocicion_area_entered"]
 [connection signal="input_event" from="CarneRoja/Area2D" to="CarneRoja" method="_on_Area2D_input_event"]

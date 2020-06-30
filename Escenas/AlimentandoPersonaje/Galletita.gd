@@ -23,6 +23,7 @@ func _on_Area2D_mouse_exited():
 
 func _on_Area2D2_area_entered(area):
 	if area.name == "1":
+		
 		Global.tipo = 2
 		Global.Energia = Global.Energia + 700
 		fin = false

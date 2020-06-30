@@ -33,4 +33,5 @@ var agua = false
 var estrella = false
 var estrellaMedia = false
 var espera = 0
+var falafel
 
