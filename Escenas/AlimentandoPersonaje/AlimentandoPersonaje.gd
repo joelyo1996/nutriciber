@@ -1,5 +1,15 @@
 extends Node2D
+
 var tipo = 0
+var texto1 = "Hola! Hoy es un gran dia.\n Saldremos a explorar el\n bosque!"
+var texto2 = "Pero primero tenemos que \n armar un almuerzo muy \n nutritivo"
+var texto3 = "Creo que hoy quiero comer \n unos falafels"
+var texto4 = "Genial! con que mas lo puedo \n acompañar? \n en el plato entran dos \n alimetos mas."
+var texto5 = "Cada alimento que eligamos nos \n da energia! \n Si elegimos buenos alimentos \n tendremos mas energia!"
+var texto6 = "Arrastra dos alimetos mas al plato"
+var texto7 = "Estamos listo para salir \n al bosque!"
+
+
 func _ready():
 	if Global.silencio:
 		$ReproductorMusica.stop()
@@ -10,8 +20,49 @@ func _ready():
 	$Titulo/TildeVerde2.visible = false
 	$Titulo/TildeVerde3.visible = false
 	tipo = 0
+	$Nube.visible = true
+	if Global.largoSalto == true:
+		$CabezaLargo.visible = true
+	elif Global.peloCorto == true:
+		$CabezaCorto.visible = true
+	$Texto.visible = true
+	$Texto.text = texto1
+	yield(get_tree().create_timer(3),"timeout")
+	$Texto.text = texto2
+	yield(get_tree().create_timer(3),"timeout")
+	$Texto.text = texto3
+	yield(get_tree().create_timer(3),"timeout")
+	$Mano.visible= true
+	$Mano2.visible = true
+	$Circulo.visible = true
+	$Nube.visible = false
+	$Texto.visible = false
+	$CabezaCorto.visible = false
+	$CabezaLargo.visible = false
 	
 func _physics_process(delta):
+	if Global.falafel == true:
+		Global.falafel = false
+		$Mano.visible= false
+		$Mano2.visible = false
+		$Circulo.visible = false
+		$Nube.visible = true
+		$Texto.visible = true
+		if Global.largoSalto == true:
+			$CabezaLargo.visible = true
+		elif Global.peloCorto == true:
+			$CabezaCorto.visible = true
+		$Texto.text = texto4
+		yield(get_tree().create_timer(2),"timeout")
+		$Texto.text = texto5
+		$Circulo2.visible = true
+		yield(get_tree().create_timer(2),"timeout")
+		$Nube.visible = false
+		$Texto.visible = false
+		$CabezaCorto.visible = false
+		$CabezaLargo.visible = false
+		$Label.visible = true
+		$Circulo2.visible = false
 	if Global.estrella == true:
 		$Estrella.visible = true
 		$AnimationPlayer.play("estrella")
@@ -32,6 +83,16 @@ func _physics_process(delta):
 			$Reiniciar.disabled = false
 			$Avanzar.visible = false
 		else:
+			$Nube.visible = true
+			if Global.largoSalto == true:
+				$CabezaLargo.visible = true
+			elif Global.peloCorto == true:
+				$CabezaCorto.visible = true
+			$Texto.visible = true
+			$Texto.text = texto7
+			$Circulo.visible = true
+			$Circulo.position = Vector2 (840,445)
+			$Label.visible = false
 			$Avanzar.visible = true
 			Global.pos4 = true
 		$Avanzar.disabled = false

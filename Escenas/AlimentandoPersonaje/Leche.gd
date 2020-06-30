@@ -29,6 +29,7 @@ func _on_Area2D2_area_entered(area):
 	if area.name == "1":
 		if estrella == true:
 			Global.estrella = true
+			Global.falafel = true
 		if estrellaMedia == true:
 			Global.estrellaMedia = true
 		Global.tipo = tipo
