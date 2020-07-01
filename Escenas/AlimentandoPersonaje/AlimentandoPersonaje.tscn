@@ -65,11 +65,11 @@ extents = Vector2( 378.882, 159.048 )
 [sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 90.7322, 54.7112 )
 
-[sub_resource type="CapsuleShape2D" id=26]
+[sub_resource type="CapsuleShape2D" id=11]
 radius = 19.8869
 height = 80.3683
 
-[sub_resource type="CapsuleShape2D" id=27]
+[sub_resource type="CapsuleShape2D" id=12]
 height = -4.13782
 
 [sub_resource type="RectangleShape2D" id=13]
@@ -396,14 +396,14 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hamburguesa/Area2D"]
 position = Vector2( 14.218, 6.28601 )
 rotation = 1.40212
-shape = SubResource( 26 )
+shape = SubResource( 11 )
 
 [node name="Area2D2" type="Area2D" parent="Hamburguesa"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hamburguesa/Area2D2"]
 position = Vector2( 11.2202, 2.03087 )
 rotation = 0.76653
-shape = SubResource( 27 )
+shape = SubResource( 12 )
 
 [node name="FrutosSecos" type="Sprite" parent="."]
 position = Vector2( 234.411, 297.58 )
