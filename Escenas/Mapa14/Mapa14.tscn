@@ -78,7 +78,7 @@ position = Vector2( -277.399, -3.49938 )
 shape = SubResource( 4 )
 
 [node name="Tronco" parent="." instance=ExtResource( 5 )]
-position = Vector2( 607.604, 502.695 )
+position = Vector2( 607.604, 522.737 )
 
 [node name="Personaje" parent="." instance=ExtResource( 6 )]
 

@@ -103,7 +103,7 @@ position = Vector2( 192.338, 119.964 )
 position = Vector2( 715.065, 103.425 )
 
 [node name="Tronco" parent="." instance=ExtResource( 5 )]
-position = Vector2( 732.851, 344.27 )
+position = Vector2( 732.851, 362.164 )
 
 [node name="UI" parent="." instance=ExtResource( 6 )]
 
