@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="NutriCiber"
 run/main_scene="res://Escenas/SegundoMenu/SegundoMenu.tscn"
-config/icon="res://icon.png"
+config/icon="res://icono.png"
 
 [autoload]
 
