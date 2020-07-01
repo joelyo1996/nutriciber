@@ -3,12 +3,12 @@
 [ext_resource path="res://Escenas/Mapa12/Mapa12.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Mapa12/fondo.jpeg" type="Texture" id=2]
 [ext_resource path="res://Escenas/Personaje/Personaje.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=5]
-[ext_resource path="res://Asset/UI/boton_izq.png" type="Texture" id=6]
-[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Escenas/Frutilla/Frutilla.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Escenas/Rama/Rama.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Escenas/UI/UI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=6]
+[ext_resource path="res://Asset/UI/boton_izq.png" type="Texture" id=7]
+[ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escenas/Frutilla/Frutilla.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 111.955, 218.984 )
@@ -100,7 +100,15 @@ rotation = 1.50111
 position = Vector2( 140.686, -108.105 )
 shape = SubResource( 5 )
 
-[node name="UI" parent="." instance=ExtResource( 4 )]
+[node name="Rama4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 728.837, 253.73 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="Rama8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 737.429, 418.407 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="UI" parent="." instance=ExtResource( 5 )]
 
 [node name="TextureButton" type="TextureButton" parent="UI"]
 margin_left = 894.49
@@ -110,7 +118,7 @@ margin_bottom = 925.789
 rect_rotation = -92.4648
 rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
-texture_normal = ExtResource( 5 )
+texture_normal = ExtResource( 6 )
 
 [node name="Izquierda" type="TextureButton" parent="UI"]
 margin_left = 26.5136
@@ -120,7 +128,7 @@ margin_bottom = 834.381
 rect_rotation = -358.928
 rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
-texture_normal = ExtResource( 6 )
+texture_normal = ExtResource( 7 )
 
 [node name="Derecha" type="TextureButton" parent="UI"]
 margin_left = 164.571
@@ -130,34 +138,26 @@ margin_bottom = 832.514
 rect_rotation = 2.24376
 rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
-texture_normal = ExtResource( 5 )
+texture_normal = ExtResource( 6 )
 
-[node name="BarraEnergia" parent="UI" instance=ExtResource( 7 )]
+[node name="BarraEnergia" parent="UI" instance=ExtResource( 8 )]
 margin_left = 32.0
 margin_top = 23.0
 margin_right = 145.0
 margin_bottom = 37.0
 
-[node name="Frutilla" parent="." instance=ExtResource( 8 )]
+[node name="Frutilla" parent="." instance=ExtResource( 9 )]
 position = Vector2( 968.826, 93.9426 )
 
-[node name="Rama4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 728.837, 253.73 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Rama8" parent="." instance=ExtResource( 9 )]
-position = Vector2( 737.429, 418.407 )
-scale = Vector2( 0.5, 0.5 )
-
-[node name="Rama5" parent="." instance=ExtResource( 9 )]
+[node name="Rama5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 989.421, 176.05 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Rama6" parent="." instance=ExtResource( 9 )]
+[node name="Rama6" parent="." instance=ExtResource( 4 )]
 position = Vector2( 975.629, 461.913 )
 scale = Vector2( 0.5, 0.5 )
 
-[node name="Rama7" parent="." instance=ExtResource( 9 )]
+[node name="Rama7" parent="." instance=ExtResource( 4 )]
 position = Vector2( 985.653, 330.172 )
 scale = Vector2( 0.5, 0.5 )
 [connection signal="area_entered" from="Mapa11" to="." method="_on_Mapa11_area_entered"]
