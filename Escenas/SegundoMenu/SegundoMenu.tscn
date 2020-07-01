@@ -1,12 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Escenas/SegundoMenu/SegundoMenu.gd" type="Script" id=1]
-[ext_resource path="res://Asset/SegundoMenu/fondo.jpeg" type="Texture" id=2]
+[ext_resource path="res://Asset/mainmenu.png" type="Texture" id=2]
 [ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=3]
 [ext_resource path="res://Asset/menu/musica_menu.ogg" type="AudioStream" id=4]
-[ext_resource path="res://Asset/menu/title.png" type="Texture" id=5]
 [ext_resource path="res://Asset/presentacion/logo_unpaz.png" type="Texture" id=6]
-[ext_resource path="res://Asset/presentacion/psyc.png" type="Texture" id=7]
 [ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=8]
 [ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=9]
 [ext_resource path="res://Asset/menu/boton_sonido_activo.png" type="Texture" id=10]
@@ -16,8 +14,8 @@
 script = ExtResource( 1 )
 
 [node name="Fondo" type="Sprite" parent="."]
-position = Vector2( 512.547, 300.989 )
-scale = Vector2( 0.799821, 0.708667 )
+position = Vector2( 513.872, 302.467 )
+scale = Vector2( 0.538958, 0.476889 )
 texture = ExtResource( 2 )
 
 [node name="NuevaPartida" type="TextureButton" parent="."]
@@ -32,20 +30,10 @@ stream = ExtResource( 4 )
 volume_db = -20.264
 autoplay = true
 
-[node name="LogoTerrana" type="Sprite" parent="."]
-position = Vector2( 556.001, 278.103 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 5 )
-
 [node name="UNPAZ" type="Sprite" parent="."]
-position = Vector2( 158.667, 57.1202 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 442.083, 90.4702 )
+scale = Vector2( 0.329283, 0.307929 )
 texture = ExtResource( 6 )
-
-[node name="PSYC" type="Sprite" parent="."]
-position = Vector2( 858.39, 36.4935 )
-scale = Vector2( 0.3, 0.3 )
-texture = ExtResource( 7 )
 
 [node name="Salir" type="TextureButton" parent="."]
 margin_left = 1.58669

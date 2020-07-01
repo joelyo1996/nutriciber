@@ -106,14 +106,14 @@ texture = ExtResource( 2 )
 [node name="Plataforma" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma"]
-position = Vector2( 490.414, 351.618 )
+position = Vector2( 492.806, 332.485 )
 shape = SubResource( 1 )
 
 [node name="Plataforma2" type="StaticBody2D" parent="."]
 position = Vector2( 1.75812, 235.584 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma2"]
-position = Vector2( 490.414, 351.618 )
+position = Vector2( 490.414, 334.876 )
 shape = SubResource( 1 )
 
 [node name="Plataforma3" type="StaticBody2D" parent="."]
