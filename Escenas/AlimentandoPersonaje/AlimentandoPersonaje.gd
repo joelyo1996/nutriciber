@@ -8,7 +8,7 @@ var texto4 = "Genial! con que mas lo puedo \n acompañar? \n en el plato entran 
 var texto5 = "Cada alimento que eligamos nos \n da energia! \n Si elegimos buenos alimentos \n tendremos mas energia!"
 var texto6 = "Arrastra dos alimetos mas al plato"
 var texto7 = "Estamos listo para salir \n al bosque!"
-
+var boton = 0
 
 func _ready():
 	if Global.silencio:
@@ -27,18 +27,7 @@ func _ready():
 		$CabezaCorto.visible = true
 	$Texto.visible = true
 	$Texto.text = texto1
-	yield(get_tree().create_timer(3),"timeout")
-	$Texto.text = texto2
-	yield(get_tree().create_timer(3),"timeout")
-	$Texto.text = texto3
-	yield(get_tree().create_timer(3),"timeout")
-	$Mano.visible= true
-	$Mano2.visible = true
-	$Circulo.visible = true
-	$Nube.visible = false
-	$Texto.visible = false
-	$CabezaCorto.visible = false
-	$CabezaLargo.visible = false
+	
 	
 func _physics_process(delta):
 	if Global.falafel == true:
@@ -53,16 +42,8 @@ func _physics_process(delta):
 		elif Global.peloCorto == true:
 			$CabezaCorto.visible = true
 		$Texto.text = texto4
-		yield(get_tree().create_timer(2),"timeout")
-		$Texto.text = texto5
-		$Circulo2.visible = true
-		yield(get_tree().create_timer(2),"timeout")
-		$Nube.visible = false
-		$Texto.visible = false
-		$CabezaCorto.visible = false
-		$CabezaLargo.visible = false
-		$Label.visible = true
-		$Circulo2.visible = false
+		boton = 3
+		$Button.visible = true
 	if Global.estrella == true:
 		$Estrella.visible = true
 		$AnimationPlayer.play("estrella")
@@ -150,3 +131,34 @@ func _on_Reiniciar_pressed():
 	Global.pos4 = false
 	Global.tipo = 0
 
+
+
+func _on_Button_pressed():
+	if boton == 0:
+		$Texto.text = texto2
+		boton = 1
+	elif boton ==1 :
+		$Texto.text = texto3
+		boton = 2
+	elif boton ==2 :
+		$Mano.visible= true
+		$Mano2.visible = true
+		$Circulo.visible = true
+		$Nube.visible = false
+		$Texto.visible = false
+		$CabezaCorto.visible = false
+		$CabezaLargo.visible = false
+		$Button.visible = false
+	elif boton == 3:
+		$Texto.text = texto5
+		$Circulo2.visible = true
+		boton = 4
+	elif boton == 4:
+		$Nube.visible = false
+		$Texto.visible = false
+		$CabezaCorto.visible = false
+		$CabezaLargo.visible = false
+		$Label.visible = true
+		$Circulo2.visible = false
+		$Button.visible = false
+	pass 

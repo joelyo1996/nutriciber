@@ -693,6 +693,11 @@ margin_right = 539.76
 margin_bottom = 91.3267
 custom_fonts/font = SubResource( 25 )
 text = "Arrastra dos alimetos mas al plato"
+
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 1027.0
+margin_bottom = 599.0
 [connection signal="input_event" from="Vegetales/Area2D" to="Vegetales" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="Vegetales/Area_pocicion" to="Vegetales" method="_on_Area_pocicion_area_entered"]
 [connection signal="input_event" from="CarneRoja/Area2D" to="CarneRoja" method="_on_Area2D_input_event"]
@@ -713,3 +718,4 @@ text = "Arrastra dos alimetos mas al plato"
 [connection signal="area_entered" from="Falafel/Area2D2" to="Falafel" method="_on_Area2D2_area_entered"]
 [connection signal="pressed" from="Avanzar" to="." method="_on_Avanzar_pressed"]
 [connection signal="pressed" from="Reiniciar" to="." method="_on_Reiniciar_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
