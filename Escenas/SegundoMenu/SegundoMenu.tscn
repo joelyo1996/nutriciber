@@ -4,11 +4,11 @@
 [ext_resource path="res://Asset/mainmenu.png" type="Texture" id=2]
 [ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=3]
 [ext_resource path="res://Asset/menu/musica_menu.ogg" type="AudioStream" id=4]
-[ext_resource path="res://Asset/presentacion/logo_unpaz.png" type="Texture" id=6]
-[ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=8]
-[ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=9]
-[ext_resource path="res://Asset/menu/boton_sonido_activo.png" type="Texture" id=10]
-[ext_resource path="res://Asset/menu/boton_sonido_desactivado.png" type="Texture" id=11]
+[ext_resource path="res://Asset/presentacion/logo_unpaz.png" type="Texture" id=5]
+[ext_resource path="res://Asset/UI/boton_salir_normal.png" type="Texture" id=6]
+[ext_resource path="res://Asset/UI/boton_salir_presionado.png" type="Texture" id=7]
+[ext_resource path="res://Asset/menu/boton_sonido_activo.png" type="Texture" id=8]
+[ext_resource path="res://Asset/menu/boton_sonido_desactivado.png" type="Texture" id=9]
 
 [node name="SegundoMenu" type="Node2D"]
 script = ExtResource( 1 )
@@ -33,7 +33,7 @@ autoplay = true
 [node name="UNPAZ" type="Sprite" parent="."]
 position = Vector2( 442.083, 90.4702 )
 scale = Vector2( 0.329283, 0.307929 )
-texture = ExtResource( 6 )
+texture = ExtResource( 5 )
 
 [node name="Salir" type="TextureButton" parent="."]
 margin_left = 1.58669
@@ -41,8 +41,8 @@ margin_top = 437.922
 margin_right = 305.587
 margin_bottom = 774.922
 rect_scale = Vector2( 0.5, 0.5 )
-texture_normal = ExtResource( 8 )
-texture_pressed = ExtResource( 9 )
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
 
 [node name="sonido" type="TextureButton" parent="."]
 margin_left = 818.724
@@ -51,8 +51,8 @@ margin_right = 1294.72
 margin_bottom = 831.882
 rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
-texture_normal = ExtResource( 10 )
-texture_pressed = ExtResource( 11 )
+texture_normal = ExtResource( 8 )
+texture_pressed = ExtResource( 9 )
 [connection signal="pressed" from="NuevaPartida" to="." method="_on_NuevaPartida_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
 [connection signal="pressed" from="sonido" to="." method="_on_sonido_pressed"]
