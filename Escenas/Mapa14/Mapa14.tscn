@@ -14,7 +14,7 @@
 [ext_resource path="res://Escenas/UI/BarraEnergia.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 284.13, 65.0719 )
+extents = Vector2( 284.13, 104.05 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 116.765, 10 )
@@ -23,7 +23,7 @@ extents = Vector2( 116.765, 10 )
 extents = Vector2( 353.766, 91.9676 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 51.3745, 15.9362 )
+extents = Vector2( 66.6794, 49.9875 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 10, 296.465 )
@@ -53,32 +53,32 @@ texture = ExtResource( 4 )
 position = Vector2( 158.228, 504.572 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma1"]
-position = Vector2( -77.3475, 3.62182 )
+position = Vector2( -48.9544, 20.3236 )
 shape = SubResource( 1 )
 
 [node name="Plataforma4" type="StaticBody2D" parent="."]
 position = Vector2( 645.763, 415.929 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma4"]
-position = Vector2( -48.9964, -47.5005 )
+position = Vector2( -50.6666, -72.5532 )
 shape = SubResource( 2 )
 
 [node name="Plataforma2" type="StaticBody2D" parent="."]
 position = Vector2( 678.623, 634.671 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma2"]
-position = Vector2( 25.7825, 46.6541 )
+position = Vector2( 25.7825, 26.6119 )
 shape = SubResource( 3 )
 
 [node name="Plataforma3" type="StaticBody2D" parent="."]
 position = Vector2( 1250, 367.441 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Plataforma3"]
-position = Vector2( -274.059, -13.5205 )
+position = Vector2( -277.399, -3.49938 )
 shape = SubResource( 4 )
 
 [node name="Tronco" parent="." instance=ExtResource( 5 )]
-position = Vector2( 607.604, 504.365 )
+position = Vector2( 607.604, 522.737 )
 
 [node name="Personaje" parent="." instance=ExtResource( 6 )]
 
