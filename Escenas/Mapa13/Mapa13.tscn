@@ -39,7 +39,7 @@ texture = ExtResource( 2 )
 position = Vector2( 515.521, 526.336 )
 
 [node name="CollisionPlataforma" type="CollisionShape2D" parent="Plataforma"]
-position = Vector2( 145.052, -33.9913 )
+position = Vector2( 145.052, -44.0124 )
 shape = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -103,7 +103,7 @@ position = Vector2( 192.338, 119.964 )
 position = Vector2( 715.065, 103.425 )
 
 [node name="Tronco" parent="." instance=ExtResource( 5 )]
-position = Vector2( 732.851, 347.61 )
+position = Vector2( 732.851, 344.27 )
 
 [node name="UI" parent="." instance=ExtResource( 6 )]
 

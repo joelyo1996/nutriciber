@@ -12,10 +12,10 @@
 [ext_resource path="res://Escenas/Tronco/Tronco.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 221.568, 136.763 )
+extents = Vector2( 235.313, 160.824 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 229.4, 91.9964 )
+extents = Vector2( 229.4, 116.798 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 131.577, 185.535 )
@@ -52,14 +52,14 @@ shape = SubResource( 1 )
 position = Vector2( 515.448, 527.397 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plataforma2"]
-position = Vector2( 125.827, -39.479 )
+position = Vector2( 86.5394, -41.9344 )
 shape = SubResource( 2 )
 
 [node name="plataforma3" type="StaticBody2D" parent="."]
 position = Vector2( 838.083, 522.853 )
 
 [node name="CollisionPlataforma" type="CollisionShape2D" parent="plataforma3"]
-position = Vector2( 75.4426, -75.8586 )
+position = Vector2( 40.0728, -105.787 )
 shape = SubResource( 3 )
 
 [node name="plataforma6" type="StaticBody2D" parent="."]
@@ -80,6 +80,7 @@ shape = SubResource( 3 )
 position = Vector2( 422.811, 385.384 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plataforma4"]
+position = Vector2( 0, -13.5051 )
 shape = SubResource( 4 )
 
 [node name="Mapa12" type="Area2D" parent="."]
@@ -137,7 +138,7 @@ margin_right = 147.886
 margin_bottom = 36.7475
 
 [node name="Tronco" parent="." instance=ExtResource( 10 )]
-position = Vector2( 538.457, 350.026 )
+position = Vector2( 536.95, 301.791 )
 [connection signal="area_entered" from="Mapa12" to="." method="_on_Mapa12_area_entered"]
 [connection signal="body_entered" from="Mapa12" to="." method="_on_Mapa12_body_entered"]
 [connection signal="body_entered" from="Mapa13" to="." method="_on_Mapa13_body_entered"]
