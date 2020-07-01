@@ -1,13 +1,13 @@
 extends Node2D
 
 var tipo = 0
-var texto1 = "Hola! Hoy es un gran día.\n Saldremos a explorar el\n bosque!"
+var texto1 = "¡Hola! Hoy es un gran día.\n ¡Saldremos a explorar el\n bosque!"
 var texto2 = "Pero primero tenemos que \n armar un almuerzo muy \n nutritivo"
 var texto3 = "Creo que hoy quiero comer \n unos falafels"
-var texto4 = "Genial! con qué más lo puedo \n acompañar? \n en el plato entran dos \n alimentos más."
-var texto5 = "Cada alimento que elijamos nos \n da energía! \n Si elegimos buenos alimentos \n tendremos mas energia!"
-var texto6 = "Arrastrá dos alimetos más al plato"
-var texto7 = "Está todo listos para salir \n al bosque!"
+var texto4 = "¡Genial! ¿Con qué más lo puedo \n acompañar? \n en el plato entran dos \n alimentos más."
+var texto5 = "¡Cada alimento que elijamos nos \n da energía! \n ¡Si elegimos buenos alimentos \n tendremos más energía!"
+var texto6 = "Arrastrá dos alimentos más al plato"
+var texto7 = "¡Está todo listo para salir \n al bosque!"
 var boton = 0
 
 func _ready():
