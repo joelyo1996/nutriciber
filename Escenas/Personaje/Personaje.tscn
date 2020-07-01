@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Escenas/Mapa11/KinematicBody2D.gd" type="Script" id=1]
 [ext_resource path="res://Asset/Personaje/corriendo.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Asset/Personaje/head_corriendo2.png" type="Texture" id=17]
 [ext_resource path="res://Asset/Personaje/largo_oro_plata_caminando.png" type="Texture" id=18]
 [ext_resource path="res://Asset/Personaje/largo_oro_plata_saltando.png" type="Texture" id=19]
+[ext_resource path="res://Asset/Personaje/largo_oro.png" type="Texture" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 114.753, 178.775 )
@@ -112,6 +113,21 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "LargoOro"
+tracks/0/type = "value"
+tracks/0/path = NodePath("LargoOro:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
 }
 
 [sub_resource type="Animation" id=8]
@@ -304,6 +320,7 @@ anims/CortoSaltoOro = SubResource( 4 )
 anims/CortoSaltoPlata = SubResource( 5 )
 anims/LargoCaminarOro = SubResource( 6 )
 anims/LargoCaminarPlata = SubResource( 7 )
+anims/LargoOro = SubResource( 20 )
 anims/LargoOroPlataCaminar = SubResource( 8 )
 anims/LargoOroPlataSalto = SubResource( 9 )
 anims/SaltoLargoOro = SubResource( 10 )
@@ -372,7 +389,7 @@ visible = false
 texture = ExtResource( 10 )
 vframes = 2
 hframes = 4
-frame = 3
+frame = 2
 
 [node name="LargoCaminar" type="Sprite" parent="."]
 visible = false
@@ -393,7 +410,7 @@ visible = false
 texture = ExtResource( 13 )
 vframes = 2
 hframes = 4
-frame = 5
+frame = 4
 
 [node name="CortoCaminarPlata" type="Sprite" parent="."]
 visible = false
@@ -435,5 +452,11 @@ texture = ExtResource( 19 )
 vframes = 2
 hframes = 4
 frame = 1
+
+[node name="LargoOro" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 20 )
+vframes = 2
+hframes = 5
 [connection signal="area_entered" from="AreaPersonaje" to="." method="_on_Area2D_area_entered"]
 [connection signal="body_entered" from="AreaPersonaje" to="." method="_on_Area2D_body_entered"]

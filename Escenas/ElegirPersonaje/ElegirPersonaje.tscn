@@ -7,13 +7,13 @@
 [ext_resource path="res://Escenas/ElegirPersonaje/sorbete1.gd" type="Script" id=5]
 [ext_resource path="res://Asset/PersonalisarPersonaje/head_idle2.png" type="Texture" id=6]
 [ext_resource path="res://Escenas/ElegirPersonaje/sorbete3.gd" type="Script" id=7]
-[ext_resource path="res://Asset/PersonalisarPersonaje/plata_remera.png" type="Texture" id=8]
+[ext_resource path="res://Asset/PersonalisarPersonaje/torsoidleplata.png" type="Texture" id=8]
 [ext_resource path="res://Escenas/ElegirPersonaje/sorbete6.gd" type="Script" id=9]
-[ext_resource path="res://Asset/PersonalisarPersonaje/remera_oro.png" type="Texture" id=10]
+[ext_resource path="res://Asset/PersonalisarPersonaje/torsoidleoro.png" type="Texture" id=10]
 [ext_resource path="res://Escenas/ElegirPersonaje/sorbete8.gd" type="Script" id=11]
-[ext_resource path="res://Asset/PersonalisarPersonaje/plata_pantalones.png" type="Texture" id=12]
+[ext_resource path="res://Asset/PersonalisarPersonaje/piernaplataidle.png" type="Texture" id=12]
 [ext_resource path="res://Escenas/ElegirPersonaje/sorbete7.gd" type="Script" id=13]
-[ext_resource path="res://Asset/PersonalisarPersonaje/pantalon_oro.png" type="Texture" id=14]
+[ext_resource path="res://Asset/PersonalisarPersonaje/piernasidleoro.png" type="Texture" id=14]
 [ext_resource path="res://Escenas/ElegirPersonaje/sorbete9.gd" type="Script" id=15]
 [ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=16]
 [ext_resource path="res://Asset/UI/Fuente.ttf" type="DynamicFontData" id=17]
@@ -47,7 +47,7 @@ extents = Vector2( 60.3876, 102.396 )
 extents = Vector2( 18.1822, 27.0292 )
 
 [sub_resource type="RectangleShape2D" id=10]
-extents = Vector2( 66.4169, 61.4103 )
+extents = Vector2( 56.3307, 107.441 )
 
 [sub_resource type="Animation" id=11]
 tracks/0/type = "value"
@@ -203,7 +203,7 @@ position = Vector2( 4.72144, -14.472 )
 shape = SubResource( 5 )
 
 [node name="sorbete6" type="Sprite" parent="."]
-position = Vector2( 218.047, 361.407 )
+position = Vector2( 218.047, 334.2 )
 texture = ExtResource( 8 )
 script = ExtResource( 9 )
 __meta__ = {
@@ -222,7 +222,7 @@ shape = SubResource( 6 )
 shape = SubResource( 7 )
 
 [node name="sorbete8" type="Sprite" parent="."]
-position = Vector2( 372.087, 449.063 )
+position = Vector2( 382.358, 327.241 )
 texture = ExtResource( 10 )
 script = ExtResource( 11 )
 __meta__ = {
@@ -230,21 +230,21 @@ __meta__ = {
 }
 
 [node name="Area2D" type="Area2D" parent="sorbete8"]
-position = Vector2( -4.52209, -91.9477 )
+position = Vector2( -18.738, 2.39431 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete8/Area2D"]
 position = Vector2( 4.91095, -19.6438 )
 shape = SubResource( 6 )
 
 [node name="Area2D2" type="Area2D" parent="sorbete8"]
-position = Vector2( 1.50745, -105.514 )
+position = Vector2( -10.1237, -8.58727 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete8/Area2D2"]
 position = Vector2( -1.50732, -6.02939 )
 shape = SubResource( 7 )
 
 [node name="sorbete7" type="Sprite" parent="."]
-position = Vector2( 180.264, 481.195 )
+position = Vector2( 205.907, 497.384 )
 texture = ExtResource( 12 )
 script = ExtResource( 13 )
 __meta__ = {
@@ -252,19 +252,21 @@ __meta__ = {
 }
 
 [node name="Area2D" type="Area2D" parent="sorbete7"]
+position = Vector2( -15.5083, -10.3389 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete7/Area2D"]
 position = Vector2( 27.1322, 10.5514 )
 shape = SubResource( 8 )
 
 [node name="Area2D2" type="Area2D" parent="sorbete7"]
+position = Vector2( -25.8471, -5.16943 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete7/Area2D2"]
 position = Vector2( 34.6688, -4.52203 )
 shape = SubResource( 9 )
 
 [node name="sorbete9" type="Sprite" parent="."]
-position = Vector2( 350.823, 542.18 )
+position = Vector2( 356.333, 506.946 )
 texture = ExtResource( 14 )
 script = ExtResource( 15 )
 __meta__ = {
@@ -272,12 +274,14 @@ __meta__ = {
 }
 
 [node name="Area2D" type="Area2D" parent="sorbete9"]
+position = Vector2( -10.3389, -1.29236 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete9/Area2D"]
 position = Vector2( 24.1174, -6.02936 )
 shape = SubResource( 10 )
 
 [node name="Area2D2" type="Area2D" parent="sorbete9"]
+position = Vector2( -24.5547, -2.58472 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sorbete9/Area2D2"]
 position = Vector2( 34.6688, -4.52203 )
@@ -285,10 +289,10 @@ shape = SubResource( 9 )
 
 [node name="Avanzar" type="TextureButton" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-margin_left = 781.156
-margin_top = 3.89607
-margin_right = 1257.16
-margin_bottom = 417.896
+margin_left = 786.43
+margin_top = 387.159
+margin_right = 1262.43
+margin_bottom = 801.159
 rect_scale = Vector2( 0.5, 0.5 )
 texture_normal = ExtResource( 16 )
 

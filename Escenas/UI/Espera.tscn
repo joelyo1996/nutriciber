@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Escenas/UI/Espera.gd" type="Script" id=1]
 [ext_resource path="res://Asset/UI/Fuente.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Asset/menu/title.png" type="Texture" id=3]
+[ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -34,11 +35,12 @@ margin_bottom = 607.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 102.695
-margin_top = 331.918
-margin_right = 1023.69
-margin_bottom = 578.918
+margin_left = 62.1628
+margin_top = 261.805
+margin_right = 983.158
+margin_bottom = 508.805
 custom_fonts/font = SubResource( 1 )
+align = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/transicion = SubResource( 2 )
@@ -52,8 +54,17 @@ wait_time = 10.0
 autostart = true
 
 [node name="Terrana" type="Sprite" parent="."]
-position = Vector2( 548.557, 156.352 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 538.487, 98.4488 )
+scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 3 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 891.205
+margin_top = 493.436
+margin_right = 1099.21
+margin_bottom = 654.436
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 4 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
