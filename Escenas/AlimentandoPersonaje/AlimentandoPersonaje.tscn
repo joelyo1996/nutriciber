@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=62 format=2]
 
 [ext_resource path="res://Escenas/AlimentandoPersonaje/AlimentandoPersonaje.gd" type="Script" id=1]
 [ext_resource path="res://Asset/AlimentandoPersonaje/fondo_alimento.jpg" type="Texture" id=2]
@@ -33,6 +33,7 @@
 [ext_resource path="res://Asset/AlimentandoPersonaje/comida3.ogg" type="AudioStream" id=31]
 [ext_resource path="res://Asset/Mapa15/globo.png" type="Texture" id=32]
 [ext_resource path="res://Asset/AlimentandoPersonaje/interfaz_woman.png" type="Texture" id=33]
+[ext_resource path="res://Asset/AlimentandoPersonaje/interfaz_man.png" type="Texture" id=34]
 [ext_resource path="res://Asset/AlimentandoPersonaje/mano_slide.png" type="Texture" id=35]
 [ext_resource path="res://Asset/AlimentandoPersonaje/circulo_luz.png" type="Texture" id=36]
 
@@ -212,6 +213,7 @@ scale = Vector2( 0.99857, 0.999563 )
 texture = ExtResource( 2 )
 
 [node name="1" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -221,6 +223,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="2" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -230,6 +233,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="3" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -239,6 +243,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="4" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -248,6 +253,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="5" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -257,6 +263,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="6" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -266,6 +273,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="7" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -275,6 +283,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="8" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -284,6 +293,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="9" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 506.682, 466.389 )
 __meta__ = {
 "_edit_group_": true
@@ -293,6 +303,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="Vegetales" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 161.872, 216.571 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
@@ -314,6 +325,7 @@ shape = SubResource( 2 )
 shape = SubResource( 3 )
 
 [node name="CarneRoja" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 71.4591, 221.675 )
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 5 )
@@ -340,6 +352,7 @@ shape = SubResource( 5 )
 shape = SubResource( 6 )
 
 [node name="Choclos" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 239.713, 208.245 )
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 7 )
@@ -360,6 +373,7 @@ shape = SubResource( 7 )
 shape = SubResource( 8 )
 
 [node name="PapasFritas" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 74.878, 293.659 )
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 9 )
@@ -381,6 +395,7 @@ position = Vector2( -63.7024, 162.152 )
 shape = SubResource( 10 )
 
 [node name="Hamburguesa" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 156.652, 296.089 )
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 11 )
@@ -403,6 +418,7 @@ position = Vector2( -36.7543, 101.075 )
 shape = SubResource( 12 )
 
 [node name="FrutosSecos" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 234.411, 297.58 )
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 13 )
@@ -423,6 +439,7 @@ shape = SubResource( 13 )
 shape = SubResource( 14 )
 
 [node name="Pescado" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 244.406, 353.378 )
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 15 )
@@ -444,6 +461,7 @@ position = Vector2( 21.4343, 171.475 )
 shape = SubResource( 15 )
 
 [node name="Spaguetti" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 165.467, 350.501 )
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 17 )
@@ -465,6 +483,7 @@ position = Vector2( 21.4343, 171.475 )
 shape = SubResource( 15 )
 
 [node name="Falafel" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 73.0726, 359.179 )
 scale = Vector2( 0.08, 0.08 )
 texture = ExtResource( 18 )
@@ -514,9 +533,6 @@ margin_right = 441.296
 margin_bottom = 102.664
 custom_fonts/font = SubResource( 19 )
 text = "Este plato contiene:"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Proteinas" type="Label" parent="Titulo"]
 margin_left = 20.8766
@@ -572,11 +588,9 @@ margin_bottom = 363.128
 custom_fonts/font = SubResource( 23 )
 text = "No creo que sea una
 
- buena combinación.
+ buena combinacion.
 
-Mejor intento con otra cosa..."
-align = 1
-valign = 1
+Mejor intento otra cosa"
 
 [node name="Reiniciar" type="TextureButton" parent="."]
 visible = false
@@ -641,6 +655,12 @@ margin_right = 340.0
 margin_bottom = 363.082
 custom_fonts/font = SubResource( 24 )
 
+[node name="CabezaCorto" type="Sprite" parent="."]
+visible = false
+position = Vector2( 118.854, 478.28 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 34 )
+
 [node name="Mano" type="Sprite" parent="."]
 visible = false
 position = Vector2( 130.31, 408.113 )
@@ -667,15 +687,12 @@ texture = ExtResource( 36 )
 
 [node name="Label" type="Label" parent="."]
 visible = false
-margin_left = 494.977
-margin_top = 72.5434
-margin_right = 851.977
-margin_bottom = 90.5434
+margin_left = 499.76
+margin_top = 77.3267
+margin_right = 539.76
+margin_bottom = 91.3267
 custom_fonts/font = SubResource( 25 )
-text = "Arrastra dos alimentos más al plato"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "Arrastra dos alimetos mas al plato"
 [connection signal="input_event" from="Vegetales/Area2D" to="Vegetales" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="Vegetales/Area_pocicion" to="Vegetales" method="_on_Area_pocicion_area_entered"]
 [connection signal="input_event" from="CarneRoja/Area2D" to="CarneRoja" method="_on_Area2D_input_event"]
