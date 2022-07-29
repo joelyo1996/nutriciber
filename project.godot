@@ -10,14 +10,13 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
 
-config/name="NutriCiber"
+config/name="Terrana"
 run/main_scene="res://Escenas/SegundoMenu/SegundoMenu.tscn"
-config/icon="res://icon.png"
+config/icon="res://Asset/AlimentandoPersonaje/interfaz_man.png"
 
 [autoload]
 

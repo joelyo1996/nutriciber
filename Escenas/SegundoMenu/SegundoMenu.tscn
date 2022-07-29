@@ -53,6 +53,7 @@ rect_scale = Vector2( 0.5, 0.5 )
 toggle_mode = true
 texture_normal = ExtResource( 8 )
 texture_pressed = ExtResource( 9 )
+
 [connection signal="pressed" from="NuevaPartida" to="." method="_on_NuevaPartida_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
 [connection signal="pressed" from="sonido" to="." method="_on_sonido_pressed"]

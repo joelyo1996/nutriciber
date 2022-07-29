@@ -70,7 +70,7 @@ radius = 19.8869
 height = 80.3683
 
 [sub_resource type="CapsuleShape2D" id=12]
-height = -4.13782
+height = 0.0
 
 [sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 511.197, 226.793 )
@@ -595,16 +595,16 @@ volume_db = -19.184
 visible = false
 position = Vector2( 194.622, 84.2336 )
 texture = ExtResource( 27 )
-vframes = 3
 hframes = 9
+vframes = 3
 frame = 9
 
 [node name="Estrella" type="Sprite" parent="."]
 visible = false
 position = Vector2( 239.158, 140.732 )
 texture = ExtResource( 28 )
-vframes = 2
 hframes = 5
+vframes = 2
 frame = 8
 
 [node name="Comida1" type="AudioStreamPlayer" parent="."]
@@ -684,6 +684,7 @@ margin_left = -79.8488
 margin_top = 5.64368
 margin_right = 947.151
 margin_bottom = 604.644
+
 [connection signal="input_event" from="Vegetales/Area2D" to="Vegetales" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="Vegetales/Area_pocicion" to="Vegetales" method="_on_Area_pocicion_area_entered"]
 [connection signal="input_event" from="CarneRoja/Area2D" to="CarneRoja" method="_on_Area2D_input_event"]

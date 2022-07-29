@@ -95,7 +95,7 @@ func _physics_process(delta):
 		$Titulo/TildeVerde.visible = false
 		$Titulo/TildeVerde2.visible = false
 		$Titulo/TildeVerde3.visible = false
-		Global.Energia = Global.Energia + 2000
+		Global.Energia = Global.Energia + 1500
 func _on_Avanzar_pressed():
 	Global.is_inside1 = true
 	Global.is_inside2 = true
