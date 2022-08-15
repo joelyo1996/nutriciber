@@ -1,5 +1,6 @@
 extends Node
 
+var voler = 0
 var silencio = false
 var is_inside1 = true
 var is_inside2 = true

@@ -16,3 +16,10 @@ func _on_Mapa12_area_entered(area):
 		Global.posicion_personaje = Vector2(100,200)
 		get_tree().change_scene(mapa12)
 	pass 
+
+
+func _on_Mapa14_area_entered(area):
+	if area.name == "AreaPersonaje":
+		if Global.Ganaste == true:
+			get_tree().change_scene(mapa12)
+	pass # Replace with function body.

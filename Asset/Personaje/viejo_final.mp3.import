@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/viejo_final.mp3-a8a322f93975bc1227f16ba40b5f8ae1.mp3str"
+
+[deps]
+
+source_file="res://Asset/Personaje/viejo_final.mp3"
+dest_files=[ "res://.import/viejo_final.mp3-a8a322f93975bc1227f16ba40b5f8ae1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -9,7 +9,7 @@ func _ready():
 	$Reintentar.visible = false
 	
 func _process(delta):
-	if Global.Energia <= 0 && Global.Ganaste == false:
+	if Global.Energia <= 0:
 		$Reintentar.visible = true
 		$BotonReintentar.visible = true
 		$BotonReintentar.disabled = false

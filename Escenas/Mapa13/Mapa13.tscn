@@ -163,6 +163,7 @@ scale = Vector2( 0.5, 0.5 )
 [node name="Rama6" parent="." instance=ExtResource( 11 )]
 position = Vector2( 98.4107, 324.887 )
 scale = Vector2( 0.5, 0.5 )
+
 [connection signal="body_entered" from="Mapa12" to="." method="_on_Mapa12_body_entered"]
 [connection signal="area_entered" from="Mapa12Abajo" to="." method="_on_Mapa12Abajo_area_entered"]
 [connection signal="area_entered" from="Mapa12Medio" to="." method="_on_Mapa12Medio_area_entered"]

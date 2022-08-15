@@ -142,6 +142,7 @@ margin_left = 27.3561
 margin_top = 28.1659
 margin_right = 140.356
 margin_bottom = 42.1659
+
 [connection signal="area_entered" from="Mapa13" to="." method="_on_Mapa13_area_entered"]
 [connection signal="area_entered" from="Arriba" to="." method="_on_Arriba_area_entered"]
 [connection signal="area_entered" from="Abajo" to="." method="_on_Abajo_area_entered"]
