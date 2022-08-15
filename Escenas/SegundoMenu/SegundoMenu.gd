@@ -9,7 +9,7 @@ func _ready():
 		$sonido.texture_normal 
 		
 func _on_NuevaPartida_pressed():
-	get_tree().change_scene("res://Escenas/ElegirPersonaje/ElegirPersonaje.tscn")
+	get_tree().change_scene("res://Escenas/SegundoMenu/Ayuda.tscn")
 	pass 
 
 func _on_Salir_pressed():

@@ -230,6 +230,7 @@ texture_normal = ExtResource( 6 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/final = SubResource( 6 )
+
 [connection signal="area_entered" from="Arriba" to="." method="_on_Arriba_area_entered"]
 [connection signal="area_entered" from="Abajo" to="." method="_on_Abajo_area_entered"]
 [connection signal="gui_input" from="UI/TextureButton" to="Personaje" method="_on_TextureButton_gui_input"]

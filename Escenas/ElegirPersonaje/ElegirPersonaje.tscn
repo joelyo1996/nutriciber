@@ -329,6 +329,7 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="input_event" from="sorbete1/Area2D" to="sorbete1" method="_on_Area2D_input_event"]
 [connection signal="area_entered" from="sorbete1/Area_pocicion" to="sorbete1" method="_on_Area_pocicion_area_entered"]
 [connection signal="input_event" from="sorbete3/Area2D" to="sorbete3" method="_on_Area2D_input_event"]
