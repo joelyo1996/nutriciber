@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boton_salir_normal.png-06cd936bd142832c91a837a3c23d1240.stex"
+path="res://.import/UNPAZ.png-be8121f44027c9c69814bfaf076f462f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/menu/boton_salir_normal.png"
-dest_files=[ "res://.import/boton_salir_normal.png-06cd936bd142832c91a837a3c23d1240.stex" ]
+source_file="res://Asset/Mapa12/UNPAZ.png"
+dest_files=[ "res://.import/UNPAZ.png-be8121f44027c9c69814bfaf076f462f.stex" ]
 
 [params]
 

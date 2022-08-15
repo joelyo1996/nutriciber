@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boton_salir_normal.png-06cd936bd142832c91a837a3c23d1240.stex"
+path="res://.import/logo.png-dd19144f6792e3ed5908ae5e7bab5ced.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/menu/boton_salir_normal.png"
-dest_files=[ "res://.import/boton_salir_normal.png-06cd936bd142832c91a837a3c23d1240.stex" ]
+source_file="res://Asset/menu/logo.png"
+dest_files=[ "res://.import/logo.png-dd19144f6792e3ed5908ae5e7bab5ced.stex" ]
 
 [params]
 
