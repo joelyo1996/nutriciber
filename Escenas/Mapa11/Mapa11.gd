@@ -21,5 +21,5 @@ func _on_Mapa12_area_entered(area):
 func _on_Mapa14_area_entered(area):
 	if area.name == "AreaPersonaje":
 		if Global.Ganaste == true:
-			get_tree().change_scene(mapa12)
+			get_tree().change_scene("res://Escenas/Mapa15/Final.tscn")
 	pass # Replace with function body.

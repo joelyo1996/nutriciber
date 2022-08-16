@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Escenas/SegundoMenu/SegundoMenu.gd" type="Script" id=1]
 [ext_resource path="res://Asset/menu/boton_play_presionado.png" type="Texture" id=2]
-[ext_resource path="res://Asset/Mapa11/Bibloteca.jpg" type="Texture" id=3]
+[ext_resource path="res://Asset/mainmenu.png" type="Texture" id=3]
 [ext_resource path="res://Asset/menu/musica_menu.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Asset/presentacion/logo_unpaz.png" type="Texture" id=5]
 [ext_resource path="res://Asset/menu/boton_salir_normal.png" type="Texture" id=6]
@@ -14,8 +14,8 @@
 script = ExtResource( 1 )
 
 [node name="Fondo" type="Sprite" parent="."]
-position = Vector2( 442, 303 )
-scale = Vector2( 1.7, 1.7 )
+position = Vector2( 511, 300 )
+scale = Vector2( 0.6, 0.5 )
 texture = ExtResource( 3 )
 
 [node name="NuevaPartida" type="TextureButton" parent="."]

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Escenas/UI/Espera.gd" type="Script" id=1]
 [ext_resource path="res://Asset/UI/Fuente.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Asset/menu/logo.png" type="Texture" id=3]
+[ext_resource path="res://Asset/menu/title.png" type="Texture" id=3]
 [ext_resource path="res://Asset/UI/boton_der.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
@@ -55,7 +55,7 @@ autostart = true
 
 [node name="Terrana" type="Sprite" parent="."]
 position = Vector2( 506, 123 )
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 
 [node name="TextureButton" type="TextureButton" parent="."]

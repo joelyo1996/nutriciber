@@ -5,7 +5,6 @@ func _ready():
 	$Globo.visible = false
 	$texto.visible = false
 	Global.Ganaste = true
-	Global.Energia = 0
 	$texto.visible = true
 	$Globo.visible = true
 	$texto.text = "Acercate, Te \n estaba esperando"
