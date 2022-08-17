@@ -14,7 +14,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="DJCP"
+config/name="Terrana"
 run/main_scene="res://Escenas/SegundoMenu/SegundoMenu.tscn"
 config/icon="res://Asset/AlimentandoPersonaje/interfaz_man.png"
 

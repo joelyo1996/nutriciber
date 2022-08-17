@@ -14,6 +14,4 @@ func _on_TextureButton_pressed():
 		get_tree().change_scene("res://Escenas/Mapa11/Mapa11.tscn")
 	if Global.espera == 1:
 		get_tree().change_scene("res://Escenas/AlimentandoPersonaje/AlimentandoPersonaje.tscn")
-	if Global.Ganaste ==1:
-		get_tree().change_scene("res://Escenas/SegundoMenu/SegundoMenu.tscn")
 	pass # Replace with function body.
